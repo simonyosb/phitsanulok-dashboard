@@ -156,26 +156,24 @@ export default function OverviewPage() {
           <CardContent>
             <div className="flex gap-6">
               {/* Donut chart */}
-              <div className="w-[160px] h-[160px] shrink-0">
+              <div className="shrink-0">
                 {mounted && (
-                  <ResponsiveContainer width="100%" height="100%">
-                    <PieChart>
-                      <Pie
-                        data={pieData}
-                        cx="50%"
-                        cy="50%"
-                        innerRadius={45}
-                        outerRadius={72}
-                        paddingAngle={3}
-                        dataKey="value"
-                        stroke="none"
-                      >
-                        {pieData.map((entry, i) => (
-                          <Cell key={i} fill={entry.color} />
-                        ))}
-                      </Pie>
-                    </PieChart>
-                  </ResponsiveContainer>
+                  <PieChart width={160} height={160}>
+                    <Pie
+                      data={pieData}
+                      cx={80}
+                      cy={80}
+                      innerRadius={45}
+                      outerRadius={72}
+                      paddingAngle={3}
+                      dataKey="value"
+                      stroke="none"
+                    >
+                      {pieData.map((entry, i) => (
+                        <Cell key={i} fill={entry.color} />
+                      ))}
+                    </Pie>
+                  </PieChart>
                 )}
               </div>
               {/* Legend */}
