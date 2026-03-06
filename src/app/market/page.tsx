@@ -1,5 +1,6 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { places } from "@/data/places";
@@ -25,6 +26,8 @@ import {
 } from "recharts";
 
 export default function MarketPage() {
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
   const categoryStats = getCategoryStats();
   const areaStats = getAreaStats();
 
@@ -129,29 +132,31 @@ export default function MarketPage() {
             <CardTitle>Market Saturation by Area</CardTitle>
           </CardHeader>
           <CardContent>
-            <ResponsiveContainer width="100%" height={300}>
-              <BarChart data={saturationData}>
-                <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />
-                <XAxis dataKey="area" fontSize={11} angle={-20} textAnchor="end" height={60} />
-                <YAxis fontSize={12} />
-                <Tooltip />
-                <Bar dataKey="hotel" stackId="a" fill={getCategoryColor("hotel")} name="Hotels" />
-                <Bar dataKey="cafe" stackId="a" fill={getCategoryColor("cafe")} name="Cafes" />
-                <Bar
-                  dataKey="restaurant"
-                  stackId="a"
-                  fill={getCategoryColor("restaurant")}
-                  name="Restaurants"
-                />
-                <Bar dataKey="clinic" stackId="a" fill={getCategoryColor("clinic")} name="Clinics" />
-                <Bar
-                  dataKey="coworking"
-                  stackId="a"
-                  fill={getCategoryColor("coworking")}
-                  name="Co-working"
-                />
-              </BarChart>
-            </ResponsiveContainer>
+            {mounted && (
+              <ResponsiveContainer width="100%" height={300}>
+                <BarChart data={saturationData}>
+                  <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />
+                  <XAxis dataKey="area" fontSize={11} angle={-20} textAnchor="end" height={60} />
+                  <YAxis fontSize={12} />
+                  <Tooltip />
+                  <Bar dataKey="hotel" stackId="a" fill={getCategoryColor("hotel")} name="Hotels" />
+                  <Bar dataKey="cafe" stackId="a" fill={getCategoryColor("cafe")} name="Cafes" />
+                  <Bar
+                    dataKey="restaurant"
+                    stackId="a"
+                    fill={getCategoryColor("restaurant")}
+                    name="Restaurants"
+                  />
+                  <Bar dataKey="clinic" stackId="a" fill={getCategoryColor("clinic")} name="Clinics" />
+                  <Bar
+                    dataKey="coworking"
+                    stackId="a"
+                    fill={getCategoryColor("coworking")}
+                    name="Co-working"
+                  />
+                </BarChart>
+              </ResponsiveContainer>
+            )}
           </CardContent>
         </Card>
 
@@ -161,28 +166,30 @@ export default function MarketPage() {
             <CardTitle>Rating Distribution</CardTitle>
           </CardHeader>
           <CardContent>
-            <ResponsiveContainer width="100%" height={300}>
-              <BarChart data={ratingBuckets}>
-                <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />
-                <XAxis dataKey="range" fontSize={12} />
-                <YAxis fontSize={12} />
-                <Tooltip />
-                <Bar dataKey="count" radius={[6, 6, 0, 0]}>
-                  {ratingBuckets.map((entry, i) => (
-                    <Cell
-                      key={entry.range}
-                      fill={
-                        i <= 1
-                          ? "#ef4444"
-                          : i === 2
-                          ? "#f59e0b"
-                          : "#22c55e"
-                      }
-                    />
-                  ))}
-                </Bar>
-              </BarChart>
-            </ResponsiveContainer>
+            {mounted && (
+              <ResponsiveContainer width="100%" height={300}>
+                <BarChart data={ratingBuckets}>
+                  <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />
+                  <XAxis dataKey="range" fontSize={12} />
+                  <YAxis fontSize={12} />
+                  <Tooltip />
+                  <Bar dataKey="count" radius={[6, 6, 0, 0]}>
+                    {ratingBuckets.map((entry, i) => (
+                      <Cell
+                        key={entry.range}
+                        fill={
+                          i <= 1
+                            ? "#ef4444"
+                            : i === 2
+                            ? "#f59e0b"
+                            : "#22c55e"
+                        }
+                      />
+                    ))}
+                  </Bar>
+                </BarChart>
+              </ResponsiveContainer>
+            )}
           </CardContent>
         </Card>
       </div>
@@ -194,25 +201,27 @@ export default function MarketPage() {
             <CardTitle>Rating vs Review Count</CardTitle>
           </CardHeader>
           <CardContent>
-            <ResponsiveContainer width="100%" height={300}>
-              <ScatterChart>
-                <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />
-                <XAxis dataKey="rating" name="Rating" domain={[2, 5]} fontSize={12} />
-                <YAxis dataKey="reviews" name="Reviews" fontSize={12} />
-                <ZAxis range={[40, 200]} />
-                <Tooltip cursor={{ strokeDasharray: "3 3" }} />
-                {["hotel", "cafe", "restaurant", "clinic", "coworking"].map(
-                  (cat) => (
-                    <Scatter
-                      key={cat}
-                      name={getCategoryLabel(cat)}
-                      data={scatterData.filter((d) => d.category === cat)}
-                      fill={getCategoryColor(cat)}
-                    />
-                  )
-                )}
-              </ScatterChart>
-            </ResponsiveContainer>
+            {mounted && (
+              <ResponsiveContainer width="100%" height={300}>
+                <ScatterChart>
+                  <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />
+                  <XAxis dataKey="rating" name="Rating" domain={[2, 5]} fontSize={12} />
+                  <YAxis dataKey="reviews" name="Reviews" fontSize={12} />
+                  <ZAxis range={[40, 200]} />
+                  <Tooltip cursor={{ strokeDasharray: "3 3" }} />
+                  {["hotel", "cafe", "restaurant", "clinic", "coworking"].map(
+                    (cat) => (
+                      <Scatter
+                        key={cat}
+                        name={getCategoryLabel(cat)}
+                        data={scatterData.filter((d) => d.category === cat)}
+                        fill={getCategoryColor(cat)}
+                      />
+                    )
+                  )}
+                </ScatterChart>
+              </ResponsiveContainer>
+            )}
           </CardContent>
         </Card>
 
@@ -222,17 +231,19 @@ export default function MarketPage() {
             <CardTitle>Price Level Analysis</CardTitle>
           </CardHeader>
           <CardContent>
-            <ResponsiveContainer width="100%" height={300}>
-              <BarChart data={priceLevels}>
-                <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />
-                <XAxis dataKey="level" fontSize={14} />
-                <YAxis yAxisId="left" fontSize={12} />
-                <YAxis yAxisId="right" orientation="right" domain={[0, 5]} fontSize={12} />
-                <Tooltip />
-                <Bar yAxisId="left" dataKey="count" fill="#3b82f6" radius={[6, 6, 0, 0]} name="Count" />
-                <Bar yAxisId="right" dataKey="avgRating" fill="#f59e0b" radius={[6, 6, 0, 0]} name="Avg Rating" />
-              </BarChart>
-            </ResponsiveContainer>
+            {mounted && (
+              <ResponsiveContainer width="100%" height={300}>
+                <BarChart data={priceLevels}>
+                  <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />
+                  <XAxis dataKey="level" fontSize={14} />
+                  <YAxis yAxisId="left" fontSize={12} />
+                  <YAxis yAxisId="right" orientation="right" domain={[0, 5]} fontSize={12} />
+                  <Tooltip />
+                  <Bar yAxisId="left" dataKey="count" fill="#3b82f6" radius={[6, 6, 0, 0]} name="Count" />
+                  <Bar yAxisId="right" dataKey="avgRating" fill="#f59e0b" radius={[6, 6, 0, 0]} name="Avg Rating" />
+                </BarChart>
+              </ResponsiveContainer>
+            )}
           </CardContent>
         </Card>
       </div>

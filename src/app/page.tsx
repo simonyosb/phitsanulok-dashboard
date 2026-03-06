@@ -1,5 +1,6 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import { StatCard } from "@/components/dashboard/stat-card";
 import {
   Card,
@@ -42,6 +43,8 @@ import {
 } from "recharts";
 
 export default function OverviewPage() {
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
   const totalPlaces = places.length;
   const avgRating = (
     places.reduce((sum, p) => sum + p.rating, 0) / totalPlaces
@@ -154,24 +157,26 @@ export default function OverviewPage() {
             <div className="flex gap-6">
               {/* Donut chart */}
               <div className="w-[160px] h-[160px] shrink-0">
-                <ResponsiveContainer width="100%" height="100%">
-                  <PieChart>
-                    <Pie
-                      data={pieData}
-                      cx="50%"
-                      cy="50%"
-                      innerRadius={45}
-                      outerRadius={72}
-                      paddingAngle={3}
-                      dataKey="value"
-                      stroke="none"
-                    >
-                      {pieData.map((entry, i) => (
-                        <Cell key={i} fill={entry.color} />
-                      ))}
-                    </Pie>
-                  </PieChart>
-                </ResponsiveContainer>
+                {mounted && (
+                  <ResponsiveContainer width="100%" height="100%">
+                    <PieChart>
+                      <Pie
+                        data={pieData}
+                        cx="50%"
+                        cy="50%"
+                        innerRadius={45}
+                        outerRadius={72}
+                        paddingAngle={3}
+                        dataKey="value"
+                        stroke="none"
+                      >
+                        {pieData.map((entry, i) => (
+                          <Cell key={i} fill={entry.color} />
+                        ))}
+                      </Pie>
+                    </PieChart>
+                  </ResponsiveContainer>
+                )}
               </div>
               {/* Legend */}
               <div className="flex-1 space-y-3 py-1">
@@ -209,46 +214,48 @@ export default function OverviewPage() {
             </CardTitle>
           </CardHeader>
           <CardContent>
-            <ResponsiveContainer width="100%" height={220}>
-              <BarChart data={barData} barCategoryGap="25%">
-                <CartesianGrid
-                  strokeDasharray="3 3"
-                  stroke="#e2e8f0"
-                  vertical={false}
-                />
-                <XAxis
-                  dataKey="name"
-                  fontSize={11}
-                  tickLine={false}
-                  axisLine={false}
-                  tick={{ fill: "#64748b" }}
-                />
-                <YAxis
-                  domain={[0, 5]}
-                  ticks={[0, 1, 2, 3, 4, 5]}
-                  fontSize={11}
-                  tickLine={false}
-                  axisLine={false}
-                  tick={{ fill: "#64748b" }}
-                  width={30}
-                />
-                <Tooltip
-                  contentStyle={{
-                    borderRadius: "10px",
-                    border: "1px solid #e2e8f0",
-                    boxShadow: "0 4px 12px rgba(0,0,0,0.08)",
-                    fontSize: "12px",
-                    padding: "8px 12px",
-                  }}
-                  formatter={(value: unknown) => [Number(value).toFixed(1), "Rating"]}
-                />
-                <Bar dataKey="avgRating" radius={[6, 6, 0, 0]} maxBarSize={48}>
-                  {barData.map((entry, i) => (
-                    <Cell key={i} fill={entry.fill} />
-                  ))}
-                </Bar>
-              </BarChart>
-            </ResponsiveContainer>
+            {mounted && (
+              <ResponsiveContainer width="100%" height={220}>
+                <BarChart data={barData} barCategoryGap="25%">
+                  <CartesianGrid
+                    strokeDasharray="3 3"
+                    stroke="#e2e8f0"
+                    vertical={false}
+                  />
+                  <XAxis
+                    dataKey="name"
+                    fontSize={11}
+                    tickLine={false}
+                    axisLine={false}
+                    tick={{ fill: "#64748b" }}
+                  />
+                  <YAxis
+                    domain={[0, 5]}
+                    ticks={[0, 1, 2, 3, 4, 5]}
+                    fontSize={11}
+                    tickLine={false}
+                    axisLine={false}
+                    tick={{ fill: "#64748b" }}
+                    width={30}
+                  />
+                  <Tooltip
+                    contentStyle={{
+                      borderRadius: "10px",
+                      border: "1px solid #e2e8f0",
+                      boxShadow: "0 4px 12px rgba(0,0,0,0.08)",
+                      fontSize: "12px",
+                      padding: "8px 12px",
+                    }}
+                    formatter={(value: unknown) => [Number(value).toFixed(1), "Rating"]}
+                  />
+                  <Bar dataKey="avgRating" radius={[6, 6, 0, 0]} maxBarSize={48}>
+                    {barData.map((entry, i) => (
+                      <Cell key={i} fill={entry.fill} />
+                    ))}
+                  </Bar>
+                </BarChart>
+              </ResponsiveContainer>
+            )}
           </CardContent>
         </Card>
       </div>

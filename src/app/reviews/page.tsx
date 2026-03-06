@@ -1,5 +1,6 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { places } from "@/data/places";
@@ -16,6 +17,8 @@ import {
 } from "recharts";
 
 export default function ReviewsPage() {
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
   const positiveKeywords = getTopKeywords("positive");
   const negativeKeywords = getTopKeywords("negative");
 
@@ -91,28 +94,30 @@ export default function ReviewsPage() {
             <CardTitle>Review Rating Distribution</CardTitle>
           </CardHeader>
           <CardContent>
-            <ResponsiveContainer width="100%" height={250}>
-              <BarChart data={reviewRatingDist}>
-                <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />
-                <XAxis dataKey="rating" fontSize={12} />
-                <YAxis fontSize={12} />
-                <Tooltip />
-                <Bar dataKey="count" radius={[6, 6, 0, 0]}>
-                  {reviewRatingDist.map((entry, i) => (
-                    <Cell
-                      key={entry.rating}
-                      fill={
-                        i <= 1
-                          ? "#ef4444"
-                          : i === 2
-                          ? "#f59e0b"
-                          : "#22c55e"
-                      }
-                    />
-                  ))}
-                </Bar>
-              </BarChart>
-            </ResponsiveContainer>
+            {mounted && (
+              <ResponsiveContainer width="100%" height={250}>
+                <BarChart data={reviewRatingDist}>
+                  <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />
+                  <XAxis dataKey="rating" fontSize={12} />
+                  <YAxis fontSize={12} />
+                  <Tooltip />
+                  <Bar dataKey="count" radius={[6, 6, 0, 0]}>
+                    {reviewRatingDist.map((entry, i) => (
+                      <Cell
+                        key={entry.rating}
+                        fill={
+                          i <= 1
+                            ? "#ef4444"
+                            : i === 2
+                            ? "#f59e0b"
+                            : "#22c55e"
+                        }
+                      />
+                    ))}
+                  </Bar>
+                </BarChart>
+              </ResponsiveContainer>
+            )}
           </CardContent>
         </Card>
 
@@ -122,20 +127,22 @@ export default function ReviewsPage() {
             <CardTitle>Top Positive Keywords</CardTitle>
           </CardHeader>
           <CardContent>
-            <ResponsiveContainer width="100%" height={250}>
-              <BarChart data={positiveKeywords.slice(0, 10)} layout="vertical">
-                <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />
-                <XAxis type="number" fontSize={12} />
-                <YAxis
-                  dataKey="keyword"
-                  type="category"
-                  fontSize={11}
-                  width={100}
-                />
-                <Tooltip />
-                <Bar dataKey="count" fill="#22c55e" radius={[0, 6, 6, 0]} />
-              </BarChart>
-            </ResponsiveContainer>
+            {mounted && (
+              <ResponsiveContainer width="100%" height={250}>
+                <BarChart data={positiveKeywords.slice(0, 10)} layout="vertical">
+                  <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />
+                  <XAxis type="number" fontSize={12} />
+                  <YAxis
+                    dataKey="keyword"
+                    type="category"
+                    fontSize={11}
+                    width={100}
+                  />
+                  <Tooltip />
+                  <Bar dataKey="count" fill="#22c55e" radius={[0, 6, 6, 0]} />
+                </BarChart>
+              </ResponsiveContainer>
+            )}
           </CardContent>
         </Card>
       </div>
@@ -148,20 +155,22 @@ export default function ReviewsPage() {
           </CardTitle>
         </CardHeader>
         <CardContent>
-          <ResponsiveContainer width="100%" height={250}>
-            <BarChart data={negativeKeywords.slice(0, 10)} layout="vertical">
-              <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />
-              <XAxis type="number" fontSize={12} />
-              <YAxis
-                dataKey="keyword"
-                type="category"
-                fontSize={11}
-                width={120}
-              />
-              <Tooltip />
-              <Bar dataKey="count" fill="#ef4444" radius={[0, 6, 6, 0]} />
-            </BarChart>
-          </ResponsiveContainer>
+          {mounted && (
+            <ResponsiveContainer width="100%" height={250}>
+              <BarChart data={negativeKeywords.slice(0, 10)} layout="vertical">
+                <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />
+                <XAxis type="number" fontSize={12} />
+                <YAxis
+                  dataKey="keyword"
+                  type="category"
+                  fontSize={11}
+                  width={120}
+                />
+                <Tooltip />
+                <Bar dataKey="count" fill="#ef4444" radius={[0, 6, 6, 0]} />
+              </BarChart>
+            </ResponsiveContainer>
+          )}
         </CardContent>
       </Card>
 
