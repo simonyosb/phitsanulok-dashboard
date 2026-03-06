@@ -1,4 +1,3 @@
-import { Card, CardContent } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 import type { LucideIcon } from "lucide-react";
 
@@ -7,8 +6,8 @@ interface StatCardProps {
   value: string | number;
   subtitle?: string;
   icon: LucideIcon;
+  iconBg?: string;
   iconColor?: string;
-  trend?: { value: string; positive: boolean };
 }
 
 export function StatCard({
@@ -16,40 +15,28 @@ export function StatCard({
   value,
   subtitle,
   icon: Icon,
-  iconColor = "text-[var(--primary)]",
-  trend,
+  iconBg = "bg-blue-50",
+  iconColor = "text-blue-600",
 }: StatCardProps) {
   return (
-    <Card>
-      <CardContent className="p-6">
-        <div className="flex items-start justify-between">
-          <div>
-            <p className="text-sm text-[var(--muted-foreground)]">{title}</p>
-            <p className="text-2xl font-bold mt-1">{value}</p>
-            {subtitle && (
-              <p className="text-xs text-[var(--muted-foreground)] mt-1">{subtitle}</p>
-            )}
-            {trend && (
-              <p
-                className={cn(
-                  "text-xs font-medium mt-1",
-                  trend.positive ? "text-green-600" : "text-red-600"
-                )}
-              >
-                {trend.value}
-              </p>
-            )}
-          </div>
-          <div
-            className={cn(
-              "flex h-10 w-10 items-center justify-center rounded-lg bg-blue-50",
-              iconColor
-            )}
-          >
-            <Icon className="h-5 w-5" />
-          </div>
+    <div className="rounded-2xl border border-[var(--border)] bg-white p-5 shadow-[0_1px_3px_rgba(0,0,0,0.04)]">
+      <div className="flex items-center gap-4">
+        <div
+          className={cn(
+            "flex h-12 w-12 shrink-0 items-center justify-center rounded-xl",
+            iconBg
+          )}
+        >
+          <Icon className={cn("h-6 w-6", iconColor)} />
         </div>
-      </CardContent>
-    </Card>
+        <div>
+          <p className="text-[13px] text-[var(--muted-foreground)] font-medium">{title}</p>
+          <p className="text-[26px] font-bold leading-tight tracking-tight mt-0.5">{value}</p>
+          {subtitle && (
+            <p className="text-[11px] text-[var(--muted-foreground)] mt-0.5">{subtitle}</p>
+          )}
+        </div>
+      </div>
+    </div>
   );
 }

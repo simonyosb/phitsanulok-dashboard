@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f8fafc;
+  --background: #f0f4f8;
   --foreground: #0f172a;
   --card: #ffffff;
   --card-foreground: #0f172a;
@@ -17,11 +17,6 @@
   --border: #e2e8f0;
   --ring: #2563eb;
   --radius: 0.75rem;
-  --chart-hotel: #3b82f6;
-  --chart-cafe: #f59e0b;
-  --chart-restaurant: #10b981;
-  --chart-clinic: #8b5cf6;
-  --chart-coworking: #ec4899;
 }
 
 * {
@@ -39,19 +34,15 @@ body {
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    sans-serif;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Smooth transitions */
-a,
-button {
+a, button {
   transition: all 0.15s ease;
 }
 
-/* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
@@ -67,21 +58,8 @@ button {
   background: #94a3b8;
 }
 
-/* Leaflet map fix */
 .leaflet-container {
   width: 100%;
   height: 100%;
   z-index: 1;
-}
-
-/* Card hover effect */
-.card-hover:hover {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  transform: translateY(-1px);
-  transition: all 0.2s ease;
-}
-
-/* Gradient header */
-.gradient-header {
-  background: linear-gradient(135deg, #1e40af 0%, #3b82f6 50%, #60a5fa 100%);
 }
