@@ -1,6 +1,6 @@
 // Phitsanulok Province Business Intelligence Dashboard
 // Data: Google Maps via Apify (2026-03-06) + supplementary data
-// Total: 38 places across 5 categories
+// Total: 30 places across 5 categories
 
 export interface Review {
   text: string;
@@ -389,25 +389,6 @@ export const places: Place[] = [
   },
   {
     "id": "place-5",
-    "name": "Jommalai Boutique Hotel",
-    "category": "hotel",
-    "subcategory": "โรงแรม",
-    "lat": 16.821132,
-    "lng": 100.265821,
-    "rating": 0,
-    "reviewCount": 0,
-    "openTime": "08:00",
-    "closeTime": "22:00",
-    "hasWebsite": false,
-    "hasSocialMedia": false,
-    "priceLevel": 2,
-    "photos": 1,
-    "topReviewKeywords": [],
-    "reviews": [],
-    "area": "Nan River"
-  },
-  {
-    "id": "place-6",
     "name": "การบูร เวลเนส สปา",
     "category": "restaurant",
     "subcategory": "สปา",
@@ -493,10 +474,10 @@ export const places: Place[] = [
         "language": "th"
       }
     ],
-    "area": "Naresuan University"
+    "area": "City Center"
   },
   {
-    "id": "place-7",
+    "id": "place-6",
     "name": "Dragon River Avenue (ดราก้อนริเวอร์อเวนิว)",
     "category": "hotel",
     "subcategory": "โรงแรม",
@@ -582,10 +563,10 @@ export const places: Place[] = [
         "language": "th"
       }
     ],
-    "area": "City Center"
+    "area": "Naresuan University"
   },
   {
-    "id": "place-8",
+    "id": "place-7",
     "name": "วังจันทน์ ริเวอร์วิว",
     "category": "hotel",
     "subcategory": "โรงแรม",
@@ -671,10 +652,10 @@ export const places: Place[] = [
         "language": "th"
       }
     ],
-    "area": "Train Station"
+    "area": "City Center"
   },
   {
-    "id": "place-9",
+    "id": "place-8",
     "name": "Hom Ka Tun - coffee and tea",
     "category": "cafe",
     "subcategory": "ร้านกาแฟ",
@@ -714,10 +695,10 @@ export const places: Place[] = [
         "language": "en"
       }
     ],
-    "area": "City Center"
+    "area": "Train Station"
   },
   {
-    "id": "place-10",
+    "id": "place-9",
     "name": "Baan Lhang Wangh บ้านหลังวัง",
     "category": "cafe",
     "subcategory": "ร้านกาแฟ",
@@ -806,7 +787,7 @@ export const places: Place[] = [
     "area": "City Center"
   },
   {
-    "id": "place-11",
+    "id": "place-10",
     "name": "ร้านลานหิน คอฟฟี่",
     "category": "cafe",
     "subcategory": "ร้านกาแฟ",
@@ -865,10 +846,10 @@ export const places: Place[] = [
         "language": "th"
       }
     ],
-    "area": "Nan River"
+    "area": "City Center"
   },
   {
-    "id": "place-12",
+    "id": "place-11",
     "name": "The Zense Boutique Hotel",
     "category": "hotel",
     "subcategory": "โรงแรม",
@@ -954,10 +935,10 @@ export const places: Place[] = [
         "language": "th"
       }
     ],
-    "area": "Topland Plaza"
+    "area": "Nan River"
   },
   {
-    "id": "place-13",
+    "id": "place-12",
     "name": "สำนักงานที่ดินจังหวัดพิษณุโลก สาขานครไทย",
     "category": "restaurant",
     "subcategory": "สถานที่ราชการ",
@@ -1043,48 +1024,10 @@ export const places: Place[] = [
         "language": "th"
       }
     ],
-    "area": "City Center"
+    "area": "Topland Plaza"
   },
   {
-    "id": "place-14",
-    "name": "Duangkaeo Mini Mart",
-    "category": "restaurant",
-    "subcategory": "ซูเปอร์มาร์เก็ต",
-    "lat": 17.118439,
-    "lng": 100.88155,
-    "rating": 0,
-    "reviewCount": 0,
-    "openTime": "08:00",
-    "closeTime": "22:00",
-    "hasWebsite": false,
-    "hasSocialMedia": false,
-    "priceLevel": 2,
-    "photos": 1,
-    "topReviewKeywords": [],
-    "reviews": [],
-    "area": "Naresuan University"
-  },
-  {
-    "id": "place-15",
-    "name": "Ning cha mook.",
-    "category": "cafe",
-    "subcategory": "ร้านกาแฟ",
-    "lat": 17.1095758,
-    "lng": 100.8584335,
-    "rating": 0,
-    "reviewCount": 0,
-    "openTime": "08:00",
-    "closeTime": "22:00",
-    "hasWebsite": false,
-    "hasSocialMedia": false,
-    "priceLevel": 2,
-    "photos": 3,
-    "topReviewKeywords": [],
-    "reviews": [],
-    "area": "City Center"
-  },
-  {
-    "id": "place-16",
+    "id": "place-13",
     "name": "Dek-cha พ่นไฟ สาขานครไทย",
     "category": "cafe",
     "subcategory": "ร้านกาแฟ",
@@ -1162,10 +1105,10 @@ export const places: Place[] = [
         "language": "en"
       }
     ],
-    "area": "Train Station"
+    "area": "City Center"
   },
   {
-    "id": "place-17",
+    "id": "place-14",
     "name": "ร้านครัวระเบียงครัว",
     "category": "restaurant",
     "subcategory": "ร้านอาหาร",
@@ -1227,48 +1170,10 @@ export const places: Place[] = [
         "language": "th"
       }
     ],
-    "area": "City Center"
+    "area": "Naresuan University"
   },
   {
-    "id": "place-18",
-    "name": "Nueng Diao",
-    "category": "restaurant",
-    "subcategory": "ซูเปอร์มาร์เก็ต",
-    "lat": 17.276112,
-    "lng": 100.600841,
-    "rating": 0,
-    "reviewCount": 0,
-    "openTime": "08:00",
-    "closeTime": "22:00",
-    "hasWebsite": false,
-    "hasSocialMedia": false,
-    "priceLevel": 2,
-    "photos": 1,
-    "topReviewKeywords": [],
-    "reviews": [],
-    "area": "City Center"
-  },
-  {
-    "id": "place-19",
-    "name": "49 ม.10 ต.นครไทย อ.นครไทย จ.พิษณุโลก 65120",
-    "category": "restaurant",
-    "subcategory": "ร้านค้า",
-    "lat": 17.1413091,
-    "lng": 100.8725857,
-    "rating": 0,
-    "reviewCount": 0,
-    "openTime": "08:00",
-    "closeTime": "22:00",
-    "hasWebsite": false,
-    "hasSocialMedia": false,
-    "priceLevel": 2,
-    "photos": 1,
-    "topReviewKeywords": [],
-    "reviews": [],
-    "area": "Nan River"
-  },
-  {
-    "id": "place-20",
+    "id": "place-15",
     "name": "The Imperial Hotel and Convention Centre Phitsanulok",
     "category": "hotel",
     "subcategory": "โรงแรม",
@@ -1357,7 +1262,7 @@ export const places: Place[] = [
     "area": "Nan River"
   },
   {
-    "id": "place-21",
+    "id": "place-16",
     "name": "ร้านพุงกาง ลาบขม ต้มแซบ",
     "category": "restaurant",
     "subcategory": "ร้านอาหาร",
@@ -1402,10 +1307,10 @@ export const places: Place[] = [
         "language": "th"
       }
     ],
-    "area": "City Center"
+    "area": "Train Station"
   },
   {
-    "id": "place-22",
+    "id": "place-17",
     "name": "ร้านอาหาร The Pool Cafe Bar",
     "category": "cafe",
     "subcategory": "ร้านอาหาร",
@@ -1491,10 +1396,10 @@ export const places: Place[] = [
         "language": "en"
       }
     ],
-    "area": "Naresuan University"
+    "area": "City Center"
   },
   {
-    "id": "place-23",
+    "id": "place-18",
     "name": "ร้าน ภ สำเภา",
     "category": "restaurant",
     "subcategory": "ร้านอาหาร",
@@ -1535,26 +1440,7 @@ export const places: Place[] = [
     "area": "City Center"
   },
   {
-    "id": "place-24",
-    "name": "ร้านกาแฟสดคนไท",
-    "category": "cafe",
-    "subcategory": "ร้านกาแฟ",
-    "lat": 17.2076092,
-    "lng": 100.8596055,
-    "rating": 0,
-    "reviewCount": 0,
-    "openTime": "08:00",
-    "closeTime": "22:00",
-    "hasWebsite": true,
-    "hasSocialMedia": false,
-    "priceLevel": 2,
-    "photos": 6,
-    "topReviewKeywords": [],
-    "reviews": [],
-    "area": "Train Station"
-  },
-  {
-    "id": "place-25",
+    "id": "place-19",
     "name": "โรงแรม โยเดีย เฮอริเทจ - Yodia Heritage Boutique Hotel",
     "category": "hotel",
     "subcategory": "โรงแรม",
@@ -1640,48 +1526,10 @@ export const places: Place[] = [
         "language": "en"
       }
     ],
-    "area": "City Center"
-  },
-  {
-    "id": "place-26",
-    "name": "ร้านโฉมถวิล",
-    "category": "restaurant",
-    "subcategory": "ร้านสะดวกซื้อ",
-    "lat": 17.099469,
-    "lng": 100.8355612,
-    "rating": 0,
-    "reviewCount": 0,
-    "openTime": "08:00",
-    "closeTime": "22:00",
-    "hasWebsite": false,
-    "hasSocialMedia": false,
-    "priceLevel": 2,
-    "photos": 1,
-    "topReviewKeywords": [],
-    "reviews": [],
-    "area": "City Center"
-  },
-  {
-    "id": "place-27",
-    "name": "ต้นไม้กับกาแฟ",
-    "category": "cafe",
-    "subcategory": "ร้านกาแฟ",
-    "lat": 17.1491009,
-    "lng": 100.9556911,
-    "rating": 0,
-    "reviewCount": 0,
-    "openTime": "08:00",
-    "closeTime": "22:00",
-    "hasWebsite": false,
-    "hasSocialMedia": false,
-    "priceLevel": 2,
-    "photos": 4,
-    "topReviewKeywords": [],
-    "reviews": [],
     "area": "Nan River"
   },
   {
-    "id": "place-28",
+    "id": "place-20",
     "name": "ส้มตำเจ๊เขียวหนองทอง",
     "category": "restaurant",
     "subcategory": "ร้านอาหาร",
@@ -1770,7 +1618,7 @@ export const places: Place[] = [
     "area": "Topland Plaza"
   },
   {
-    "id": "place-29",
+    "id": "place-21",
     "name": "HUB Phitsanulok Co-working",
     "category": "coworking",
     "subcategory": "co-working space",
@@ -1814,7 +1662,7 @@ export const places: Place[] = [
     "area": "City Center"
   },
   {
-    "id": "place-30",
+    "id": "place-22",
     "name": "JEAB Space",
     "category": "coworking",
     "subcategory": "co-working space",
@@ -1852,7 +1700,7 @@ export const places: Place[] = [
     "area": "Naresuan University"
   },
   {
-    "id": "place-31",
+    "id": "place-23",
     "name": "The Desk PLK",
     "category": "coworking",
     "subcategory": "co-working space",
@@ -1890,7 +1738,7 @@ export const places: Place[] = [
     "area": "Nan River"
   },
   {
-    "id": "place-32",
+    "id": "place-24",
     "name": "WorkCafe Connect",
     "category": "coworking",
     "subcategory": "co-working cafe",
@@ -1928,7 +1776,7 @@ export const places: Place[] = [
     "area": "Train Station"
   },
   {
-    "id": "place-33",
+    "id": "place-25",
     "name": "Digital Nomad PLK",
     "category": "coworking",
     "subcategory": "co-working space",
@@ -1966,7 +1814,7 @@ export const places: Place[] = [
     "area": "City Center"
   },
   {
-    "id": "place-34",
+    "id": "place-26",
     "name": "Phitsanulok Skin Clinic",
     "category": "clinic",
     "subcategory": "aesthetic clinic",
@@ -2004,7 +1852,7 @@ export const places: Place[] = [
     "area": "City Center"
   },
   {
-    "id": "place-35",
+    "id": "place-27",
     "name": "Dr. Smile Dental Clinic",
     "category": "clinic",
     "subcategory": "dental clinic",
@@ -2042,7 +1890,7 @@ export const places: Place[] = [
     "area": "City Center"
   },
   {
-    "id": "place-36",
+    "id": "place-28",
     "name": "The Face Clinic Phitsanulok",
     "category": "clinic",
     "subcategory": "aesthetic clinic",
@@ -2080,7 +1928,7 @@ export const places: Place[] = [
     "area": "City Center"
   },
   {
-    "id": "place-37",
+    "id": "place-29",
     "name": "Nara Beauty Clinic",
     "category": "clinic",
     "subcategory": "aesthetic clinic",
@@ -2118,7 +1966,7 @@ export const places: Place[] = [
     "area": "Topland Plaza"
   },
   {
-    "id": "place-38",
+    "id": "place-30",
     "name": "Slim & Shape Center",
     "category": "clinic",
     "subcategory": "aesthetic clinic",

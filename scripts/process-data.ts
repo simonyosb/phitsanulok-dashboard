@@ -82,8 +82,31 @@ function main() {
     process.exit(1);
   }
 
-  const scraped: Place[] = JSON.parse(fs.readFileSync(scrapedPath, "utf-8"));
-  console.log(`Loaded ${scraped.length} scraped places`);
+  const rawScraped: Place[] = JSON.parse(
+    fs.readFileSync(scrapedPath, "utf-8")
+  );
+  console.log(`Loaded ${rawScraped.length} raw scraped places`);
+
+  // Filter out bad data: no rating, no name (address as name), etc.
+  const scraped = rawScraped.filter((p) => {
+    // Must have a valid rating > 0
+    if (!p.rating || p.rating <= 0) {
+      console.log(`  Filtered out (no rating): ${p.name}`);
+      return false;
+    }
+    // Filter out places whose name looks like an address
+    if (/^\d+\s+ม\.\d+/.test(p.name) || /^\d+\/\d+/.test(p.name)) {
+      console.log(`  Filtered out (address name): ${p.name}`);
+      return false;
+    }
+    // Must have at least 1 review
+    if (!p.reviewCount || p.reviewCount <= 0) {
+      console.log(`  Filtered out (no reviews): ${p.name}`);
+      return false;
+    }
+    return true;
+  });
+  console.log(`After filtering: ${scraped.length} valid places`);
 
   // Enrich scraped data
   const enriched = scraped.map((place, i) => ({
