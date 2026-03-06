@@ -1,5 +1,6 @@
-// Phitsanulok Province Business Intelligence Dashboard - Sample Dataset
-// Realistic data for demo to Thai provincial MPs
+// Phitsanulok Province Business Intelligence Dashboard
+// Data: Google Maps via Apify (2026-03-06) + supplementary data
+// Total: 38 places across 5 categories
 
 export interface Review {
   text: string;
@@ -28,1184 +29,2132 @@ export interface Place {
   area: string;
 }
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const places: Place[] = [
-  // ============================================================
-  // HOTELS
-  // ============================================================
   {
-    id: "hotel-001",
-    name: "The Pailyn Hotel Phitsanulok",
-    category: "hotel",
-    subcategory: "3-star hotel",
-    lat: 16.8265,
-    lng: 100.2610,
-    rating: 4.2,
-    reviewCount: 312,
-    openTime: "00:00",
-    closeTime: "23:59",
-    hasWebsite: true,
-    hasSocialMedia: true,
-    priceLevel: 2,
-    photos: 87,
-    topReviewKeywords: ["ทำเลดี", "ห้องสะอาด", "staff friendly", "breakfast included", "ใกล้ตลาดกลางคืน"],
-    reviews: [
-      { text: "ห้องพักสะอาด ทำเลดีมาก ใกล้ตลาดกลางคืน เดินไปได้สบาย พนักงานบริการดี", rating: 5, date: "2025-11-15", language: "th" },
-      { text: "Great location near the night market. Room was clean and spacious. Will come back!", rating: 4, date: "2025-10-22", language: "en" },
-      { text: "อาหารเช้าหลากหลาย แต่ห้องน้ำค่อนข้างเก่า ต้องปรับปรุง", rating: 3, date: "2025-09-08", language: "th" },
-      { text: "Decent stay for the price. AC works well. A bit noisy from the street at night.", rating: 3, date: "2025-08-30", language: "en" },
+    "id": "place-1",
+    "name": "Little Jasmine by the River",
+    "category": "hotel",
+    "subcategory": "โรงแรม",
+    "lat": 16.8050835,
+    "lng": 100.2460907,
+    "rating": 4.7,
+    "reviewCount": 57,
+    "openTime": "08:00",
+    "closeTime": "22:00",
+    "hasWebsite": false,
+    "hasSocialMedia": true,
+    "priceLevel": 2,
+    "photos": 150,
+    "topReviewKeywords": [
+      "clean",
+      "far",
+      "there",
+      "you",
+      "with",
+      "his",
+      "place",
+      "excellent"
     ],
-    area: "City Center",
+    "reviews": [
+      {
+        "text": "We were there before NY 2025 and won’t go back there again.",
+        "rating": 1,
+        "date": "2026-01-28T14:32:16.627Z",
+        "language": "en"
+      },
+      {
+        "text": "บริการดีมากเลยค่ะเป็นกันเอง\nห้องพักสะอาด มีตลาดถนนคนเดินตอนเย็นถึง4ทุ่ม ของกินอร่อยของใช้ก็เยอะคนเดินก็เยอะมากกก😁😁",
+        "rating": 5,
+        "date": "2026-01-24T23:17:26.620Z",
+        "language": "th"
+      },
+      {
+        "text": "",
+        "rating": 4,
+        "date": "2026-01-07T05:53:23.951Z",
+        "language": "en"
+      },
+      {
+        "text": "Small, very clean and welcoming hotel. From the minute you arrive, Pon at the front desk takes care of you in every way. From check-in to preparing breakfast, he gets the job done quickly and helpfully, with a big smile on his face. The hotel is welcoming and very clean. The whole place smells wonderful. The rooms are clean and comfortable. The location is excellent, right on the riverfront. But the added bonus is definitely Pon, who accommodated every request with kindness and professionalism. His dedication to his work made me think he was the owner, but I discovered that he actually works as an employee.",
+        "rating": 5,
+        "date": "2026-01-05T14:04:26.700Z",
+        "language": "en"
+      },
+      {
+        "text": "L’hôtel est situé légèrement en retrait du centre-ville dans un quartier calme, proche d’un magnifique temple doré et de la rivière Nan. L’hôte est super accueillant, de bons conseils, aux petits soins et prépare un savoureux petit-déjeuner ! Une étape de repos incontournable de passage à Phitsanulok !",
+        "rating": 5,
+        "date": "2025-12-30T03:21:39.164Z",
+        "language": "en"
+      },
+      {
+        "text": "",
+        "rating": 5,
+        "date": "2025-12-12T09:58:33.994Z",
+        "language": "en"
+      },
+      {
+        "text": "Wow!! This small guesthouse is amazing and the personal service provided on-site by Pond is simply superb!\n\nThe hospitality is by far the best we've had in Thailand, and far exceeds that provided by other expensive high-class hotels. The coffee is excellent...great beans and well brewed...and the accompanying breakfast ideal. The on-site host is SO friendly, supportive and generous, and we felt so relaxed staying here.\n\nThe rooms are large and extremely clean, and the entire place has a relaxed funky vibe. We've thoroughly enjoyed the balcony looking over the river, particularly at night time, with a great view of the bridge and temple.\n\nThe location is excellent, especially on market night, and offers quick access to one of the best and authentic markets in Thailand - far better than those in Chaing Mai and Bangkok. So convenient and just around the corner so there is no noise. Also, its a quick stroll along the river to all the major attractions, or you can grab a taxi/grab.\n\nWe will definitely stay here again when we come back to Phitsanulok. This place is a gem and it deserves far more than five stars for the superb level of hospitality provided on-site by Pond.  Thankyou 🙏✨️",
+        "rating": 5,
+        "date": "2025-12-10T01:11:06.786Z",
+        "language": "en"
+      },
+      {
+        "text": "Très belle chambre juste en face du wat chantawantok ❤️ et a côté du walking street ❤️ parfait!!!!!",
+        "rating": 5,
+        "date": "2025-11-23T00:12:35.393Z",
+        "language": "en"
+      },
+      {
+        "text": "Little Jasmine by the river...\nเกสเฮ้าส์เล็กๆ ริมแม่น้ำน่านในตัวเมืองพิษณุโลก ไม่ได้จองล่วงหน้าหาข้อมูลที่พักไม่ถึงครึ่งชั่วโมงระหว่างเดินทางมาจากสุโขทัย เพื่อหาที่พักแบบด่วนเพราะเริ่มมืดแล้ว จองที่นี่เพราะเห็นรีวิวให้คะแนนสูงเลยกดจองผ่าน Booking.com ด้วยความรีบเลยไม่ได้ดูว่าห้องที่จองเป็นแชร์ห้องน้ำกับอีกห้องนึง โทรสอบถามที่พัก น้องผู้ดูแลช่วยเหลือแก้ปัญหาให้ดีมากๆ เปลี่ยนห้องให้แบบห้องน้ำส่วนตัว มีWelcome drink เป็นชาเสาวรส สดชื่นอร่อยมากค่ะ ห้องพักสะอาด กว้างขวาง สะดวก สบาย ตอนเช้ามีข้าวต้ม ผลไม้ ขนมหวาน น้ำส้ม กาแฟสด เป็น set มื้อเช้าที่อิ่มและอร่อยมาก น้องดูแลดีมากๆทั้งที่เพิ่งเคยเจอกันครั้งแรก แต่การให้บริการเสมือนเป็นญาติกัน น้องล้างรถให้อีกด้วย ขอบคุณมากๆสำหรับการใส่ใจลูกค้า บริการดีแบบนี้ครั้งหน้ามาหาอีกแน่นอนค่ะ ❤",
+        "rating": 5,
+        "date": "2025-11-11T09:33:15.868Z",
+        "language": "th"
+      },
+      {
+        "text": "",
+        "rating": 4,
+        "date": "2025-11-03T07:52:34.117Z",
+        "language": "en"
+      }
+    ],
+    "area": "City Center"
   },
   {
-    id: "hotel-002",
-    name: "Topland Hotel & Convention Centre",
-    category: "hotel",
-    subcategory: "3-star hotel",
-    lat: 16.8282,
-    lng: 100.2558,
-    rating: 4.0,
-    reviewCount: 578,
-    openTime: "00:00",
-    closeTime: "23:59",
-    hasWebsite: true,
-    hasSocialMedia: true,
-    priceLevel: 2,
-    photos: 124,
-    topReviewKeywords: ["ห้องประชุม", "shopping mall", "convenient", "ที่จอดรถเยอะ", "เก่าแต่สะอาด"],
-    reviews: [
-      { text: "โรงแรมเก่าแต่สะอาด มีห้างติดกันสะดวกมาก ที่จอดรถเยอะ", rating: 4, date: "2025-12-01", language: "th" },
-      { text: "Connected to Topland Plaza shopping center. Very convenient. Rooms are a bit dated but acceptable.", rating: 3, date: "2025-11-10", language: "en" },
-      { text: "เหมาะสำหรับนักธุรกิจ ห้องประชุมดี แต่ห้องพักควรรีโนเวท", rating: 3, date: "2025-10-05", language: "th" },
+    "id": "place-2",
+    "name": "โฮลาเทลริมน่าน",
+    "category": "hotel",
+    "subcategory": "โรงแรม",
+    "lat": 16.8218332,
+    "lng": 100.2626319,
+    "rating": 4.1,
+    "reviewCount": 352,
+    "openTime": "08:00",
+    "closeTime": "22:00",
+    "hasWebsite": true,
+    "hasSocialMedia": true,
+    "priceLevel": 2,
+    "photos": 379,
+    "topReviewKeywords": [
+      "good",
+      "wat",
+      "phra",
+      "great",
+      "this",
+      "hotel",
+      "nang",
+      "phaya"
     ],
-    area: "Topland Plaza",
+    "reviews": [
+      {
+        "text": "",
+        "rating": 5,
+        "date": "2026-03-02T12:55:03.938Z",
+        "language": "en"
+      },
+      {
+        "text": "",
+        "rating": 5,
+        "date": "2026-02-12T06:57:46.298Z",
+        "language": "en"
+      },
+      {
+        "text": "เป็นอีกหนึ่งโรงแรมที่ดีสำหรับพิษณุโลก ห้องพักสะอาด ทันสมัย ห้องพักกว้าง ตรงปก พนักงานอัธยาศัยดี เช็คอินเช็คเอาท์รวดเร็ว มีที่จอดรถรองรับหลายคัน สะดวกสบายโลเคชั่นใกล้กับวัดนางพญาและวัดใหญ่สามารถเดินเท้าไปได้ 200 เมตร และยังใกล้กับห้างท็อปแลนด์ของพิษณุโลก เดินทางไปไหนมาไหนสะดวกสบาย ข้อเสียสำหรับห้องพักที่ติดกับฝั่งถนนหรือวิวเมืองค่อนข้างเสียงดังได้ยินเสียงรถสัญจรไปมา ห้องไม่เก็บเสียง โดยรวมถือว่าดีครับ",
+        "rating": 4,
+        "date": "2026-02-10T16:52:34.328Z",
+        "language": "th"
+      },
+      {
+        "text": "",
+        "rating": 3,
+        "date": "2026-01-28T06:33:13.038Z",
+        "language": "en"
+      },
+      {
+        "text": "Great location, great breakfast, good front desk staff",
+        "rating": 4,
+        "date": "2026-01-20T00:41:57.732Z",
+        "language": "en"
+      },
+      {
+        "text": "ทุกอย่างโอเค ชอบสุดๆที่อยู่ข้างหลังหรือข้างๆวัดนางพญา ให้ 10\nแต่หักคะแนนที่วางฝักบัวหัก วางไม่ได้ เตียงนอนแล้วปวดหลัง",
+        "rating": 4,
+        "date": "2026-01-08T09:45:16.517Z",
+        "language": "th"
+      },
+      {
+        "text": "ดีมาก เตียงนอนหลับสบายไม่ปวดหลังเลย ไม่ปวดคอ. แต่อาหารน้อยไปหน่อย",
+        "rating": 5,
+        "date": "2026-01-01T03:15:49.602Z",
+        "language": "th"
+      },
+      {
+        "text": "ที่พักนี้ อยู่ใกล้ วัดนางพญา และ วัดพระศรีรัตนมหาธาตุ\nเดินได้สบายๆ\nที่พักมีที่จอดรถสะดวก\nห้องพัก /อาหารเช้า ใช้ได้ค่ะ\nห้องน้ำ  ไม่ลื่น น้ำแรงดี",
+        "rating": 4,
+        "date": "2025-12-15T08:55:35.540Z",
+        "language": "th"
+      },
+      {
+        "text": "ห้องพักสะอาดและเป็นระเบียบเรียบร้อย และนอกจากจะมีน้ำดื่มฟรีแล้ว ยังมีน้ำผลไม้และของว่างให้ด้วย 😊 ห้องน้ำมีน้ำอุ่นและแรงดันน้ำดี 🥰👌 เตียงนุ่มสบาย ☺️ มีร้านอาหารอยู่ใกล้ๆ และมีวัดที่มีชื่อเสียงอยู่ข้างๆ 🥰💕💕💕 สาธุ 🙏 ฉันแนะนำเลย 😊👍👍👍",
+        "rating": 5,
+        "date": "2025-12-13T22:50:14.612Z",
+        "language": "th"
+      },
+      {
+        "text": "This is a good value hotel, close to Wat Phra Si Rattana Mahathat, locally known as Wat Yai, and also Wat Nang Phaya.\nThe former is home to a venerated Buddha image called Phra Phuttha Chinnarat, and the latter a huge Buddha image called Phra Nang Phaya. If you like temples then, this hotel is a good first choice.\nThe rooms are clean, but some don't have daylight despite having window. These rooms are cheaper though.",
+        "rating": 5,
+        "date": "2025-12-09T19:29:50.051Z",
+        "language": "en"
+      }
+    ],
+    "area": "Nan River"
   },
   {
-    id: "hotel-003",
-    name: "Nan Boutique Hotel",
-    category: "hotel",
-    subcategory: "boutique hotel",
-    lat: 16.8210,
-    lng: 100.2660,
-    rating: 4.6,
-    reviewCount: 189,
-    openTime: "00:00",
-    closeTime: "23:59",
-    hasWebsite: true,
-    hasSocialMedia: true,
-    priceLevel: 3,
-    photos: 156,
-    topReviewKeywords: ["วิวแม่น้ำน่าน", "river view", "romantic", "ตกแต่งสวย", "คุ้มค่า"],
-    reviews: [
-      { text: "วิวแม่น้ำน่านสวยมาก ห้องตกแต่งสไตล์ไทยร่วมสมัย ประทับใจมาก", rating: 5, date: "2025-12-10", language: "th" },
-      { text: "Beautiful boutique hotel right on the Nan River. The sunset view from our room was absolutely stunning.", rating: 5, date: "2025-11-28", language: "en" },
-      { text: "ราคาค่อนข้างสูงสำหรับพิษณุโลก แต่ได้บรรยากาศดี อาหารเช้าอร่อย", rating: 4, date: "2025-10-15", language: "th" },
+    "id": "place-3",
+    "name": "จอมมาลัย บูติก โฮเทล",
+    "category": "hotel",
+    "subcategory": "โรงแรม",
+    "lat": 16.8178451,
+    "lng": 100.2807298,
+    "rating": 4,
+    "reviewCount": 135,
+    "openTime": "08:00",
+    "closeTime": "22:00",
+    "hasWebsite": false,
+    "hasSocialMedia": false,
+    "priceLevel": 2,
+    "photos": 33,
+    "topReviewKeywords": [
+      "check​",
+      "ที่จอดรถเยอะ",
+      "out",
+      "ราคา",
+      "450",
+      "โทรมาจองไว้ล่วงหน้า",
+      "เพราะมาถึมืด",
+      "กลัวไม่มีที่พัก"
     ],
-    area: "Nan River",
+    "reviews": [
+      {
+        "text": "โทรมาจองไว้ล่วงหน้า เพราะมาถึมืด กลัวไม่มีที่พัก ลุงบอกได้จองไว้เรียบร้อย ละมาถึงตี 2 บอกให้ห้องพักคนอื่นไปแล้ว บริการโคตรแย่",
+        "rating": 1,
+        "date": "2026-02-23T20:22:07.881Z",
+        "language": "th"
+      },
+      {
+        "text": "ห้องพักราคาไม่แพง ห้องใหญ่พอสมควร ห้องพักสะอาด เตียงนุ่มนอนสบาย แอร์เย็น น้ำแรง อินเตอร์เนตไว มีตู้เย็นขนาดใหญ่ ที่จอดรถเยอะ",
+        "rating": 5,
+        "date": "2026-02-23T15:46:22.602Z",
+        "language": "th"
+      },
+      {
+        "text": "มาจาก กทม. เข้ามา Check​ in กับคุณลุง วันที่ 29 ม.ค. 69 ถามรายละเอียด​การ Check​ out บอกว่าเป็น 30 ม.ค. 69 ก่อนเที่ยง\n\nสรุปตอน 10.00 น. มี ผู้หญิง​อีกคนมานั่ง บอกให้ Check​ out วันนี้​เลย ก่อน 12.00 น.",
+        "rating": 1,
+        "date": "2026-01-29T03:04:50.897Z",
+        "language": "th"
+      },
+      {
+        "text": "ดูรูปลักษณ์น่าจะบริการดี",
+        "rating": 5,
+        "date": "2026-01-27T01:26:18.732Z",
+        "language": "th"
+      },
+      {
+        "text": "ตาแก่ ผช หน้าเค้าเตอร์ พูดจา หมาไม่แดกมาพักที่นี้หลายครั้งละ กี่ครั้งก็ไปเป็นแบบเดิม ไม่มีใจที่จะบริการ หรือง่วงนอน ก็ควรพักผ่อนอยู่บ้านนะ",
+        "rating": 1,
+        "date": "2026-01-05T15:18:38.259Z",
+        "language": "th"
+      },
+      {
+        "text": "ผู้ชายหน้าเคาร์เตอร์ พูดจาไม่ดี ตะคอกใส่ลูกค้า ไม่ทราบว่าอารมณ์เสียจากไหนมา ก็ไม่ควรมาพูดจาเสียมารยาทแบบนี้ครับ",
+        "rating": 1,
+        "date": "2025-12-17T05:31:06.433Z",
+        "language": "th"
+      },
+      {
+        "text": "ที่จอดรถเยอะครับ ห้องกว้างพอสมควร ราคา 450 ผ้าปูเปลี่ยน ใหม่ตลอดโอเคครับ จริงๆอยากจะให้ประมาณ 3.5 แต่มันไม่มีให้เลือก โดยรวมแล้วก็คือโอเคราคานี้กับคุณภาพประมาณนี้",
+        "rating": 3,
+        "date": "2025-12-01T06:58:49.795Z",
+        "language": "th"
+      },
+      {
+        "text": "กว้าง ที่จอดรถเยอะ",
+        "rating": 5,
+        "date": "2025-11-27T10:35:35.371Z",
+        "language": "th"
+      },
+      {
+        "text": "ห้องพัก : ความสะอาดโอเค ผ้าห่มหนากำลังดี ผ้าขนหนูไม่มีกลิ่นอับ มีโต๊ะเขียนหนังสือ ตู้เย็น น้ำดื่ม ที่แขวนเสื้อ แต่ระเบียงห้องอาจจะฝุ่นจับไปสักนิด\n\nบริการ : ช่วงเช้ามีน้ำอุ่น กาแฟ หิวยามดึกมีมาม่ากระป๋องและตู้เครื่องดื่ม ลานจอดรถมีทั้งใต้หลังคาและลานโล่งสามารถรองรับรถได้พอสมควร\n\nบรรยากาศ : ใกล้เมือง เข้าออกได้สะดวกหลายทาง ไม่เสียงดังรบกวน\n\nราคา : เหมาะสมครับ",
+        "rating": 4,
+        "date": "2025-11-17T11:04:24.766Z",
+        "language": "th"
+      },
+      {
+        "text": "",
+        "rating": 5,
+        "date": "2025-07-30T23:50:21.507Z",
+        "language": "en"
+      }
+    ],
+    "area": "Train Station"
   },
   {
-    id: "hotel-004",
-    name: "Yodia Heritage Hotel",
-    category: "hotel",
-    subcategory: "boutique hotel",
-    lat: 16.8195,
-    lng: 100.2640,
-    rating: 4.5,
-    reviewCount: 241,
-    openTime: "00:00",
-    closeTime: "23:59",
-    hasWebsite: true,
-    hasSocialMedia: true,
-    priceLevel: 3,
-    photos: 198,
-    topReviewKeywords: ["heritage", "ย้อนยุค", "สวยงาม", "quiet", "อาหารเช้าดี"],
-    reviews: [
-      { text: "โรงแรมสไตล์ heritage สวยมาก เหมือนย้อนเวลา บรรยากาศดีสุดๆ", rating: 5, date: "2025-11-20", language: "th" },
-      { text: "One of the best heritage hotels in Northern Thailand. The architecture is breathtaking.", rating: 5, date: "2025-10-30", language: "en" },
-      { text: "สวยงาม แต่ wifi ไม่ค่อยแรง ห้องน้ำเล็กไปหน่อย", rating: 4, date: "2025-09-25", language: "th" },
+    "id": "place-4",
+    "name": "Petit Paramata",
+    "category": "restaurant",
+    "subcategory": "เบด แอนด์ เบรกฟาสต์",
+    "lat": 16.8161962,
+    "lng": 100.2572811,
+    "rating": 4.8,
+    "reviewCount": 32,
+    "openTime": "08:00",
+    "closeTime": "22:00",
+    "hasWebsite": false,
+    "hasSocialMedia": false,
+    "priceLevel": 2,
+    "photos": 88,
+    "topReviewKeywords": [
+      "und",
+      "est",
+      "die",
+      "des",
+      "sehr",
+      "war",
+      "dans",
+      "wir"
     ],
-    area: "Nan River",
+    "reviews": [
+      {
+        "text": "",
+        "rating": 5,
+        "date": "2026-01-03T00:35:34.303Z",
+        "language": "en"
+      },
+      {
+        "text": "Magnifique maison d'hôtes dans la ville à  proximité des temples et des marchés.|Îlot de verdure. Beaucoup de plantes tropicales dans le jardin.|La chambre est spacieuse décorée avec soin. Le bâtiment est en bois de teck. Dans une pièce à  part est mis à disposition gratuitement des boissons et des fruits.|Le petit déjeuner est copieux et variés avec de petits mets thai exquis.|La propriétaire est très sympathique et riche d'un grand vécu. Elle a vécu en France. Elle parle donc français. Génial |Sa sœur nous a joué d'un instrument traditionnel|Un accueil chaleureux",
+        "rating": 3,
+        "date": "2025-12-04T23:59:59.999Z",
+        "language": "en"
+      },
+      {
+        "text": "Wir haben uns sehr wohl gefühlt. Die Vermieterin war sehr freundlich und hat sich viel Zeit genommen ohne aufdringlich zu sein. Das Zimmer war sauber und zweckmäßig eingerichtet, ausgestattet mit Klimaanlage. Am schönsten aber war es auf dem bequemen Sofa auf der Terrasse mit Blick in den Garten. Das Frühstück war sensationell in Geschmack und Vielfalt. Man konnte gar nicht alles essen, aber sie haben es für uns eingepackt und im Kühlschrank der Gäste-Küche, die wir benutzen durften, deponiert. Auch die kostenlosen Fahrräder, Getränke, Kaffee, Snacks und Obst für die Gäste sind nicht selbstverständlich. Wir haben uns, sehr wohl gefühlt und können die Unterkunft sehr empfehlen.",
+        "rating": 5,
+        "date": "2025-11-24T07:43:33.465Z",
+        "language": "en"
+      },
+      {
+        "text": "Prachtige homestay in Phitsanulok,  centraal gelegen en toch rustig. Veel privacy en een prachtige tuin om in te verblijven.",
+        "rating": 5,
+        "date": "2025-11-18T13:44:12.072Z",
+        "language": "en"
+      },
+      {
+        "text": "Wonderful homestay, very friendly hosts, an amazing breakfast  - altogether a clear recommendation.  I'd love to come back 👍🙂",
+        "rating": 5,
+        "date": "2025-10-01T14:14:23.686Z",
+        "language": "en"
+      },
+      {
+        "text": "Geweldige ervaring om hier te mogen zijn. Genoten van de gastvrijheid, het ontbijt en de stad. Met de prachtige tuin is het oase van rust.",
+        "rating": 5,
+        "date": "2025-02-19T14:37:59.171Z",
+        "language": "en"
+      },
+      {
+        "text": "",
+        "rating": 5,
+        "date": "2025-01-21T09:22:40.494Z",
+        "language": "en"
+      },
+      {
+        "text": "",
+        "rating": 5,
+        "date": "2024-09-07T11:45:34.389Z",
+        "language": "en"
+      },
+      {
+        "text": "This place is as good as it gets. A beautiful property owned and run by kind, super interesting people with great facilities and the most delicious breakfast (the leftovers of which were packed up for my lunch on the train later in the day). The room was very comfortable and I was given loads of ideas how to use my time in Pithsanulok. If you get the chance: STAY HERE!",
+        "rating": 5,
+        "date": "2024-08-08T12:37:45.255Z",
+        "language": "en"
+      },
+      {
+        "text": "Krásné místo, milí lidé, top zážitek",
+        "rating": 5,
+        "date": "2023-12-14T02:11:31.131Z",
+        "language": "en"
+      }
+    ],
+    "area": "Topland Plaza"
   },
   {
-    id: "hotel-005",
-    name: "P.U. Inn Resort",
-    category: "hotel",
-    subcategory: "3-star hotel",
-    lat: 16.7460,
-    lng: 100.1960,
-    rating: 3.5,
-    reviewCount: 145,
-    openTime: "00:00",
-    closeTime: "23:59",
-    hasWebsite: false,
-    hasSocialMedia: true,
-    priceLevel: 1,
-    photos: 32,
-    topReviewKeywords: ["ราคาถูก", "ใกล้มหาลัย", "budget", "พอใช้ได้", "เสียงดัง"],
-    reviews: [
-      { text: "ราคาถูก ใกล้มหาวิทยาลัย เหมาะสำหรับนักศึกษา แต่เสียงดังมากจากถนน", rating: 3, date: "2025-11-05", language: "th" },
-      { text: "Cheap and close to Naresuan University. Don't expect luxury. Bed was hard.", rating: 2, date: "2025-10-12", language: "en" },
-      { text: "พอใช้ได้ในราคานี้ แอร์เย็น แต่ห้องน้ำต้องปรับปรุง มีตะไคร่", rating: 3, date: "2025-09-18", language: "th" },
-      { text: "ไม่มีเว็บไซต์ โทรจองเท่านั้น ไม่สะดวก ห้องพักทั่วไป", rating: 3, date: "2025-08-20", language: "th" },
-    ],
-    area: "Naresuan University",
+    "id": "place-5",
+    "name": "Jommalai Boutique Hotel",
+    "category": "hotel",
+    "subcategory": "โรงแรม",
+    "lat": 16.821132,
+    "lng": 100.265821,
+    "rating": 0,
+    "reviewCount": 0,
+    "openTime": "08:00",
+    "closeTime": "22:00",
+    "hasWebsite": false,
+    "hasSocialMedia": false,
+    "priceLevel": 2,
+    "photos": 1,
+    "topReviewKeywords": [],
+    "reviews": [],
+    "area": "Nan River"
   },
   {
-    id: "hotel-006",
-    name: "Amarin Nakorn Hotel",
-    category: "hotel",
-    subcategory: "3-star hotel",
-    lat: 16.8240,
-    lng: 100.2580,
-    rating: 3.3,
-    reviewCount: 267,
-    openTime: "00:00",
-    closeTime: "23:59",
-    hasWebsite: false,
-    hasSocialMedia: false,
-    priceLevel: 1,
-    photos: 18,
-    topReviewKeywords: ["เก่ามาก", "ราคาถูก", "old", "needs renovation", "แอร์ไม่เย็น"],
-    reviews: [
-      { text: "โรงแรมเก่ามาก ต้องปรับปรุงหลายอย่าง แอร์ไม่เย็น ผ้าปูเก่า", rating: 2, date: "2025-12-02", language: "th" },
-      { text: "Very old hotel. Needs serious renovation. Only good thing is the central location.", rating: 2, date: "2025-11-15", language: "en" },
-      { text: "ราคาถูกจริง แต่คุณภาพตามราคา ไม่มีลิฟต์ ต้องขนกระเป๋าขึ้นเอง", rating: 2, date: "2025-10-28", language: "th" },
+    "id": "place-6",
+    "name": "การบูร เวลเนส สปา",
+    "category": "restaurant",
+    "subcategory": "สปา",
+    "lat": 16.7861544,
+    "lng": 100.2641544,
+    "rating": 4.3,
+    "reviewCount": 97,
+    "openTime": "08:00",
+    "closeTime": "22:00",
+    "hasWebsite": true,
+    "hasSocialMedia": true,
+    "priceLevel": 2,
+    "photos": 303,
+    "topReviewKeywords": [
+      "pet",
+      "friendly",
+      "ราคาไม่แพง",
+      "คุ้มค่าราคา",
+      "เป็นที่พัก",
+      "เอาน้องหมาไป",
+      "ตัว",
+      "น้องๆ"
     ],
-    area: "City Center",
+    "reviews": [
+      {
+        "text": "ราคาไม่แพง คุ้มค่าราคา เป็นที่พัก pet friendly เอาน้องหมาไป 2 ตัว น้องๆ Happy มาก ภายในรีสอร์ทมีที่กว้างให้น้องวิ่งปล่อยพลังสบายและร่มรื่นมากๆ และแนะนำอย่างยิ่งกับบริการ \"นวดน้ำมัน Image\" กับหมอเก๋ หมอนวดที่เก่งมากๆ",
+        "rating": 5,
+        "date": "2025-10-26T02:12:32.125Z",
+        "language": "th"
+      },
+      {
+        "text": "บ้านสายน้ำติดแม่น้ำโขง สวยงาม บรรยากาศชิว ชอบค่ะ",
+        "rating": 4,
+        "date": "2025-07-19T10:13:26.640Z",
+        "language": "th"
+      },
+      {
+        "text": "",
+        "rating": 4,
+        "date": "2025-07-01T10:19:32.785Z",
+        "language": "en"
+      },
+      {
+        "text": "ที่พักราคาไม่แพง pet friendly แต่มีค่าบริการ ค่อนข้างเงียบ ไม่มีอาหารเช้า ห้องกว้างสะอาดราคาดี มีไก่โอ้คให้น้องหมาน้องชอบมากเล่นทั้งคืน",
+        "rating": 4,
+        "date": "2025-05-24T14:21:47.899Z",
+        "language": "th"
+      },
+      {
+        "text": "",
+        "rating": 5,
+        "date": "2025-04-29T07:09:47.907Z",
+        "language": "en"
+      },
+      {
+        "text": "ประทับใจกับ Karaboon wellnes spa ทีพิดโลกมากกก แถมปลาให้น้องแมวมาเล่นอีก มาพักรอบสองแล้ว ทีีพักทีีเปน pet friendly แล้วราคาไม่แรง ในพิษณุโลกหายากมากกก ถ้ามาอีกแล้วมีหมาแมวมาด้วยจะปีกหมุดที่นีชัวร์",
+        "rating": 5,
+        "date": "2025-02-10T17:46:11.920Z",
+        "language": "th"
+      },
+      {
+        "text": "",
+        "rating": 5,
+        "date": "2025-01-24T13:16:11.186Z",
+        "language": "en"
+      },
+      {
+        "text": "นอนบ้านสีขาว กว้างขวางมากครับ มีห้องนั่งเล่นแยกกับห้องนอน คุ้มค่ากับราคาครับ",
+        "rating": 5,
+        "date": "2025-01-02T14:37:05.847Z",
+        "language": "th"
+      },
+      {
+        "text": "",
+        "rating": 5,
+        "date": "2024-10-12T02:18:41.511Z",
+        "language": "en"
+      },
+      {
+        "text": "บริการดี",
+        "rating": 5,
+        "date": "2024-09-29T05:01:27.326Z",
+        "language": "th"
+      }
+    ],
+    "area": "Naresuan University"
   },
   {
-    id: "hotel-007",
-    name: "Ruean Thai Hotel",
-    category: "hotel",
-    subcategory: "boutique hotel",
-    lat: 16.8230,
-    lng: 100.2670,
-    rating: 3.8,
-    reviewCount: 98,
-    openTime: "00:00",
-    closeTime: "23:59",
-    hasWebsite: false,
-    hasSocialMedia: true,
-    priceLevel: 2,
-    photos: 45,
-    topReviewKeywords: ["บ้านไทย", "Thai style", "ริมน้ำ", "เงียบสงบ", "ยุงเยอะ"],
-    reviews: [
-      { text: "บรรยากาศบ้านไทยริมน้ำ เงียบสงบมาก แต่ยุงเยอะ ควรเตรียมยาทากันยุง", rating: 4, date: "2025-11-08", language: "th" },
-      { text: "Charming Thai-style rooms by the river. Needs better mosquito control but otherwise lovely.", rating: 3, date: "2025-10-20", language: "en" },
-      { text: "ไม่มีเว็บไซต์ หาข้อมูลยาก ต้องโทรจอง แต่ที่พักดีมาก บรรยากาศสุดๆ", rating: 4, date: "2025-09-10", language: "th" },
+    "id": "place-7",
+    "name": "Dragon River Avenue (ดราก้อนริเวอร์อเวนิว)",
+    "category": "hotel",
+    "subcategory": "โรงแรม",
+    "lat": 16.8288361,
+    "lng": 100.2643371,
+    "rating": 4.2,
+    "reviewCount": 770,
+    "openTime": "08:00",
+    "closeTime": "22:00",
+    "hasWebsite": true,
+    "hasSocialMedia": true,
+    "priceLevel": 2,
+    "photos": 2014,
+    "topReviewKeywords": [
+      "ห้องพักสะอาดดี",
+      "แต่เสียงแอร์ดังมาก",
+      "ประตูออกแล้วคีย์การ์ดเข้าไม่ได้",
+      "แก้ไข",
+      "ถึง",
+      "ครั้ง",
+      "ทั้งช่วงดึก",
+      "และช่วงเช้า"
     ],
-    area: "Nan River",
+    "reviews": [
+      {
+        "text": "ห้องพักสะอาดดี แต่เสียงแอร์ดังมาก ประตูออกแล้วคีย์การ์ดเข้าไม่ได้ แก้ไข ถึง 2 ครั้ง ทั้งช่วงดึก และช่วงเช้า พนักงานบริการดี ที่จอดรถข้างถนน มีอาหารเช้า",
+        "rating": 2,
+        "date": "2026-02-28T02:52:55.252Z",
+        "language": "th"
+      },
+      {
+        "text": "",
+        "rating": 3,
+        "date": "2026-02-26T08:39:23.646Z",
+        "language": "en"
+      },
+      {
+        "text": "พนักงานบริการดีมากสุภาพ มีรถรับส่งไปวัดและสถานที่ใก้ลๆ อาหารที่ร้านอาหาร โดยรวมก็อร่อย แต่ออกเค็มไปหน่อยกินเล่นไม่ค่อยได้ต้องกินกับข้าว",
+        "rating": 4,
+        "date": "2026-02-25T11:28:10.780Z",
+        "language": "th"
+      },
+      {
+        "text": "",
+        "rating": 5,
+        "date": "2026-02-13T14:48:47.116Z",
+        "language": "en"
+      },
+      {
+        "text": "",
+        "rating": 5,
+        "date": "2026-02-08T12:01:21.179Z",
+        "language": "en"
+      },
+      {
+        "text": "มาทานอาหาร8โมงเช้า รอเป็นครึ่งชั่วโมงแล้วยังไม่ได้ทานเพราะเป็นเมนูที่ต้องสั่งทำจานต่อจาน พนักงานแจ้งว่ามีลูกค้ามาทานเป็นกรุ๊ป  ประเด็นคือมาทานแค่2 คน ใครจะมาก็คิดให้ดี รอได้ก็รอ ระบบจัดการหลังบ้านแย่มาก ส่วนตัวไม่ขอมาพักอีก",
+        "rating": 1,
+        "date": "2026-02-02T01:30:10.340Z",
+        "language": "th"
+      },
+      {
+        "text": "",
+        "rating": 5,
+        "date": "2026-01-24T10:52:22.858Z",
+        "language": "en"
+      },
+      {
+        "text": "",
+        "rating": 5,
+        "date": "2026-01-21T11:58:38.390Z",
+        "language": "en"
+      },
+      {
+        "text": "",
+        "rating": 5,
+        "date": "2026-01-17T10:34:01.735Z",
+        "language": "en"
+      },
+      {
+        "text": "ติดรินน้ำน่าน วิวกลางคืนสวย",
+        "rating": 4,
+        "date": "2026-01-10T12:41:23.736Z",
+        "language": "th"
+      }
+    ],
+    "area": "City Center"
   },
   {
-    id: "hotel-008",
-    name: "Lithai Guesthouse",
-    category: "hotel",
-    subcategory: "boutique hotel",
-    lat: 16.8175,
-    lng: 100.2700,
-    rating: 4.3,
-    reviewCount: 176,
-    openTime: "00:00",
-    closeTime: "23:59",
-    hasWebsite: true,
-    hasSocialMedia: true,
-    priceLevel: 1,
-    photos: 67,
-    topReviewKeywords: ["backpacker", "friendly", "ใกล้สถานีรถไฟ", "budget friendly", "สะอาด"],
-    reviews: [
-      { text: "ใกล้สถานีรถไฟ เดินไปได้ เจ้าของเป็นกันเอง ราคาถูกและสะอาด", rating: 5, date: "2025-12-05", language: "th" },
-      { text: "Best budget option in Phitsanulok! The owner is super helpful and speaks great English.", rating: 5, date: "2025-11-22", language: "en" },
-      { text: "ห้องเล็กแต่สะอาด มี wifi ฟรี เหมาะสำหรับ backpacker มาก", rating: 4, date: "2025-10-15", language: "th" },
+    "id": "place-8",
+    "name": "วังจันทน์ ริเวอร์วิว",
+    "category": "hotel",
+    "subcategory": "โรงแรม",
+    "lat": 16.8170792,
+    "lng": 100.2583696,
+    "rating": 4.2,
+    "reviewCount": 1039,
+    "openTime": "08:00",
+    "closeTime": "22:00",
+    "hasWebsite": true,
+    "hasSocialMedia": true,
+    "priceLevel": 2,
+    "photos": 1808,
+    "topReviewKeywords": [
+      "parking",
+      "went",
+      "employee",
+      "car",
+      "room",
+      "breakfast",
+      "ใจกลางเมือง",
+      "สะดวกมาก"
     ],
-    area: "Train Station",
-  },
-
-  // ============================================================
-  // CAFES & COFFEE SHOPS
-  // ============================================================
-  {
-    id: "cafe-001",
-    name: "Tuk Coffee Roasters",
-    category: "cafe",
-    subcategory: "specialty coffee",
-    lat: 16.8255,
-    lng: 100.2590,
-    rating: 4.7,
-    reviewCount: 423,
-    openTime: "07:00",
-    closeTime: "18:00",
-    hasWebsite: false,
-    hasSocialMedia: true,
-    priceLevel: 2,
-    photos: 234,
-    topReviewKeywords: ["กาแฟดี", "specialty coffee", "คั่วเอง", "latte art", "บรรยากาศดี"],
-    reviews: [
-      { text: "กาแฟคั่วเองอร่อยมาก เป็น specialty coffee ที่ดีที่สุดในพิษณุโลก Latte art สวยด้วย", rating: 5, date: "2025-12-08", language: "th" },
-      { text: "Finally, a proper specialty coffee shop in Phitsanulok! The single origin Ethiopian is amazing.", rating: 5, date: "2025-11-30", language: "en" },
-      { text: "ร้านเล็กๆ แต่กาแฟดีมาก คั่วสดทุกวัน ราคาแพงกว่าร้านทั่วไปนิดหน่อย แต่คุ้ม", rating: 5, date: "2025-11-01", language: "th" },
-      { text: "The space is tiny but coffee quality is top notch. Limited seating, often crowded on weekends.", rating: 4, date: "2025-10-10", language: "en" },
+    "reviews": [
+      {
+        "text": "",
+        "rating": 5,
+        "date": "2026-03-02T15:06:18.753Z",
+        "language": "en"
+      },
+      {
+        "text": "ใจกลางเมือง สะดวกมาก ห้องสะอาดค่ะ ได้ห้องฝั่งวิวแม่น้ำสวยดีค่ะ",
+        "rating": 5,
+        "date": "2026-03-01T16:01:53.617Z",
+        "language": "th"
+      },
+      {
+        "text": "",
+        "rating": 5,
+        "date": "2026-03-01T10:52:42.879Z",
+        "language": "en"
+      },
+      {
+        "text": "",
+        "rating": 4,
+        "date": "2026-02-26T04:46:29.963Z",
+        "language": "en"
+      },
+      {
+        "text": "",
+        "rating": 5,
+        "date": "2026-02-23T01:26:01.158Z",
+        "language": "en"
+      },
+      {
+        "text": "After returning from dinner there was no parking. I went to the front desk and an English speaking employee helped me.  We went to the parking garage and a second employee moved a car to make room for my car. Because of this service I will stay here again. The room, shower, hotel, Wi-Fi, breakfast were all acceptable.",
+        "rating": 4,
+        "date": "2026-02-15T01:41:17.874Z",
+        "language": "en"
+      },
+      {
+        "text": "",
+        "rating": 5,
+        "date": "2026-02-14T04:14:52.525Z",
+        "language": "en"
+      },
+      {
+        "text": "",
+        "rating": 5,
+        "date": "2026-02-09T12:41:09.920Z",
+        "language": "en"
+      },
+      {
+        "text": "Very central. Nice rooms and good breakfast.",
+        "rating": 5,
+        "date": "2026-02-08T17:28:35.451Z",
+        "language": "en"
+      },
+      {
+        "text": "โรงแรมสวยมาก ห้องกว้างขวาง น้องๆพนักงานน่ารักมาก ให้บริการดี คุ้มค่ากับราคา มีอาหารเช้า ถ้าได้ไปพิษณุโลกจะแวะพักที่นี่อีกแน่นอน",
+        "rating": 5,
+        "date": "2026-02-08T10:38:18.191Z",
+        "language": "th"
+      }
     ],
-    area: "City Center",
-  },
-  {
-    id: "cafe-002",
-    name: "Nan River Coffee & Bistro",
-    category: "cafe",
-    subcategory: "coffee shop",
-    lat: 16.8215,
-    lng: 100.2665,
-    rating: 4.4,
-    reviewCount: 287,
-    openTime: "08:00",
-    closeTime: "20:00",
-    hasWebsite: false,
-    hasSocialMedia: true,
-    priceLevel: 2,
-    photos: 189,
-    topReviewKeywords: ["วิวดี", "river view", "นั่งชิลล์", "เค้กอร่อย", "Instagrammable"],
-    reviews: [
-      { text: "วิวแม่น้ำน่านสวยมาก นั่งชิลล์ได้ทั้งวัน เค้กอร่อยมาก โดยเฉพาะเค้กมะพร้าว", rating: 5, date: "2025-12-03", language: "th" },
-      { text: "Lovely riverside cafe. The sunset view is incredible. Cakes are freshly baked.", rating: 4, date: "2025-11-18", language: "en" },
-      { text: "บรรยากาศดี แต่ร้อนมากตอนบ่ายถ้านั่งข้างนอก แอร์ข้างในไม่ค่อยเย็น", rating: 3, date: "2025-10-25", language: "th" },
-    ],
-    area: "Nan River",
-  },
-  {
-    id: "cafe-003",
-    name: "Medsai Cafe",
-    category: "cafe",
-    subcategory: "coffee shop",
-    lat: 16.7445,
-    lng: 100.1945,
-    rating: 4.5,
-    reviewCount: 356,
-    openTime: "07:30",
-    closeTime: "21:00",
-    hasWebsite: false,
-    hasSocialMedia: true,
-    priceLevel: 1,
-    photos: 145,
-    topReviewKeywords: ["ใกล้มน.", "ราคานักศึกษา", "wifi ดี", "นั่งทำงาน", "ชาเย็นอร่อย"],
-    reviews: [
-      { text: "ราคาเป็นมิตรกับนักศึกษา wifi แรงมาก นั่งทำงานได้ทั้งวัน ชาเย็นอร่อย", rating: 5, date: "2025-12-07", language: "th" },
-      { text: "Great cafe near Naresuan University. Affordable prices. Good wifi for working.", rating: 4, date: "2025-11-12", language: "en" },
-      { text: "คนเยอะมากช่วงเปิดเทอม หาที่นั่งยาก แต่เครื่องดื่มอร่อยและราคาดี", rating: 4, date: "2025-10-08", language: "th" },
-    ],
-    area: "Naresuan University",
+    "area": "Train Station"
   },
   {
-    id: "cafe-004",
-    name: "กาแฟบ้านเก่า (Baan Gao Cafe)",
-    category: "cafe",
-    subcategory: "coffee shop",
-    lat: 16.8200,
-    lng: 100.2630,
-    rating: 4.3,
-    reviewCount: 198,
-    openTime: "09:00",
-    closeTime: "19:00",
-    hasWebsite: false,
-    hasSocialMedia: true,
-    priceLevel: 2,
-    photos: 167,
-    topReviewKeywords: ["บ้านเก่า", "vintage", "ถ่ายรูปสวย", "กาแฟโบราณ", "homemade cake"],
-    reviews: [
-      { text: "ร้านกาแฟในบ้านเก่าสไตล์ไทย ถ่ายรูปสวยมาก กาแฟโบราณอร่อย เค้กทำเอง", rating: 5, date: "2025-11-25", language: "th" },
-      { text: "Charming vintage cafe in a traditional Thai house. The homemade cakes are delicious!", rating: 4, date: "2025-10-30", language: "en" },
-      { text: "บรรยากาศดีมาก แต่เปิดบ่ายมาก เก้าอี้ไม่ค่อยนั่งสบาย", rating: 3, date: "2025-09-20", language: "th" },
+    "id": "place-9",
+    "name": "Hom Ka Tun - coffee and tea",
+    "category": "cafe",
+    "subcategory": "ร้านกาแฟ",
+    "lat": 17.2763486,
+    "lng": 100.6027682,
+    "rating": 4.7,
+    "reviewCount": 3,
+    "openTime": "08:00",
+    "closeTime": "22:00",
+    "hasWebsite": true,
+    "hasSocialMedia": false,
+    "priceLevel": 2,
+    "photos": 6,
+    "topReviewKeywords": [
+      "good",
+      "coffee",
+      "around",
+      "here"
     ],
-    area: "City Center",
+    "reviews": [
+      {
+        "text": "Good coffee around here",
+        "rating": 4,
+        "date": "2022-05-01T04:04:11.155Z",
+        "language": "en"
+      },
+      {
+        "text": "",
+        "rating": 5,
+        "date": "2021-11-01T11:26:17.839Z",
+        "language": "en"
+      },
+      {
+        "text": "",
+        "rating": 5,
+        "date": "2021-11-01T03:01:46.914Z",
+        "language": "en"
+      }
+    ],
+    "area": "City Center"
   },
   {
-    id: "cafe-005",
-    name: "NU Brew Lab",
-    category: "cafe",
-    subcategory: "specialty coffee",
-    lat: 16.7425,
-    lng: 100.1920,
-    rating: 4.6,
-    reviewCount: 178,
-    openTime: "07:00",
-    closeTime: "19:00",
-    hasWebsite: true,
-    hasSocialMedia: true,
-    priceLevel: 2,
-    photos: 112,
-    topReviewKeywords: ["pour over", "เมล็ดกาแฟไทย", "Thai beans", "minimal", "นั่งสบาย"],
-    reviews: [
-      { text: "pour over ดีมาก ใช้เมล็ดกาแฟจากภาคเหนือ บรรยากาศร้านสไตล์ minimal สวย", rating: 5, date: "2025-12-01", language: "th" },
-      { text: "Excellent pour over coffee. They source beans from Northern Thai farms. Very knowledgeable baristas.", rating: 5, date: "2025-11-15", language: "en" },
-      { text: "ราคาค่อนข้างแพงสำหรับย่านมหาวิทยาลัย แต่คุณภาพกาแฟดีจริง", rating: 4, date: "2025-10-05", language: "th" },
+    "id": "place-10",
+    "name": "Baan Lhang Wangh บ้านหลังวัง",
+    "category": "cafe",
+    "subcategory": "ร้านกาแฟ",
+    "lat": 16.8305173,
+    "lng": 100.2601705,
+    "rating": 4.7,
+    "reviewCount": 252,
+    "openTime": "08:00",
+    "closeTime": "22:00",
+    "hasWebsite": true,
+    "hasSocialMedia": true,
+    "priceLevel": 2,
+    "photos": 1069,
+    "topReviewKeywords": [
+      "coffee",
+      "this",
+      "today",
+      "again",
+      "with",
+      "nice",
+      "amazing",
+      "been"
     ],
-    area: "Naresuan University",
+    "reviews": [
+      {
+        "text": "",
+        "rating": 5,
+        "date": "2026-02-18T06:58:57.550Z",
+        "language": "en"
+      },
+      {
+        "text": "",
+        "rating": 5,
+        "date": "2026-02-18T06:58:17.482Z",
+        "language": "en"
+      },
+      {
+        "text": "พอดีไม่ได้มาพักค่ะ มาใช้บริการด้านอาหารและเครื่องดื่ม\nบอกเลยชอบมากค่ะ เมนูของว่างและเครื่องดื่มทั้งสมัยก่อนและปัจจุบัน",
+        "rating": 4,
+        "date": "2026-02-17T04:01:00.649Z",
+        "language": "th"
+      },
+      {
+        "text": "",
+        "rating": 5,
+        "date": "2026-02-14T06:32:28.278Z",
+        "language": "en"
+      },
+      {
+        "text": "",
+        "rating": 5,
+        "date": "2026-02-01T03:29:22.688Z",
+        "language": "en"
+      },
+      {
+        "text": "Update 21.01.2026\nWe came here today again after 4 years, with the plan to have a nice Coffee. Unfortunately today the Coffee Machine doesnt working... bad luck.\n\nWonderful Bistro, beautiful surroundings and retro style design, history about Palace around. Delicious Coffee and Smoothies, Cakes and Food. Upstairs are 4 nice Rooms available for affordable Prices including Breakfast.",
+        "rating": 5,
+        "date": "2026-01-21T07:38:50.628Z",
+        "language": "en"
+      },
+      {
+        "text": "Extremely happy with the service, what make this place amazing is the reception boy, amazing host 😊",
+        "rating": 5,
+        "date": "2026-01-11T04:01:29.733Z",
+        "language": "en"
+      },
+      {
+        "text": "I've been traveling for a week in Thailand and so far this has been the best hotel experience! Probably top 10 within my life! If I'm in the area again I will select this hotel above all others!",
+        "rating": 5,
+        "date": "2026-01-11T04:00:12.555Z",
+        "language": "en"
+      },
+      {
+        "text": "ร้านอยู่หลังค่ายพระนเรศวรหาราช อยู่ติดริมน้ำบรรยากาศดีมาก ร้านตกแต่งสไตล์ไทยมีบอกเล่าเรื่องราวของสุโขทัยเป็นที่น่าสนใจยิ่ง  เครื่องดื่มรสชาติเข้มข้นดีมาก/ราคาไม่แพง เป็นทั้งที่พักและคาเฟ่ ที่จอดรถสะดวก",
+        "rating": 5,
+        "date": "2026-01-03T15:47:21.089Z",
+        "language": "th"
+      },
+      {
+        "text": "ที่พักร่มรื่น สะอาด สวยมาก บรรยากาศที่ได้รับอบอุ่น น้องที่ต้อนรับดูแลดีมาก อาหารเช้ามีให้เลือกหลากหลาย ทั้งกาแฟเลือกได้หลายเมนูโกโก้ น้ำผลไม้ ก็มี ห้องพักสะอาดมาก โดยรวมประทับใจที่สุด กลับมาใหม่แน่นอนคะ",
+        "rating": 3,
+        "date": "2026-01-01T23:59:59.999Z",
+        "language": "th"
+      }
+    ],
+    "area": "City Center"
   },
   {
-    id: "cafe-006",
-    name: "ชาชัก ณ พิษณุโลก (Cha Chak)",
-    category: "cafe",
-    subcategory: "tea house",
-    lat: 16.8260,
-    lng: 100.2575,
-    rating: 3.6,
-    reviewCount: 89,
-    openTime: "10:00",
-    closeTime: "20:00",
-    hasWebsite: false,
-    hasSocialMedia: false,
-    priceLevel: 1,
-    photos: 23,
-    topReviewKeywords: ["ชาไทย", "ชาชัก", "ราคาถูก", "ร้านเล็ก", "ธรรมดา"],
-    reviews: [
-      { text: "ชาชักหอมดี ราคาถูก แต่ร้านเล็กมาก ไม่มีที่นั่งสบาย", rating: 3, date: "2025-11-10", language: "th" },
-      { text: "Basic Thai tea shop. Nothing special but affordable. No social media presence, hard to find info.", rating: 3, date: "2025-10-22", language: "en" },
-      { text: "ชาเย็นพอใช้ได้ แต่ไม่มีเมนูอื่นๆ เลย ร้านไม่มีแอร์ ร้อน", rating: 3, date: "2025-09-15", language: "th" },
+    "id": "place-11",
+    "name": "ร้านลานหิน คอฟฟี่",
+    "category": "cafe",
+    "subcategory": "ร้านกาแฟ",
+    "lat": 17.2578542,
+    "lng": 100.5604167,
+    "rating": 4,
+    "reviewCount": 6,
+    "openTime": "08:00",
+    "closeTime": "22:00",
+    "hasWebsite": false,
+    "hasSocialMedia": false,
+    "priceLevel": 2,
+    "photos": 9,
+    "topReviewKeywords": [
+      "this",
+      "cafe",
+      "has",
+      "closed",
+      "อร่อยมากกกก"
     ],
-    area: "City Center",
+    "reviews": [
+      {
+        "text": "",
+        "rating": 3,
+        "date": "2019-08-20T11:39:50.987Z",
+        "language": "en"
+      },
+      {
+        "text": "This cafe has closed",
+        "rating": 1,
+        "date": "2019-08-03T04:30:48.204Z",
+        "language": "en"
+      },
+      {
+        "text": "",
+        "rating": 5,
+        "date": "2019-05-05T18:52:48.769Z",
+        "language": "en"
+      },
+      {
+        "text": "",
+        "rating": 5,
+        "date": "2018-09-26T08:07:57.297Z",
+        "language": "en"
+      },
+      {
+        "text": "",
+        "rating": 5,
+        "date": "2017-10-08T01:00:35.781Z",
+        "language": "en"
+      },
+      {
+        "text": "อร่อยมากกกก 💕",
+        "rating": 5,
+        "date": "2017-03-10T08:16:24.293Z",
+        "language": "th"
+      }
+    ],
+    "area": "Nan River"
   },
   {
-    id: "cafe-007",
-    name: "Topland Cafe Corner",
-    category: "cafe",
-    subcategory: "coffee shop",
-    lat: 16.8278,
-    lng: 100.2555,
-    rating: 3.2,
-    reviewCount: 67,
-    openTime: "10:00",
-    closeTime: "21:00",
-    hasWebsite: false,
-    hasSocialMedia: false,
-    priceLevel: 1,
-    photos: 12,
-    topReviewKeywords: ["ในห้าง", "ธรรมดา", "กาแฟเฉยๆ", "basic", "nothing special"],
-    reviews: [
-      { text: "กาแฟธรรมดามาก ไม่มีอะไรน่าสนใจ นั่งรอคนในห้างพอได้", rating: 3, date: "2025-11-28", language: "th" },
-      { text: "Very basic coffee. Tastes like instant. Only came here because nothing else was open.", rating: 2, date: "2025-10-18", language: "en" },
-      { text: "ราคาถูกแต่คุณภาพต่ำ ไม่แนะนำ ไปร้านอื่นดีกว่า", rating: 2, date: "2025-09-30", language: "th" },
+    "id": "place-12",
+    "name": "The Zense Boutique Hotel",
+    "category": "hotel",
+    "subcategory": "โรงแรม",
+    "lat": 16.809341,
+    "lng": 100.226373,
+    "rating": 4.3,
+    "reviewCount": 548,
+    "openTime": "08:00",
+    "closeTime": "22:00",
+    "hasWebsite": true,
+    "hasSocialMedia": true,
+    "priceLevel": 2,
+    "photos": 493,
+    "topReviewKeywords": [
+      "boutique",
+      "pool",
+      "view",
+      "das",
+      "zense",
+      "hotel",
+      "signature",
+      "bed"
     ],
-    area: "Topland Plaza",
+    "reviews": [
+      {
+        "text": "มาเช็คอินที่ The Zense Boutique Hotel Phitsanulok ครั้งแรก ประทับใจตั้งแต่เดินเข้าล็อบบี้เลยครับ โรงแรมดีไซน์โมเดิร์น ดูสะอาด โปร่ง โลเคชันอยู่ไม่ไกลจากตัวเมือง เดินทางสะดวกมาก\n\nห้องที่พักเป็นแบบ Signature Pool View Twin Bed ห้องกว้าง เตียงนอนสบาย สิ่งอำนวยความสะดวกครบครับ\n\nช่วงเย็นลงไปเดินเล่นริมสระ เปิดไฟแล้วบรรยากาศดี นั่งชิลได้เลย อาหารเช้าก็มีให้เลือกทั้งแบบไทยและอเมริกัน รสชาติโอเค\n\nโดยรวมถือว่าเป็นอีกที่พักในพิษณุโลกที่คุ้มค่า เหมาะทั้งมาพักผ่อนและมาทำงาน ถ้ามีโอกาสมาพิษณุโลกอีก ก็จะกลับมาพักที่นี่อีกแน่นอนครับ",
+        "rating": 5,
+        "date": "2026-03-03T02:18:33.687Z",
+        "language": "th"
+      },
+      {
+        "text": "ทริปพิษณุโลกครั้งนี้🏨\nเราพักโรงแรมที่ “ครบและคุ้ม” กับ\nThe Zense Boutique Hotel\nเป็นโรงแรม 4 ดาวดีไซน์ Modern Boutique เรียบหรู สงบ พักสบาย ใจกลางเมืองพิษณุโลก✨\n\nสิ่งที่ชอบมาก\n✨ ห้อง Signature Pool View King Bed เห็นวิวสระทุกห้อง\n✨ มีให้เลือก 3 Room Type\n✨ เช็คอินได้ 24 ชม. เหมาะกับคนเดินทางดึก\n✨ สระว่ายน้ำระบบเกลือ + Pool Bar “INFINITY”\n✨ ห้องอาหาร / ห้องประชุม\n✨ มี EV Charger สำหรับรถไฟฟ้า\n✨ พนักงานบริการดี\n\nเป็นโรงแรมที่เหมาะทั้งสายเที่ยว สายทำงาน หรือมาพักชาร์จพลังเฉย ๆ ราคาหลักพัน ใจกลางเมือง🤍",
+        "rating": 5,
+        "date": "2026-03-01T05:53:28.755Z",
+        "language": "th"
+      },
+      {
+        "text": "พักที่นี้ทุกครั้ง ที่มาพิษณุโลก ห้องเงียบ รวมๆประทับใจค่ะ",
+        "rating": 5,
+        "date": "2026-02-21T03:34:42.424Z",
+        "language": "th"
+      },
+      {
+        "text": "น้องๆพนักงานน่ารักทุกคน เข้าโรงแรมสิ่งแรกที่ประทับใจคือความหอมของโรงแรม หอมมากกกกกกก เตียงนุ่มนอนสบาย",
+        "rating": 5,
+        "date": "2026-02-09T07:00:45.009Z",
+        "language": "th"
+      },
+      {
+        "text": "ที่พักสะดวกสบาย สะอาด พนักงานบริการดีมากๆ",
+        "rating": 5,
+        "date": "2026-02-07T02:43:05.569Z",
+        "language": "th"
+      },
+      {
+        "text": "มี่จอดรถกว้าง ห้องสะอาด บริการดี",
+        "rating": 5,
+        "date": "2026-02-01T04:45:47.151Z",
+        "language": "th"
+      },
+      {
+        "text": "เราเข้าพัก3คืนค่ะ,ห้องพักใหญ่และสะอาด,สระว่ายน้ำใหญ่และผ่อนคลาย,อาหารอร่อยค่ะ,พนักบริการดียิ้มแย้ม,ประทับใจมากค่ะมีโอกาสจะแวะมาอีกค่ะ⭐️⭐️⭐️⭐️⭐️",
+        "rating": 5,
+        "date": "2026-01-21T02:55:10.012Z",
+        "language": "th"
+      },
+      {
+        "text": "ห้องพักสวย สะอาด ห้องพักกว้างขวาง แบ่งแยกโซนชัดเจน ระหว่าง ห้องนอน ห้องนั่งเล่น",
+        "rating": 5,
+        "date": "2026-01-19T16:26:09.069Z",
+        "language": "th"
+      },
+      {
+        "text": "Das Hotelzimmer ist für den Preis sehr gut. Leider war das Frühstück nicht das Beste, muss aber sagen für den Preis geht es in Ordnung. Personal sehr freundlich.",
+        "rating": 4,
+        "date": "2026-01-19T14:36:27.006Z",
+        "language": "en"
+      },
+      {
+        "text": "ห้องพักสะอาดคุ้มค่ากับราคา ได้ห้อง Garden View วิวสวนสวย เดินไปสระสะดวก ห้องพักหลับสบาย ประทับใจมาก พนักงานบริการดีมากๆ ห้องพักเหมือนโรงแรมในกรุงเทพ แอร์ฝัง ห้องกว้าง เรียบหรู มีอาหารเช้า มีที่ชาจไฟรถไฟฟ้า",
+        "rating": 5,
+        "date": "2026-01-19T05:24:06.167Z",
+        "language": "th"
+      }
+    ],
+    "area": "Topland Plaza"
   },
   {
-    id: "cafe-008",
-    name: "After the Rain Coffee",
-    category: "cafe",
-    subcategory: "specialty coffee",
-    lat: 16.8190,
-    lng: 100.2680,
-    rating: 4.8,
-    reviewCount: 312,
-    openTime: "08:00",
-    closeTime: "17:00",
-    hasWebsite: true,
-    hasSocialMedia: true,
-    priceLevel: 2,
-    photos: 278,
-    topReviewKeywords: ["best coffee", "กาแฟดีที่สุด", "must visit", "croissant", "aesthetic"],
-    reviews: [
-      { text: "กาแฟดีที่สุดในพิษณุโลก! ครัวซองต์กรอบอร่อยมาก ร้านสวยมากๆ", rating: 5, date: "2025-12-09", language: "th" },
-      { text: "Hands down the best coffee in Phitsanulok. Their croissants are flaky and buttery. A must visit!", rating: 5, date: "2025-12-01", language: "en" },
-      { text: "สวยมาก แต่ปิดเร็วมาก (5 โมงเย็น) คนเยอะสุดสัปดาห์ ต้องรอคิว", rating: 4, date: "2025-11-10", language: "th" },
+    "id": "place-13",
+    "name": "สำนักงานที่ดินจังหวัดพิษณุโลก สาขานครไทย",
+    "category": "restaurant",
+    "subcategory": "สถานที่ราชการ",
+    "lat": 17.1084541,
+    "lng": 100.8264715,
+    "rating": 3.4,
+    "reviewCount": 18,
+    "openTime": "08:00",
+    "closeTime": "22:00",
+    "hasWebsite": true,
+    "hasSocialMedia": false,
+    "priceLevel": 2,
+    "photos": 20,
+    "topReviewKeywords": [
+      "เจ้าหน้าที่หน้าตาดูเหนื่อยแต่ก็ยังยิ้ม",
+      "ขอบคุณนะคะที่ใส่ใจประชาชน",
+      "ฝากปรับปรุงเรื่องการบริการ",
+      "ของเจ้าหน้าที่ผู้ชายวัยรุ่นตัวสูงๆ",
+      "พูดจา",
+      "ใช้น้ำเสียงกับคนที่มาใช้บริการห่วยแตก",
+      "เป็นกรมที่ดินที่ห่วยแตกมาก",
+      "เจ้าหน้าที่"
     ],
-    area: "Nan River",
+    "reviews": [
+      {
+        "text": "เจ้าหน้าที่หน้าตาดูเหนื่อยแต่ก็ยังยิ้ม ขอบคุณนะคะที่ใส่ใจประชาชน",
+        "rating": 5,
+        "date": "2026-03-02T18:45:11.996Z",
+        "language": "th"
+      },
+      {
+        "text": "ฝากปรับปรุงเรื่องการบริการ ของเจ้าหน้าที่ผู้ชายวัยรุ่นตัวสูงๆ พูดจา ใช้น้ำเสียงกับคนที่มาใช้บริการห่วยแตก",
+        "rating": 1,
+        "date": "2025-12-05T06:36:41.600Z",
+        "language": "th"
+      },
+      {
+        "text": "เป็นกรมที่ดินที่ห่วยแตกมาก เจ้าหน้าที่ ที่ให้บริการทำเสมือนว่าตัวเองเป็นเจ้านาย บริการไม่ให้ความสะดวกแก่ประชาชนเลยทำเหยียด เหมือนตัวเองนี่เก่ง ข้านี้ละมีการศึกษา จะบอกอะไรให้ครับ เรียนมาเสียเปล่าเป็นราชการ คือข้าของแผ่นดิน  ควรมีจิตสำนึกที่ดีกว่านี้นะครับ ไม่ใช่คิดว่าตัวเองนี้ ยิ่งใหญ่กว่าใคร ฝากไว้ให้คิด 👎👎",
+        "rating": 1,
+        "date": "2025-10-14T14:33:34.887Z",
+        "language": "th"
+      },
+      {
+        "text": "ทำงานช้ามากๆรอหลับไปหลายตื่นยังไม่ถึงคิวเลย...",
+        "rating": 1,
+        "date": "2025-06-12T03:56:41.794Z",
+        "language": "th"
+      },
+      {
+        "text": "ไปใช้บริการมาเมื่อวาน ประทับใจมาก เจ้าหน้าที่แนะนำ บริการดี",
+        "rating": 5,
+        "date": "2025-02-22T08:55:57.423Z",
+        "language": "th"
+      },
+      {
+        "text": "เมื่อวานไปใช้บริการเกิดความประทับใจเนื่องจาก จนท. บริการดีมากๆค่ะ",
+        "rating": 5,
+        "date": "2025-02-22T02:21:06.714Z",
+        "language": "th"
+      },
+      {
+        "text": "บริการดีมากค่ะ",
+        "rating": 5,
+        "date": "2025-02-13T06:11:06.756Z",
+        "language": "th"
+      },
+      {
+        "text": "",
+        "rating": 4,
+        "date": "2023-05-12T08:33:09.245Z",
+        "language": "en"
+      },
+      {
+        "text": "ผมจะขอคัดค้านการรับมรดก ต้องทำยังไง\nซึ่งผมไม่โอเคแล้วตอนนี้ กรณีมารดาเสียชีวิต",
+        "rating": 5,
+        "date": "2023-01-24T06:57:43.566Z",
+        "language": "th"
+      },
+      {
+        "text": "บริหารจัดการได้ห๋วยแตกเท่าที่เคยติดต่อมา อธิบดีดูแลผู้ใต้บังคับบัญชาท่านด้วย",
+        "rating": 1,
+        "date": "2022-04-07T07:08:02.082Z",
+        "language": "th"
+      }
+    ],
+    "area": "City Center"
   },
   {
-    id: "cafe-009",
-    name: "Station Brew",
-    category: "cafe",
-    subcategory: "coffee shop",
-    lat: 16.8168,
-    lng: 100.2715,
-    rating: 4.1,
-    reviewCount: 134,
-    openTime: "06:30",
-    closeTime: "18:00",
-    hasWebsite: false,
-    hasSocialMedia: true,
-    priceLevel: 1,
-    photos: 56,
-    topReviewKeywords: ["ใกล้สถานี", "เปิดเช้า", "กาแฟเร่งด่วน", "take away", "สะดวก"],
-    reviews: [
-      { text: "สะดวกมาก อยู่ใกล้สถานีรถไฟ เปิดเช้า ได้ดื่มก่อนขึ้นรถไฟ กาแฟดีเลย", rating: 4, date: "2025-11-20", language: "th" },
-      { text: "Convenient spot near the train station. Good for a quick coffee before catching a train.", rating: 4, date: "2025-10-25", language: "en" },
-      { text: "กาแฟพอใช้ได้ ร้านเล็กมาก ไม่มีที่นั่ง ซื้อกลับอย่างเดียว", rating: 3, date: "2025-09-12", language: "th" },
-    ],
-    area: "Train Station",
-  },
-
-  // ============================================================
-  // RESTAURANTS
-  // ============================================================
-  {
-    id: "rest-001",
-    name: "ก๋วยเตี๋ยวห้อยขา (Flying Vegetable Noodle)",
-    category: "restaurant",
-    subcategory: "thai restaurant",
-    lat: 16.8245,
-    lng: 100.2615,
-    rating: 4.5,
-    reviewCount: 1243,
-    openTime: "09:00",
-    closeTime: "16:00",
-    hasWebsite: false,
-    hasSocialMedia: true,
-    priceLevel: 1,
-    photos: 567,
-    topReviewKeywords: ["ก๋วยเตี๋ยวห้อยขา", "flying vegetable", "must try", "ของดีพิษณุโลก", "คิวยาว"],
-    reviews: [
-      { text: "ของดีพิษณุโลก ต้องมาลอง! ก๋วยเตี๋ยวห้อยขา เอกลักษณ์ของเมืองนี้ อร่อยมาก", rating: 5, date: "2025-12-10", language: "th" },
-      { text: "The famous Flying Vegetable Noodle! A must-try when visiting Phitsanulok. Long queue but worth it.", rating: 5, date: "2025-11-28", language: "en" },
-      { text: "อร่อยแต่คิวยาวมาก รอเกือบ 1 ชม. ร้านร้อน ไม่มีแอร์", rating: 4, date: "2025-10-15", language: "th" },
-      { text: "Overrated honestly. The noodles are average. The 'flying' gimmick is fun but food is just okay.", rating: 3, date: "2025-09-20", language: "en" },
-    ],
-    area: "City Center",
+    "id": "place-14",
+    "name": "Duangkaeo Mini Mart",
+    "category": "restaurant",
+    "subcategory": "ซูเปอร์มาร์เก็ต",
+    "lat": 17.118439,
+    "lng": 100.88155,
+    "rating": 0,
+    "reviewCount": 0,
+    "openTime": "08:00",
+    "closeTime": "22:00",
+    "hasWebsite": false,
+    "hasSocialMedia": false,
+    "priceLevel": 2,
+    "photos": 1,
+    "topReviewKeywords": [],
+    "reviews": [],
+    "area": "Naresuan University"
   },
   {
-    id: "rest-002",
-    name: "ครัวบ้านสวน (Baan Suan Kitchen)",
-    category: "restaurant",
-    subcategory: "thai restaurant",
-    lat: 16.8225,
-    lng: 100.2645,
-    rating: 4.3,
-    reviewCount: 456,
-    openTime: "11:00",
-    closeTime: "22:00",
-    hasWebsite: false,
-    hasSocialMedia: true,
-    priceLevel: 2,
-    photos: 234,
-    topReviewKeywords: ["อาหารไทย", "สวนสวย", "garden", "ครอบครัว", "ปลาแม่น้ำน่าน"],
-    reviews: [
-      { text: "อาหารไทยรสชาติดี บรรยากาศสวนสวย เหมาะมาเป็นครอบครัว ปลาแม่น้ำน่านสดมาก", rating: 5, date: "2025-12-05", language: "th" },
-      { text: "Beautiful garden restaurant with excellent Thai food. The river fish dishes are outstanding.", rating: 4, date: "2025-11-18", language: "en" },
-      { text: "อาหารอร่อย แต่บริการช้ามาก รอนาน เหมาะสำหรับคนไม่รีบ", rating: 3, date: "2025-10-10", language: "th" },
-    ],
-    area: "Nan River",
+    "id": "place-15",
+    "name": "Ning cha mook.",
+    "category": "cafe",
+    "subcategory": "ร้านกาแฟ",
+    "lat": 17.1095758,
+    "lng": 100.8584335,
+    "rating": 0,
+    "reviewCount": 0,
+    "openTime": "08:00",
+    "closeTime": "22:00",
+    "hasWebsite": false,
+    "hasSocialMedia": false,
+    "priceLevel": 2,
+    "photos": 3,
+    "topReviewKeywords": [],
+    "reviews": [],
+    "area": "City Center"
   },
   {
-    id: "rest-003",
-    name: "Night Market Food Court",
-    category: "restaurant",
-    subcategory: "street food",
-    lat: 16.8252,
-    lng: 100.2608,
-    rating: 4.1,
-    reviewCount: 789,
-    openTime: "17:00",
-    closeTime: "23:00",
-    hasWebsite: false,
-    hasSocialMedia: false,
-    priceLevel: 1,
-    photos: 345,
-    topReviewKeywords: ["ตลาดกลางคืน", "ราคาถูก", "หลากหลาย", "night market", "street food"],
-    reviews: [
-      { text: "ตลาดกลางคืนพิษณุโลก อาหารหลากหลาย ราคาถูก ต้องมาลองทุกร้าน!", rating: 4, date: "2025-12-08", language: "th" },
-      { text: "Great night market with tons of food options. Everything is cheap and delicious.", rating: 4, date: "2025-11-22", language: "en" },
-      { text: "เปิดเฉพาะเย็น คนเยอะมากวันหยุด ที่นั่งหายาก", rating: 3, date: "2025-10-30", language: "th" },
+    "id": "place-16",
+    "name": "Dek-cha พ่นไฟ สาขานครไทย",
+    "category": "cafe",
+    "subcategory": "ร้านกาแฟ",
+    "lat": 17.1051252,
+    "lng": 100.8320407,
+    "rating": 4.9,
+    "reviewCount": 9,
+    "openTime": "08:00",
+    "closeTime": "22:00",
+    "hasWebsite": true,
+    "hasSocialMedia": false,
+    "priceLevel": 2,
+    "photos": 6,
+    "topReviewKeywords": [
+      "ร้านนี้อร่อย",
+      "อร่อยมากๆๆค่ะ",
+      "อร่อยมากค่ะ",
+      "เครื่องดื่มอร่อยมากๆ",
+      "วัตถุดิบคุณภาพดีไม่ใช้คอฟฟี่เมต👍👍👍👍👍👍👍👍👍👍👍",
+      "ชาอร่อยดีครับ"
     ],
-    area: "City Center",
+    "reviews": [
+      {
+        "text": "",
+        "rating": 5,
+        "date": "2022-01-09T08:10:57.525Z",
+        "language": "en"
+      },
+      {
+        "text": "",
+        "rating": 5,
+        "date": "2021-12-19T12:55:13.773Z",
+        "language": "en"
+      },
+      {
+        "text": "ร้านนี้อร่อย",
+        "rating": 5,
+        "date": "2021-12-19T04:07:46.653Z",
+        "language": "th"
+      },
+      {
+        "text": "",
+        "rating": 5,
+        "date": "2021-11-20T02:44:00.798Z",
+        "language": "en"
+      },
+      {
+        "text": "อร่อยมากๆๆค่ะ",
+        "rating": 5,
+        "date": "2021-08-14T03:56:58.081Z",
+        "language": "th"
+      },
+      {
+        "text": "อร่อยมากค่ะ",
+        "rating": 5,
+        "date": "2021-03-18T04:08:00.340Z",
+        "language": "th"
+      },
+      {
+        "text": "เครื่องดื่มอร่อยมากๆ วัตถุดิบคุณภาพดีไม่ใช้คอฟฟี่เมต👍👍👍👍👍👍👍👍👍👍👍",
+        "rating": 5,
+        "date": "2021-02-21T08:45:49.706Z",
+        "language": "th"
+      },
+      {
+        "text": "ชาอร่อยดีครับ",
+        "rating": 4,
+        "date": "2021-01-16T08:00:13.277Z",
+        "language": "th"
+      },
+      {
+        "text": "",
+        "rating": 5,
+        "date": "2020-12-14T08:20:22.024Z",
+        "language": "en"
+      }
+    ],
+    "area": "Train Station"
   },
   {
-    id: "rest-004",
-    name: "Pho Viet Phitsanulok",
-    category: "restaurant",
-    subcategory: "international restaurant",
-    lat: 16.8270,
-    lng: 100.2570,
-    rating: 3.9,
-    reviewCount: 123,
-    openTime: "10:00",
-    closeTime: "21:00",
-    hasWebsite: false,
-    hasSocialMedia: true,
-    priceLevel: 2,
-    photos: 78,
-    topReviewKeywords: ["เฝอ", "Vietnamese", "พอใช้ได้", "อร่อย", "portions small"],
-    reviews: [
-      { text: "เฝอรสชาติดี ใกล้เคียงของจริง แต่ปริมาณน้อยไปหน่อยสำหรับราคา", rating: 4, date: "2025-11-28", language: "th" },
-      { text: "Decent Vietnamese food. Not as good as in Hanoi but good for Phitsanulok.", rating: 3, date: "2025-10-15", language: "en" },
-      { text: "ร้านเล็กๆ อาหารออกช้า แต่รสชาติอร่อย เฝอเนื้อแนะนำ", rating: 4, date: "2025-09-22", language: "th" },
+    "id": "place-17",
+    "name": "ร้านครัวระเบียงครัว",
+    "category": "restaurant",
+    "subcategory": "ร้านอาหาร",
+    "lat": 17.1065552,
+    "lng": 100.8438283,
+    "rating": 4.5,
+    "reviewCount": 6,
+    "openTime": "08:00",
+    "closeTime": "22:00",
+    "hasWebsite": false,
+    "hasSocialMedia": false,
+    "priceLevel": 2,
+    "photos": 21,
+    "topReviewKeywords": [
+      "เป็นร้านอาหารตั้งอยู่ในทำเลที่ดีใกล้อู่ซ่อมเบนซ์ถนนสรงประภาเวลามาเข็ครถทีไรก็แวะมาทานทุกที",
+      "รสชาติอาหารใช้ได้",
+      "บริการรวดเร็วทันใจราคาไม่แพงมาก",
+      "โอเค",
+      "เป็นวัด",
+      "แต่มีตลาดนัดสินค้าทุกประเภท",
+      "ของกิน",
+      "เสื้อผ้า"
     ],
-    area: "Topland Plaza",
+    "reviews": [
+      {
+        "text": "เป็นร้านอาหารตั้งอยู่ในทำเลที่ดีใกล้อู่ซ่อมเบนซ์ถนนสรงประภาเวลามาเข็ครถทีไรก็แวะมาทานทุกที รสชาติอาหารใช้ได้ บริการรวดเร็วทันใจราคาไม่แพงมาก",
+        "rating": 5,
+        "date": "2024-05-03T14:51:15.584Z",
+        "language": "th"
+      },
+      {
+        "text": "",
+        "rating": 4,
+        "date": "2022-12-26T09:09:52.198Z",
+        "language": "en"
+      },
+      {
+        "text": "โอเค",
+        "rating": 4,
+        "date": "2022-10-27T07:01:55.306Z",
+        "language": "th"
+      },
+      {
+        "text": "",
+        "rating": 5,
+        "date": "2022-07-10T19:02:32.971Z",
+        "language": "en"
+      },
+      {
+        "text": "",
+        "rating": 4,
+        "date": "2021-02-10T06:07:12.234Z",
+        "language": "en"
+      },
+      {
+        "text": "เป็นวัด แต่มีตลาดนัดสินค้าทุกประเภท ของกิน เสื้อผ้า แว่นตาเครื่องประดับ",
+        "rating": 5,
+        "date": "2018-01-05T05:03:24.844Z",
+        "language": "th"
+      }
+    ],
+    "area": "City Center"
   },
   {
-    id: "rest-005",
-    name: "ร้านส้มตำแม่ลำยอง (Mae Lamyong Somtam)",
-    category: "restaurant",
-    subcategory: "thai restaurant",
-    lat: 16.7440,
-    lng: 100.1950,
-    rating: 4.6,
-    reviewCount: 534,
-    openTime: "09:00",
-    closeTime: "20:00",
-    hasWebsite: false,
-    hasSocialMedia: true,
-    priceLevel: 1,
-    photos: 187,
-    topReviewKeywords: ["ส้มตำอร่อย", "ลาบ", "อีสาน", "spicy", "ราคาถูก"],
-    reviews: [
-      { text: "ส้มตำอร่อยที่สุดในย่านมหาลัย! ลาบหมูก็เด็ด เผ็ดจัดจ้าน ราคานักศึกษา", rating: 5, date: "2025-12-06", language: "th" },
-      { text: "Incredibly spicy and delicious Isaan food. Super cheap. A favorite among university students.", rating: 5, date: "2025-11-20", language: "en" },
-      { text: "อร่อย ราคาถูก แต่ร้านร้อนมาก ไม่มีแอร์ พัดลมน้อย", rating: 4, date: "2025-10-12", language: "th" },
-    ],
-    area: "Naresuan University",
+    "id": "place-18",
+    "name": "Nueng Diao",
+    "category": "restaurant",
+    "subcategory": "ซูเปอร์มาร์เก็ต",
+    "lat": 17.276112,
+    "lng": 100.600841,
+    "rating": 0,
+    "reviewCount": 0,
+    "openTime": "08:00",
+    "closeTime": "22:00",
+    "hasWebsite": false,
+    "hasSocialMedia": false,
+    "priceLevel": 2,
+    "photos": 1,
+    "topReviewKeywords": [],
+    "reviews": [],
+    "area": "City Center"
   },
   {
-    id: "rest-006",
-    name: "Plearn Wan Restaurant",
-    category: "restaurant",
-    subcategory: "thai restaurant",
-    lat: 16.8235,
-    lng: 100.2635,
-    rating: 3.4,
-    reviewCount: 167,
-    openTime: "10:00",
-    closeTime: "21:00",
-    hasWebsite: false,
-    hasSocialMedia: false,
-    priceLevel: 2,
-    photos: 34,
-    topReviewKeywords: ["ย้อนยุค", "ธรรมดา", "overpriced", "แพงเกิน", "ตกแต่งดี"],
-    reviews: [
-      { text: "ร้านตกแต่งสวยสไตล์ย้อนยุค แต่อาหารธรรมดา ราคาแพงเกินไป ไม่คุ้ม", rating: 3, date: "2025-11-30", language: "th" },
-      { text: "Cute retro decoration but food is very average for the price. Overpriced for what you get.", rating: 2, date: "2025-10-28", language: "en" },
-      { text: "มาเพราะร้านสวย แต่อาหารผิดหวัง ข้าวผัดจืด ต้มยำไม่มีรสชาติ", rating: 2, date: "2025-09-15", language: "th" },
-    ],
-    area: "Nan River",
+    "id": "place-19",
+    "name": "49 ม.10 ต.นครไทย อ.นครไทย จ.พิษณุโลก 65120",
+    "category": "restaurant",
+    "subcategory": "ร้านค้า",
+    "lat": 17.1413091,
+    "lng": 100.8725857,
+    "rating": 0,
+    "reviewCount": 0,
+    "openTime": "08:00",
+    "closeTime": "22:00",
+    "hasWebsite": false,
+    "hasSocialMedia": false,
+    "priceLevel": 2,
+    "photos": 1,
+    "topReviewKeywords": [],
+    "reviews": [],
+    "area": "Nan River"
   },
   {
-    id: "rest-007",
-    name: "Song Kwae Fish Restaurant",
-    category: "restaurant",
-    subcategory: "thai restaurant",
-    lat: 16.8205,
-    lng: 100.2655,
-    rating: 4.4,
-    reviewCount: 378,
-    openTime: "11:00",
-    closeTime: "22:00",
-    hasWebsite: true,
-    hasSocialMedia: true,
-    priceLevel: 2,
-    photos: 156,
-    topReviewKeywords: ["ปลาเผา", "ริมน้ำ", "grilled fish", "บรรยากาศดี", "fresh fish"],
-    reviews: [
-      { text: "ปลาเผาริมแม่น้ำน่าน สดมากกก อร่อยสุดๆ บรรยากาศดีมาก ลมเย็นสบาย", rating: 5, date: "2025-12-04", language: "th" },
-      { text: "Best grilled fish restaurant in Phitsanulok. Right by the Nan River. Fresh catch daily.", rating: 5, date: "2025-11-16", language: "en" },
-      { text: "อาหารอร่อยแต่ราคาค่อนข้างสูง ปลาตัวใหญ่ก็แพง เหมาะมาเป็นกลุ่ม", rating: 4, date: "2025-10-08", language: "th" },
+    "id": "place-20",
+    "name": "The Imperial Hotel and Convention Centre Phitsanulok",
+    "category": "hotel",
+    "subcategory": "โรงแรม",
+    "lat": 16.8243323,
+    "lng": 100.287661,
+    "rating": 4,
+    "reviewCount": 1542,
+    "openTime": "08:00",
+    "closeTime": "22:00",
+    "hasWebsite": true,
+    "hasSocialMedia": true,
+    "priceLevel": 2,
+    "photos": 2382,
+    "topReviewKeywords": [
+      "der",
+      "war",
+      "das",
+      "hotel",
+      "die",
+      "mit",
+      "abstand",
+      "bei"
     ],
-    area: "Nan River",
+    "reviews": [
+      {
+        "text": "",
+        "rating": 5,
+        "date": "2026-02-28T10:33:17.750Z",
+        "language": "en"
+      },
+      {
+        "text": "",
+        "rating": 5,
+        "date": "2026-02-27T10:16:52.972Z",
+        "language": "en"
+      },
+      {
+        "text": "Dieses Hotel war mit Abstand das schlechteste bei der Rundreise! Das Hotel ist schon ziemlich alt und die Zimmer total abgewohnt , das Badezimmer war wirklich furchtbar , der Lack in der Badewanne, die auch gleichzeitig Dusche ist , war total abgebröckelt, alles etwas modrig und schimmelig, die Geckos laufen im Zimmer herum etc… der Pool war grauenhaft , hatte eine grünlich gelbe Farbe ! Keine Ahnung ob es jemals gereinigt wird … also wirklich nichts empfehlenswertes hier ! Das einzige was noch erträglich war, war der Cocktail an der Bar.",
+        "rating": 2,
+        "date": "2026-02-26T12:27:22.515Z",
+        "language": "en"
+      },
+      {
+        "text": "Hermoso Hotel",
+        "rating": 5,
+        "date": "2026-02-25T13:49:36.317Z",
+        "language": "en"
+      },
+      {
+        "text": "Mit Abstand das das müsste Hotel auf der Rundreise in Thailand (sehr in die Jahre gekommen). Auch im Vergleich Frühstücksangebot schlechter als bei anderen",
+        "rating": 2,
+        "date": "2026-02-24T23:51:43.274Z",
+        "language": "en"
+      },
+      {
+        "text": "",
+        "rating": 4,
+        "date": "2026-02-22T04:29:44.069Z",
+        "language": "en"
+      },
+      {
+        "text": "ดี",
+        "rating": 5,
+        "date": "2026-02-16T02:44:28.739Z",
+        "language": "th"
+      },
+      {
+        "text": "มีโอกาสได้เข้าไปใช้บริการบ่อย ในเรื่องการอบรมสัมมนา ก็โอเคครับ ในทุกๆด้าน",
+        "rating": 5,
+        "date": "2026-02-14T13:15:35.774Z",
+        "language": "th"
+      },
+      {
+        "text": "",
+        "rating": 5,
+        "date": "2026-02-14T05:18:25.849Z",
+        "language": "en"
+      },
+      {
+        "text": "",
+        "rating": 4,
+        "date": "2026-02-11T08:14:39.021Z",
+        "language": "en"
+      }
+    ],
+    "area": "Nan River"
   },
   {
-    id: "rest-008",
-    name: "ข้าวมันไก่ลุงเจี๊ยบ (Lung Jiap Chicken Rice)",
-    category: "restaurant",
-    subcategory: "thai restaurant",
-    lat: 16.8180,
-    lng: 100.2710,
-    rating: 4.2,
-    reviewCount: 298,
-    openTime: "06:00",
-    closeTime: "14:00",
-    hasWebsite: false,
-    hasSocialMedia: false,
-    priceLevel: 1,
-    photos: 89,
-    topReviewKeywords: ["ข้าวมันไก่", "เช้าๆ", "หมดเร็ว", "chicken rice", "ของดัง"],
-    reviews: [
-      { text: "ข้าวมันไก่ของดังพิษณุโลก ต้องมาเช้าเพราะหมดเร็ว อร่อยมาก น้ำจิ้มเด็ด", rating: 5, date: "2025-12-02", language: "th" },
-      { text: "Famous chicken rice near the train station. Come early, they sell out by noon!", rating: 4, date: "2025-11-08", language: "en" },
-      { text: "อร่อยจริงแต่ต้องมาก่อน 10 โมง ไม่งั้นหมด ไม่มีโซเชียลมีเดีย หาข้อมูลยาก", rating: 4, date: "2025-10-20", language: "th" },
+    "id": "place-21",
+    "name": "ร้านพุงกาง ลาบขม ต้มแซบ",
+    "category": "restaurant",
+    "subcategory": "ร้านอาหาร",
+    "lat": 17.1132885,
+    "lng": 100.8608246,
+    "rating": 4.3,
+    "reviewCount": 4,
+    "openTime": "08:00",
+    "closeTime": "22:00",
+    "hasWebsite": false,
+    "hasSocialMedia": false,
+    "priceLevel": 2,
+    "photos": 0,
+    "topReviewKeywords": [
+      "รสชาติไทบ้านสูตรสกลนครถึงเครื่องครับ",
+      "เมนูไม่เยอะแต่อร่อยครับ",
+      "พอใช้ได้นะ"
     ],
-    area: "Train Station",
+    "reviews": [
+      {
+        "text": "รสชาติไทบ้านสูตรสกลนครถึงเครื่องครับ\nเมนูไม่เยอะแต่อร่อยครับ",
+        "rating": 4,
+        "date": "2025-04-04T13:54:36.522Z",
+        "language": "th"
+      },
+      {
+        "text": "",
+        "rating": 5,
+        "date": "2025-02-26T13:43:45.134Z",
+        "language": "en"
+      },
+      {
+        "text": "",
+        "rating": 4,
+        "date": "2023-08-24T23:23:14.649Z",
+        "language": "en"
+      },
+      {
+        "text": "พอใช้ได้นะ",
+        "rating": 4,
+        "date": "2023-08-11T07:28:35.311Z",
+        "language": "th"
+      }
+    ],
+    "area": "City Center"
   },
   {
-    id: "rest-009",
-    name: "Pizza Company Topland",
-    category: "restaurant",
-    subcategory: "international restaurant",
-    lat: 16.8275,
-    lng: 100.2562,
-    rating: 3.7,
-    reviewCount: 234,
-    openTime: "10:30",
-    closeTime: "21:30",
-    hasWebsite: true,
-    hasSocialMedia: true,
-    priceLevel: 2,
-    photos: 45,
-    topReviewKeywords: ["pizza", "chain", "ในห้าง", "พิซซ่า", "ธรรมดา"],
-    reviews: [
-      { text: "พิซซ่าเชนทั่วไป ไม่มีอะไรพิเศษ สะดวกเพราะอยู่ในห้าง", rating: 3, date: "2025-11-25", language: "th" },
-      { text: "Standard chain pizza. Nothing special. At least it's consistent.", rating: 3, date: "2025-10-15", language: "en" },
+    "id": "place-22",
+    "name": "ร้านอาหาร The Pool Cafe Bar",
+    "category": "cafe",
+    "subcategory": "ร้านอาหาร",
+    "lat": 17.1111105,
+    "lng": 100.8383433,
+    "rating": 4.4,
+    "reviewCount": 18,
+    "openTime": "08:00",
+    "closeTime": "22:00",
+    "hasWebsite": false,
+    "hasSocialMedia": false,
+    "priceLevel": 2,
+    "photos": 48,
+    "topReviewKeywords": [
+      "food",
+      "staff",
+      "lovley",
+      "owner",
+      "are",
+      "great",
+      "ร้านอาหารบรรยากาศดี",
+      "อาหารอร่อยบริการดี"
     ],
-    area: "Topland Plaza",
+    "reviews": [
+      {
+        "text": "",
+        "rating": 5,
+        "date": "2025-09-18T17:51:47.885Z",
+        "language": "en"
+      },
+      {
+        "text": "ร้านอาหารบรรยากาศดี อาหารอร่อยบริการดี",
+        "rating": 5,
+        "date": "2025-05-27T13:30:22.311Z",
+        "language": "th"
+      },
+      {
+        "text": "",
+        "rating": 4,
+        "date": "2025-04-07T00:41:46.324Z",
+        "language": "en"
+      },
+      {
+        "text": "",
+        "rating": 5,
+        "date": "2025-02-05T10:25:13.657Z",
+        "language": "en"
+      },
+      {
+        "text": "",
+        "rating": 4,
+        "date": "2024-12-03T02:03:24.366Z",
+        "language": "en"
+      },
+      {
+        "text": "",
+        "rating": 5,
+        "date": "2024-11-10T01:39:46.527Z",
+        "language": "en"
+      },
+      {
+        "text": "",
+        "rating": 5,
+        "date": "2024-11-09T05:46:32.894Z",
+        "language": "en"
+      },
+      {
+        "text": "Very enjoyable good food pleasant staff lovley owner a lovley setting\nOn arriving today 16.5.24 i found the place closed disappointed but hope the owner and the staff are ok unfortunately a sighn of the times so many places disapearing",
+        "rating": 5,
+        "date": "2024-05-16T12:04:23.360Z",
+        "language": "en"
+      },
+      {
+        "text": "สั่งอาหารไปนานมาก รอราวครึ่งชั่วโมง แต่ลูกค้าที่มาทีหลัง ได้รับอาหารก่อน หากไม่มีอาหารที่สั่ง ก็แค่มาแจ้ง แต่นี่เราต้องตามอาหารเอง ช่วยทำตามคิวด้วยค่ะ",
+        "rating": 1,
+        "date": "2024-04-10T13:20:50.291Z",
+        "language": "th"
+      },
+      {
+        "text": "Great food. Great atmosphere. Children can swim. Prices are cheap. Whats not to like.",
+        "rating": 5,
+        "date": "2023-12-10T03:26:54.541Z",
+        "language": "en"
+      }
+    ],
+    "area": "Naresuan University"
   },
   {
-    id: "rest-010",
-    name: "NU Canteen Premium",
-    category: "restaurant",
-    subcategory: "food court",
-    lat: 16.7435,
-    lng: 100.1940,
-    rating: 3.8,
-    reviewCount: 445,
-    openTime: "07:00",
-    closeTime: "19:00",
-    hasWebsite: false,
-    hasSocialMedia: false,
-    priceLevel: 1,
-    photos: 56,
-    topReviewKeywords: ["โรงอาหาร", "ราคาถูก", "หลากหลาย", "student food", "สะอาด"],
-    reviews: [
-      { text: "โรงอาหารมหาวิทยาลัย อาหารหลากหลาย ราคาถูก สะอาดดี เหมาะนักศึกษา", rating: 4, date: "2025-11-30", language: "th" },
-      { text: "University food court with decent variety. Very cheap. Clean and well-maintained.", rating: 4, date: "2025-10-22", language: "en" },
-      { text: "อาหารพื้นฐาน ราคาถูก แต่ช่วงพักเที่ยงคนเยอะมาก ต้องรอนาน", rating: 3, date: "2025-09-18", language: "th" },
+    "id": "place-23",
+    "name": "ร้าน ภ สำเภา",
+    "category": "restaurant",
+    "subcategory": "ร้านอาหาร",
+    "lat": 17.1100583,
+    "lng": 100.8464797,
+    "rating": 3.5,
+    "reviewCount": 2,
+    "openTime": "08:00",
+    "closeTime": "22:00",
+    "hasWebsite": false,
+    "hasSocialMedia": false,
+    "priceLevel": 2,
+    "photos": 1,
+    "topReviewKeywords": [
+      "เปลี่ยนเป็น",
+      "ครัวท่านขุน",
+      "แล้วครับ",
+      "บรรยากาศดี",
+      "อาหารอร่อย",
+      "ราคามิตรภาพชวนให้กลับไปอีก",
+      "และสำคัญที่สุด",
+      "ลูกสาวสวยมากๆ"
     ],
-    area: "Naresuan University",
-  },
-
-  // ============================================================
-  // CLINICS
-  // ============================================================
-  {
-    id: "clinic-001",
-    name: "Phitsanulok Skin Clinic",
-    category: "clinic",
-    subcategory: "aesthetic clinic",
-    lat: 16.8260,
-    lng: 100.2595,
-    rating: 4.4,
-    reviewCount: 234,
-    openTime: "10:00",
-    closeTime: "20:00",
-    hasWebsite: true,
-    hasSocialMedia: true,
-    priceLevel: 3,
-    photos: 98,
-    topReviewKeywords: ["หมอเก่ง", "ผิวสวย", "laser", "botox", "ราคาแพง"],
-    reviews: [
-      { text: "หมอเก่ง ทำเลเซอร์หน้าใส ผิวดีขึ้นเห็นชัด แต่ราคาค่อนข้างแพง", rating: 5, date: "2025-12-07", language: "th" },
-      { text: "Professional aesthetic clinic. Dr. Nong is very skilled. Results are visible after just one session.", rating: 5, date: "2025-11-20", language: "en" },
-      { text: "แพงมากสำหรับพิษณุโลก ราคาเท่ากรุงเทพ แต่ผลลัพธ์ดี คุ้มกับราคา", rating: 4, date: "2025-10-15", language: "th" },
+    "reviews": [
+      {
+        "text": "เปลี่ยนเป็น ครัวท่านขุน แล้วครับ",
+        "rating": 3,
+        "date": "2022-07-01T06:37:17.482Z",
+        "language": "th"
+      },
+      {
+        "text": "บรรยากาศดี อาหารอร่อย ราคามิตรภาพชวนให้กลับไปอีก และสำคัญที่สุด ลูกสาวสวยมากๆ จั๊กจั่น AF 11",
+        "rating": 4,
+        "date": "2017-02-05T21:35:59.823Z",
+        "language": "th"
+      }
     ],
-    area: "City Center",
+    "area": "City Center"
   },
   {
-    id: "clinic-002",
-    name: "Nara Beauty Clinic",
-    category: "clinic",
-    subcategory: "aesthetic clinic",
-    lat: 16.8285,
-    lng: 100.2550,
-    rating: 4.1,
-    reviewCount: 178,
-    openTime: "10:00",
-    closeTime: "19:00",
-    hasWebsite: false,
-    hasSocialMedia: true,
-    priceLevel: 2,
-    photos: 67,
-    topReviewKeywords: ["ฟิลเลอร์", "filler", "ราคาดี", "ปรึกษาฟรี", "พนักงานดี"],
-    reviews: [
-      { text: "ทำฟิลเลอร์ที่นี่ ราคาดี พนักงานบริการดี หมอให้คำปรึกษาฟรี ไม่กดดันซื้อ", rating: 4, date: "2025-12-03", language: "th" },
-      { text: "Good value for filler treatments. Free consultation. Staff is friendly and not pushy.", rating: 4, date: "2025-11-10", language: "en" },
-      { text: "ไม่มีเว็บไซต์ ต้องติดต่อทาง Line เท่านั้น บริการพอใช้ได้", rating: 3, date: "2025-10-08", language: "th" },
-    ],
-    area: "Topland Plaza",
+    "id": "place-24",
+    "name": "ร้านกาแฟสดคนไท",
+    "category": "cafe",
+    "subcategory": "ร้านกาแฟ",
+    "lat": 17.2076092,
+    "lng": 100.8596055,
+    "rating": 0,
+    "reviewCount": 0,
+    "openTime": "08:00",
+    "closeTime": "22:00",
+    "hasWebsite": true,
+    "hasSocialMedia": false,
+    "priceLevel": 2,
+    "photos": 6,
+    "topReviewKeywords": [],
+    "reviews": [],
+    "area": "Train Station"
   },
   {
-    id: "clinic-003",
-    name: "Derma Plus Clinic",
-    category: "clinic",
-    subcategory: "dermatology clinic",
-    lat: 16.7450,
-    lng: 100.1955,
-    rating: 3.7,
-    reviewCount: 145,
-    openTime: "09:00",
-    closeTime: "18:00",
-    hasWebsite: false,
-    hasSocialMedia: true,
-    priceLevel: 2,
-    photos: 34,
-    topReviewKeywords: ["รักษาสิว", "acne", "ผิวหนัง", "รอนาน", "หมอดี"],
-    reviews: [
-      { text: "หมอดี รักษาสิวได้ผล แต่ต้องรอนานมาก บางทีรอ 2-3 ชม.", rating: 4, date: "2025-11-25", language: "th" },
-      { text: "Good dermatologist for acne treatment. Very long wait times though. Plan your whole morning.", rating: 3, date: "2025-10-18", language: "en" },
-      { text: "รักษาสิวหาย แต่ต้องมาหลายครั้ง แต่ละครั้งรอนาน ไม่มีระบบจองคิวออนไลน์", rating: 3, date: "2025-09-12", language: "th" },
+    "id": "place-25",
+    "name": "โรงแรม โยเดีย เฮอริเทจ - Yodia Heritage Boutique Hotel",
+    "category": "hotel",
+    "subcategory": "โรงแรม",
+    "lat": 16.8261052,
+    "lng": 100.2634045,
+    "rating": 4.5,
+    "reviewCount": 283,
+    "openTime": "08:00",
+    "closeTime": "22:00",
+    "hasWebsite": true,
+    "hasSocialMedia": true,
+    "priceLevel": 2,
+    "photos": 614,
+    "topReviewKeywords": [
+      "service",
+      "room",
+      "breakfast",
+      "from",
+      "place",
+      "this",
+      "favourite",
+      "staff"
     ],
-    area: "Naresuan University",
+    "reviews": [
+      {
+        "text": "",
+        "rating": 3,
+        "date": "2026-02-22T10:17:01.996Z",
+        "language": "en"
+      },
+      {
+        "text": "I have stayed at a few places in phitsanuluk . This is my favourite. The staff really are amazing. Check in was seamless with smiles and we felt welcomed. The room is lovely with a nice balcony. My wife wanted to change room during the night and the staff were lovely and it was no problem. Great location. Breakfast is a set menu but they allow you to eat a lot of options. The two ladies serving the breakfast were kind and again make you feel welcome. I will stay here again.",
+        "rating": 5,
+        "date": "2026-02-05T02:11:06.228Z",
+        "language": "en"
+      },
+      {
+        "text": "man kann vor allem ruhigen und angenehmen Schlaf genießen da die Betten sehr ok sind,\n\nder Service ist erstklassig und Frühstück ist sowohl als Buffet oder á la Carte schön.\n\nDer Pool zu kalt zum Genießen.\n\ninsgesamt sehr relaxed 👍🏻❤️🇹🇭",
+        "rating": 5,
+        "date": "2026-02-03T02:18:44.159Z",
+        "language": "en"
+      },
+      {
+        "text": "ล่าสุดเพิ่งไปพักมา วันที่ 22/01/26 ประทับใจมาก ทุกอย่างทั้งห้องพัก น้องพนักงานทุกคน โดยเฉพาะ \"ข้าวกล่องอาหารเช้า\" 🤤 เพราะไม่คาดว่าจะมีบริการตัวนี้ สำหรับแขกที่ไม่สามารถทานอาหารเช้าของโรงแรมได้ อร่อย และ luxury มากๆ",
+        "rating": 5,
+        "date": "2026-01-30T11:06:49.578Z",
+        "language": "th"
+      },
+      {
+        "text": "",
+        "rating": 5,
+        "date": "2026-01-24T01:19:58.143Z",
+        "language": "en"
+      },
+      {
+        "text": "On the way home from driving trip from Chiangrai back to Pathumthani.  We choose to return to our favourite place in Phitsanulok for stop over.  This place never make us disappointing.  ||Since the swift and fast service during reservation, and warm welcome from the Reception Team.  And the F&B Service at the breakfast room.  They still keep the service as compare to 5 stars hotel.",
+        "rating": 3,
+        "date": "2026-01-13T23:59:59.999Z",
+        "language": "en"
+      },
+      {
+        "text": "Endroit bien place proche de la rivière et de Temples...assez à l'écart pour éviter les bruits,du moins les chambres sur l'arrière...grandes chambres, avec tout le nécessaire,propre,et balcon...|Piscine si envie !! Petit déjeuner buffet...",
+        "rating": 3,
+        "date": "2026-01-12T23:59:59.999Z",
+        "language": "en"
+      },
+      {
+        "text": "ในห้องที่ผมพัก ฝุ่นเยอะมากครับ ภรรยาผมจามตลอด ไม่แน่ใจในระบบแอร์ เพราะะป็นระบบเก่า",
+        "rating": 4,
+        "date": "2026-01-04T02:31:37.059Z",
+        "language": "th"
+      },
+      {
+        "text": "เข้าพักคืนเคาท์ดาวน์ ห้องพักสวยสะอาดมาก ของใช้ภายในห้องครบครันมีเวลคัวดริ้งค์เวลคัมฟรุตให้ พนักงานดูแลเอาใจใส่ดีมาก อยู่ใกล้วัดพระศรีมากจนปั่นจักรยานของโรงแรมไปไหว้พระทั้งเย็นและเช้าปีใหม่เลย อาหารเช้าคุณภาพดีครบห้าหมู่",
+        "rating": 5,
+        "date": "2026-01-01T13:31:52.922Z",
+        "language": "th"
+      },
+      {
+        "text": "",
+        "rating": 5,
+        "date": "2025-12-29T09:46:34.525Z",
+        "language": "en"
+      }
+    ],
+    "area": "City Center"
   },
   {
-    id: "clinic-004",
-    name: "The Face Clinic Phitsanulok",
-    category: "clinic",
-    subcategory: "aesthetic clinic",
-    lat: 16.8248,
-    lng: 100.2620,
-    rating: 3.2,
-    reviewCount: 89,
-    openTime: "10:00",
-    closeTime: "19:00",
-    hasWebsite: false,
-    hasSocialMedia: true,
-    priceLevel: 2,
-    photos: 23,
-    topReviewKeywords: ["ผิดหวัง", "hard sell", "กดดัน", "ผลลัพธ์ไม่ดี", "ไม่แนะนำ"],
-    reviews: [
-      { text: "ผิดหวังมาก พนักงาน hard sell มาก กดดันให้ซื้อคอร์ส ผลลัพธ์ไม่เห็นผล", rating: 2, date: "2025-12-01", language: "th" },
-      { text: "Very pushy sales. They kept trying to sell expensive packages. Results were mediocre.", rating: 2, date: "2025-11-15", language: "en" },
-      { text: "ทำเลเซอร์แล้วหน้าแดง 3 วัน หมอไม่ได้อธิบายผลข้างเคียงก่อน", rating: 2, date: "2025-10-22", language: "th" },
-      { text: "ราคาพอได้ แต่คุณภาพไม่ดี ไม่กลับไปอีก", rating: 3, date: "2025-09-08", language: "th" },
-    ],
-    area: "City Center",
+    "id": "place-26",
+    "name": "ร้านโฉมถวิล",
+    "category": "restaurant",
+    "subcategory": "ร้านสะดวกซื้อ",
+    "lat": 17.099469,
+    "lng": 100.8355612,
+    "rating": 0,
+    "reviewCount": 0,
+    "openTime": "08:00",
+    "closeTime": "22:00",
+    "hasWebsite": false,
+    "hasSocialMedia": false,
+    "priceLevel": 2,
+    "photos": 1,
+    "topReviewKeywords": [],
+    "reviews": [],
+    "area": "City Center"
   },
   {
-    id: "clinic-005",
-    name: "Dr. Smile Dental Clinic",
-    category: "clinic",
-    subcategory: "dental clinic",
-    lat: 16.8270,
-    lng: 100.2585,
-    rating: 4.6,
-    reviewCount: 267,
-    openTime: "09:00",
-    closeTime: "18:00",
-    hasWebsite: true,
-    hasSocialMedia: true,
-    priceLevel: 2,
-    photos: 45,
-    topReviewKeywords: ["หมอฟัน", "ไม่เจ็บ", "painless", "สะอาด", "ราคาเป็นธรรม"],
-    reviews: [
-      { text: "หมอฟันเก่งมาก ทำฟันไม่เจ็บเลย อุปกรณ์ทันสมัย สะอาดมาก", rating: 5, date: "2025-12-05", language: "th" },
-      { text: "Best dentist in Phitsanulok. Modern equipment. Painless treatment. Fair pricing.", rating: 5, date: "2025-11-22", language: "en" },
-      { text: "คิวเยอะ ต้องจองล่วงหน้า 1-2 สัปดาห์ แต่คุณภาพดีมาก คุ้มค่ารอ", rating: 4, date: "2025-10-18", language: "th" },
-    ],
-    area: "City Center",
+    "id": "place-27",
+    "name": "ต้นไม้กับกาแฟ",
+    "category": "cafe",
+    "subcategory": "ร้านกาแฟ",
+    "lat": 17.1491009,
+    "lng": 100.9556911,
+    "rating": 0,
+    "reviewCount": 0,
+    "openTime": "08:00",
+    "closeTime": "22:00",
+    "hasWebsite": false,
+    "hasSocialMedia": false,
+    "priceLevel": 2,
+    "photos": 4,
+    "topReviewKeywords": [],
+    "reviews": [],
+    "area": "Nan River"
   },
   {
-    id: "clinic-006",
-    name: "Slim & Shape Center",
-    category: "clinic",
-    subcategory: "aesthetic clinic",
-    lat: 16.8278,
-    lng: 100.2545,
-    rating: 3.5,
-    reviewCount: 112,
-    openTime: "10:00",
-    closeTime: "20:00",
-    hasWebsite: false,
-    hasSocialMedia: true,
-    priceLevel: 3,
-    photos: 28,
-    topReviewKeywords: ["ลดน้ำหนัก", "slimming", "แพงมาก", "ผลลัพธ์ช้า", "coolsculpting"],
-    reviews: [
-      { text: "ทำ coolsculpting แพงมาก ผลลัพธ์ต้องรอ 2-3 เดือน ยังไม่เห็นผลชัดเจน", rating: 3, date: "2025-11-28", language: "th" },
-      { text: "Expensive slimming treatments. Results take months to show. Staff is professional though.", rating: 3, date: "2025-10-20", language: "en" },
-      { text: "ราคาแพงมากสำหรับพิษณุโลก ควรไปทำที่กรุงเทพดีกว่า ผลลัพธ์เหมือนกัน", rating: 2, date: "2025-09-15", language: "th" },
+    "id": "place-28",
+    "name": "ส้มตำเจ๊เขียวหนองทอง",
+    "category": "restaurant",
+    "subcategory": "ร้านอาหาร",
+    "lat": 17.1020238,
+    "lng": 100.8194827,
+    "rating": 4.6,
+    "reviewCount": 24,
+    "openTime": "08:00",
+    "closeTime": "22:00",
+    "hasWebsite": false,
+    "hasSocialMedia": false,
+    "priceLevel": 2,
+    "photos": 34,
+    "topReviewKeywords": [
+      "สะอาด",
+      "300",
+      "อาหารอร่อยมากกกก",
+      "ราคาถูก",
+      "รสชาติดี",
+      "เเนะนำๆๆ",
+      "ถูกและอร่อยมีอยู่จริง",
+      "บรรยากาศดี"
     ],
-    area: "Topland Plaza",
-  },
-
-  // ============================================================
-  // CO-WORKING SPACES
-  // ============================================================
-  {
-    id: "cowork-001",
-    name: "HUB Phitsanulok Co-working",
-    category: "coworking",
-    subcategory: "co-working space",
-    lat: 16.8258,
-    lng: 100.2600,
-    rating: 4.3,
-    reviewCount: 156,
-    openTime: "08:00",
-    closeTime: "22:00",
-    hasWebsite: true,
-    hasSocialMedia: true,
-    priceLevel: 2,
-    photos: 89,
-    topReviewKeywords: ["wifi แรง", "ห้องประชุม", "meeting room", "นั่งทำงานดี", "ปลั๊กเยอะ"],
-    reviews: [
-      { text: "co-working ที่ดีที่สุดในพิษณุโลก! wifi แรง ปลั๊กไฟเยอะ มีห้องประชุมให้ใช้ กาแฟฟรี", rating: 5, date: "2025-12-09", language: "th" },
-      { text: "Best coworking space in Phitsanulok. Fast wifi, lots of power outlets, free coffee. Meeting rooms available.", rating: 5, date: "2025-11-25", language: "en" },
-      { text: "ดีมากสำหรับทำงานระยะไกล แต่ช่วงบ่ายคนเยอะ เสียงดังบ้าง ห้องประชุมต้องจอง", rating: 4, date: "2025-10-15", language: "th" },
+    "reviews": [
+      {
+        "text": "อาหารอร่อยมากกกก ราคาถูก สะอาด รสชาติดี  เเนะนำๆๆ",
+        "rating": 5,
+        "date": "2026-01-04T06:01:27.918Z",
+        "language": "th"
+      },
+      {
+        "text": "ถูกและอร่อยมีอยู่จริง",
+        "rating": 5,
+        "date": "2026-01-04T05:59:24.383Z",
+        "language": "th"
+      },
+      {
+        "text": "บรรยากาศดี  มีที่จอดรถ  ส้มตำรสเด็ด  ของทอดสด  สะอาด",
+        "rating": 5,
+        "date": "2025-07-11T04:12:45.649Z",
+        "language": "th"
+      },
+      {
+        "text": "ส้มตำอร่อยมาก ไม่เเพง ราคาคือปกติ เเต่รสชาติจัดเต็มมากขอบอก มากัน 3-5 คน จ่าย 300 คืออิ่ม",
+        "rating": 5,
+        "date": "2025-07-11T04:02:33.777Z",
+        "language": "th"
+      },
+      {
+        "text": "",
+        "rating": 4,
+        "date": "2025-02-08T06:18:47.903Z",
+        "language": "en"
+      },
+      {
+        "text": "",
+        "rating": 4,
+        "date": "2024-12-02T08:38:17.610Z",
+        "language": "en"
+      },
+      {
+        "text": "แหล่งกินส้มตำที่อร่อยในนครไทยเลยคะ",
+        "rating": 5,
+        "date": "2024-01-30T02:39:39.588Z",
+        "language": "th"
+      },
+      {
+        "text": "ส้มตำและจองทอดอร่อยทุกอย่าง ราคากันเองมาก",
+        "rating": 5,
+        "date": "2024-01-27T09:55:38.503Z",
+        "language": "th"
+      },
+      {
+        "text": "",
+        "rating": 5,
+        "date": "2024-01-11T05:54:43.252Z",
+        "language": "en"
+      },
+      {
+        "text": "",
+        "rating": 5,
+        "date": "2024-01-02T08:23:43.147Z",
+        "language": "en"
+      }
     ],
-    area: "City Center",
-  },
-  {
-    id: "cowork-002",
-    name: "JEAB Space",
-    category: "coworking",
-    subcategory: "co-working space",
-    lat: 16.7438,
-    lng: 100.1935,
-    rating: 4.5,
-    reviewCount: 198,
-    openTime: "07:00",
-    closeTime: "23:00",
-    hasWebsite: true,
-    hasSocialMedia: true,
-    priceLevel: 1,
-    photos: 123,
-    topReviewKeywords: ["ราคานักศึกษา", "เปิดดึก", "wifi ดี", "student friendly", "นั่งสบาย"],
-    reviews: [
-      { text: "co-working ราคาถูก เปิดถึง 5 ทุ่ม! wifi ดี มีโซนเงียบ เหมาะนักศึกษามาก", rating: 5, date: "2025-12-06", language: "th" },
-      { text: "Great student-friendly coworking near NU. Open late, cheap prices, good atmosphere.", rating: 5, date: "2025-11-18", language: "en" },
-      { text: "ดี ราคาถูก แต่แอร์เย็นเกินไป ต้องเอาเสื้อกันหนาวมาด้วย เก้าอี้แข็ง", rating: 4, date: "2025-10-10", language: "th" },
-    ],
-    area: "Naresuan University",
-  },
-  {
-    id: "cowork-003",
-    name: "The Desk PLK",
-    category: "coworking",
-    subcategory: "co-working space",
-    lat: 16.8220,
-    lng: 100.2650,
-    rating: 4.0,
-    reviewCount: 87,
-    openTime: "09:00",
-    closeTime: "20:00",
-    hasWebsite: false,
-    hasSocialMedia: true,
-    priceLevel: 2,
-    photos: 56,
-    topReviewKeywords: ["วิวน้ำ", "สงบ", "quiet zone", "ริมน้ำ", "กาแฟดี"],
-    reviews: [
-      { text: "co-working ริมแม่น้ำน่าน วิวสวย บรรยากาศสงบ เหมาะทำงานที่ต้องการสมาธิ", rating: 4, date: "2025-11-30", language: "th" },
-      { text: "Riverside coworking with a great view. Quiet atmosphere. Coffee is decent too.", rating: 4, date: "2025-10-22", language: "en" },
-      { text: "สวยดี แต่ไม่มีเว็บไซต์ หาข้อมูลราคายาก ต้องโทรถาม ปิดเร็วไป", rating: 3, date: "2025-09-18", language: "th" },
-    ],
-    area: "Nan River",
+    "area": "Topland Plaza"
   },
   {
-    id: "cowork-004",
-    name: "Topland Business Center",
-    category: "coworking",
-    subcategory: "business center",
-    lat: 16.8283,
-    lng: 100.2553,
-    rating: 3.6,
-    reviewCount: 45,
-    openTime: "08:00",
-    closeTime: "18:00",
-    hasWebsite: false,
-    hasSocialMedia: false,
-    priceLevel: 3,
-    photos: 15,
-    topReviewKeywords: ["ในห้าง", "ห้องประชุม", "formal", "แพง", "เงียบ"],
-    reviews: [
-      { text: "ห้องประชุมในท็อปแลนด์ เหมาะประชุมงานเป็นทางการ แต่ราคาแพง ปิดเร็ว", rating: 3, date: "2025-11-15", language: "th" },
-      { text: "Formal business center inside Topland. Good for meetings. Expensive and closes early.", rating: 3, date: "2025-10-08", language: "en" },
-      { text: "ไม่มีทั้งเว็บไซต์และโซเชียล หาข้อมูลยากมาก สิ่งอำนวยความสะดวกเก่า", rating: 3, date: "2025-09-22", language: "th" },
+    "id": "place-29",
+    "name": "HUB Phitsanulok Co-working",
+    "category": "coworking",
+    "subcategory": "co-working space",
+    "lat": 16.8258,
+    "lng": 100.26,
+    "rating": 4.3,
+    "reviewCount": 156,
+    "openTime": "08:00",
+    "closeTime": "22:00",
+    "hasWebsite": true,
+    "hasSocialMedia": true,
+    "priceLevel": 2,
+    "photos": 89,
+    "topReviewKeywords": [
+      "wifi แรง",
+      "ห้องประชุม",
+      "meeting room",
+      "นั่งทำงานดี",
+      "ปลั๊กเยอะ"
     ],
-    area: "Topland Plaza",
+    "reviews": [
+      {
+        "text": "co-working ที่ดีที่สุดในพิษณุโลก! wifi แรง ปลั๊กไฟเยอะ มีห้องประชุมให้ใช้ กาแฟฟรี",
+        "rating": 5,
+        "date": "2025-12-09",
+        "language": "th"
+      },
+      {
+        "text": "Best coworking space in Phitsanulok. Fast wifi, lots of power outlets, free coffee.",
+        "rating": 5,
+        "date": "2025-11-25",
+        "language": "en"
+      },
+      {
+        "text": "ดีมากสำหรับทำงานระยะไกล แต่ช่วงบ่ายคนเยอะ เสียงดังบ้าง",
+        "rating": 4,
+        "date": "2025-10-15",
+        "language": "th"
+      }
+    ],
+    "area": "City Center"
   },
   {
-    id: "cowork-005",
-    name: "WorkCafe Connect",
-    category: "coworking",
-    subcategory: "co-working cafe",
-    lat: 16.8172,
-    lng: 100.2718,
-    rating: 4.2,
-    reviewCount: 134,
-    openTime: "07:30",
-    closeTime: "21:00",
-    hasWebsite: true,
-    hasSocialMedia: true,
-    priceLevel: 2,
-    photos: 78,
-    topReviewKeywords: ["cafe+coworking", "กาแฟอร่อย", "นั่งทำงาน", "power outlets", "ใกล้สถานี"],
-    reviews: [
-      { text: "ร้านกาแฟ + co-working ใกล้สถานีรถไฟ กาแฟอร่อย wifi แรง ปลั๊กเยอะ", rating: 4, date: "2025-12-04", language: "th" },
-      { text: "Cafe-coworking hybrid near the train station. Good coffee and reliable wifi.", rating: 4, date: "2025-11-12", language: "en" },
-      { text: "ดีมากสำหรับ digital nomad ที่แวะพิษณุโลก เดินจากสถานีรถไฟไม่ไกล", rating: 5, date: "2025-10-05", language: "th" },
+    "id": "place-30",
+    "name": "JEAB Space",
+    "category": "coworking",
+    "subcategory": "co-working space",
+    "lat": 16.7438,
+    "lng": 100.1935,
+    "rating": 4.5,
+    "reviewCount": 198,
+    "openTime": "07:00",
+    "closeTime": "23:00",
+    "hasWebsite": true,
+    "hasSocialMedia": true,
+    "priceLevel": 1,
+    "photos": 123,
+    "topReviewKeywords": [
+      "ราคานักศึกษา",
+      "เปิดดึก",
+      "wifi ดี",
+      "student friendly",
+      "นั่งสบาย"
     ],
-    area: "Train Station",
-  },
-
-  // ============================================================
-  // ADDITIONAL PLACES (to reach ~45 total)
-  // ============================================================
-  {
-    id: "hotel-009",
-    name: "Grand Riverside Hotel",
-    category: "hotel",
-    subcategory: "3-star hotel",
-    lat: 16.8188,
-    lng: 100.2648,
-    rating: 3.9,
-    reviewCount: 203,
-    openTime: "00:00",
-    closeTime: "23:59",
-    hasWebsite: true,
-    hasSocialMedia: true,
-    priceLevel: 2,
-    photos: 76,
-    topReviewKeywords: ["ริมน้ำ", "ห้องกว้าง", "อาหารเช้าดี", "เสียงดัง", "river side"],
-    reviews: [
-      { text: "ห้องกว้าง อาหารเช้าหลากหลาย ติดริมแม่น้ำน่าน แต่เสียงดังจากถนนตอนกลางคืน", rating: 4, date: "2025-11-28", language: "th" },
-      { text: "Spacious rooms with river view. Good breakfast. Some noise from the street at night.", rating: 4, date: "2025-10-15", language: "en" },
-      { text: "โรงแรมพอใช้ได้ ราคาสมเหตุสมผล ห้องน้ำสะอาด แต่เฟอร์นิเจอร์เริ่มเก่า", rating: 3, date: "2025-09-20", language: "th" },
+    "reviews": [
+      {
+        "text": "co-working ราคาถูก เปิดถึง 5 ทุ่ม! wifi ดี มีโซนเงียบ เหมาะนักศึกษามาก",
+        "rating": 5,
+        "date": "2025-12-06",
+        "language": "th"
+      },
+      {
+        "text": "Great student-friendly coworking near NU. Open late, cheap prices.",
+        "rating": 5,
+        "date": "2025-11-18",
+        "language": "en"
+      }
     ],
-    area: "Nan River",
+    "area": "Naresuan University"
   },
   {
-    id: "rest-011",
-    name: "Krua Rim Nam (Riverside Kitchen)",
-    category: "restaurant",
-    subcategory: "thai restaurant",
-    lat: 16.8198,
-    lng: 100.2668,
-    rating: 4.0,
-    reviewCount: 312,
-    openTime: "16:00",
-    closeTime: "23:00",
-    hasWebsite: false,
-    hasSocialMedia: true,
-    priceLevel: 2,
-    photos: 134,
-    topReviewKeywords: ["ริมน้ำ", "อาหารทะเล", "เย็นสบาย", "seafood", "ยำ"],
-    reviews: [
-      { text: "ร้านริมแม่น้ำ อาหารทะเลสดมาก ยำทะเลรวมอร่อย บรรยากาศดี ลมเย็นสบาย", rating: 4, date: "2025-12-02", language: "th" },
-      { text: "Lovely riverside dining. Seafood is fresh. The evening breeze makes it very pleasant.", rating: 4, date: "2025-11-10", language: "en" },
-      { text: "อาหารอร่อย แต่ยุงชุมมาก ต้องพ่นยากันยุงก่อนนั่ง บริการช้าช่วงเย็นวันศุกร์", rating: 3, date: "2025-10-25", language: "th" },
+    "id": "place-31",
+    "name": "The Desk PLK",
+    "category": "coworking",
+    "subcategory": "co-working space",
+    "lat": 16.822,
+    "lng": 100.265,
+    "rating": 4,
+    "reviewCount": 87,
+    "openTime": "09:00",
+    "closeTime": "20:00",
+    "hasWebsite": false,
+    "hasSocialMedia": true,
+    "priceLevel": 2,
+    "photos": 56,
+    "topReviewKeywords": [
+      "วิวน้ำ",
+      "สงบ",
+      "quiet zone",
+      "ริมน้ำ",
+      "กาแฟดี"
     ],
-    area: "Nan River",
+    "reviews": [
+      {
+        "text": "co-working ริมแม่น้ำน่าน วิวสวย บรรยากาศสงบ เหมาะทำงานที่ต้องการสมาธิ",
+        "rating": 4,
+        "date": "2025-11-30",
+        "language": "th"
+      },
+      {
+        "text": "Riverside coworking with a great view. Quiet atmosphere.",
+        "rating": 4,
+        "date": "2025-10-22",
+        "language": "en"
+      }
+    ],
+    "area": "Nan River"
   },
   {
-    id: "cafe-010",
-    name: "กาแฟดริป สถานี 5 (Drip Station 5)",
-    category: "cafe",
-    subcategory: "specialty coffee",
-    lat: 16.8240,
-    lng: 100.2605,
-    rating: 4.4,
-    reviewCount: 201,
-    openTime: "08:00",
-    closeTime: "17:00",
-    hasWebsite: false,
-    hasSocialMedia: true,
-    priceLevel: 2,
-    photos: 145,
-    topReviewKeywords: ["drip coffee", "กาแฟดริป", "single origin", "เมล็ดไทย", "minimal"],
-    reviews: [
-      { text: "กาแฟดริปอร่อยมาก ใช้เมล็ดไทยจากดอยช้าง single origin สวยมากร้าน", rating: 5, date: "2025-12-08", language: "th" },
-      { text: "Excellent drip coffee using Thai single origin beans. Minimalist space. Very photogenic.", rating: 5, date: "2025-11-20", language: "en" },
-      { text: "ปิดเร็ว 5 โมงเย็น ไม่เหมาะคนทำงานที่อยากมาหลังเลิกงาน กาแฟดีมาก", rating: 4, date: "2025-10-12", language: "th" },
+    "id": "place-32",
+    "name": "WorkCafe Connect",
+    "category": "coworking",
+    "subcategory": "co-working cafe",
+    "lat": 16.8172,
+    "lng": 100.2718,
+    "rating": 4.2,
+    "reviewCount": 134,
+    "openTime": "07:30",
+    "closeTime": "21:00",
+    "hasWebsite": true,
+    "hasSocialMedia": true,
+    "priceLevel": 2,
+    "photos": 78,
+    "topReviewKeywords": [
+      "cafe+coworking",
+      "กาแฟอร่อย",
+      "นั่งทำงาน",
+      "power outlets",
+      "ใกล้สถานี"
     ],
-    area: "City Center",
+    "reviews": [
+      {
+        "text": "ร้านกาแฟ + co-working ใกล้สถานีรถไฟ กาแฟอร่อย wifi แรง ปลั๊กเยอะ",
+        "rating": 4,
+        "date": "2025-12-04",
+        "language": "th"
+      },
+      {
+        "text": "Cafe-coworking hybrid near the train station. Good coffee and reliable wifi.",
+        "rating": 4,
+        "date": "2025-11-12",
+        "language": "en"
+      }
+    ],
+    "area": "Train Station"
   },
   {
-    id: "clinic-007",
-    name: "BK Beauty Lab",
-    category: "clinic",
-    subcategory: "aesthetic clinic",
-    lat: 16.8268,
-    lng: 100.2578,
-    rating: 4.0,
-    reviewCount: 156,
-    openTime: "10:00",
-    closeTime: "19:00",
-    hasWebsite: true,
-    hasSocialMedia: true,
-    priceLevel: 2,
-    photos: 78,
-    topReviewKeywords: ["ทำผิว", "โปรโมชั่น", "promotions", "ราคาดี", "สะอาด"],
-    reviews: [
-      { text: "ทำผิวหน้าที่นี่ มีโปรโมชั่นบ่อย ราคาดี สะอาด พนักงานเป็นมิตร", rating: 4, date: "2025-11-30", language: "th" },
-      { text: "Good beauty clinic with regular promotions. Clean facility. Friendly staff.", rating: 4, date: "2025-10-28", language: "en" },
-      { text: "โปรโมชั่นดี แต่บางทีต้องรอนาน ควรมีระบบจองคิวออนไลน์", rating: 3, date: "2025-09-15", language: "th" },
+    "id": "place-33",
+    "name": "Digital Nomad PLK",
+    "category": "coworking",
+    "subcategory": "co-working space",
+    "lat": 16.8245,
+    "lng": 100.2588,
+    "rating": 3.4,
+    "reviewCount": 56,
+    "openTime": "09:00",
+    "closeTime": "19:00",
+    "hasWebsite": false,
+    "hasSocialMedia": true,
+    "priceLevel": 1,
+    "photos": 23,
+    "topReviewKeywords": [
+      "wifi ช้า",
+      "ถูก",
+      "เก้าอี้แข็ง",
+      "basic",
+      "พอใช้ได้"
     ],
-    area: "City Center",
+    "reviews": [
+      {
+        "text": "ราคาถูกมาก แต่ wifi ช้ามาก ไม่เหมาะทำงานที่ต้อง video call เก้าอี้แข็ง",
+        "rating": 3,
+        "date": "2025-11-22",
+        "language": "th"
+      },
+      {
+        "text": "Very basic coworking. Cheap but wifi is unreliable.",
+        "rating": 2,
+        "date": "2025-10-15",
+        "language": "en"
+      }
+    ],
+    "area": "City Center"
   },
   {
-    id: "rest-012",
-    name: "ราดหน้าเจ๊แดง (Jae Daeng Rad Na)",
-    category: "restaurant",
-    subcategory: "thai restaurant",
-    lat: 16.8255,
-    lng: 100.2625,
-    rating: 4.3,
-    reviewCount: 567,
-    openTime: "08:00",
-    closeTime: "15:00",
-    hasWebsite: false,
-    hasSocialMedia: false,
-    priceLevel: 1,
-    photos: 123,
-    topReviewKeywords: ["ราดหน้า", "อร่อย", "ของดัง", "เส้นใหญ่", "หมดเร็ว"],
-    reviews: [
-      { text: "ราดหน้าของดังพิษณุโลก! เส้นใหญ่เหนียวนุ่ม น้ำราดข้นอร่อย ต้องมาเช้า", rating: 5, date: "2025-12-06", language: "th" },
-      { text: "Famous Rad Na noodles in Phitsanulok. Rich gravy, perfect noodle texture. Come early!", rating: 5, date: "2025-11-15", language: "en" },
-      { text: "อร่อยจริง แต่ไม่มีโซเชียลมีเดีย หาร้านยากมากสำหรับคนไม่คุ้นเคย", rating: 4, date: "2025-10-08", language: "th" },
+    "id": "place-34",
+    "name": "Phitsanulok Skin Clinic",
+    "category": "clinic",
+    "subcategory": "aesthetic clinic",
+    "lat": 16.826,
+    "lng": 100.2595,
+    "rating": 4.4,
+    "reviewCount": 234,
+    "openTime": "10:00",
+    "closeTime": "20:00",
+    "hasWebsite": true,
+    "hasSocialMedia": true,
+    "priceLevel": 3,
+    "photos": 98,
+    "topReviewKeywords": [
+      "หมอเก่ง",
+      "ผิวสวย",
+      "laser",
+      "botox",
+      "ราคาแพง"
     ],
-    area: "City Center",
+    "reviews": [
+      {
+        "text": "หมอเก่ง ทำเลเซอร์หน้าใส ผิวดีขึ้นเห็นชัด แต่ราคาค่อนข้างแพง",
+        "rating": 5,
+        "date": "2025-12-07",
+        "language": "th"
+      },
+      {
+        "text": "Professional aesthetic clinic. Results are visible after just one session.",
+        "rating": 5,
+        "date": "2025-11-20",
+        "language": "en"
+      }
+    ],
+    "area": "City Center"
   },
   {
-    id: "cowork-006",
-    name: "Digital Nomad PLK",
-    category: "coworking",
-    subcategory: "co-working space",
-    lat: 16.8245,
-    lng: 100.2588,
-    rating: 3.4,
-    reviewCount: 56,
-    openTime: "09:00",
-    closeTime: "19:00",
-    hasWebsite: false,
-    hasSocialMedia: true,
-    priceLevel: 1,
-    photos: 23,
-    topReviewKeywords: ["wifi ช้า", "ถูก", "เก้าอี้แข็ง", "basic", "พอใช้ได้"],
-    reviews: [
-      { text: "ราคาถูกมาก แต่ wifi ช้ามาก ไม่เหมาะทำงานที่ต้อง video call เก้าอี้แข็ง", rating: 3, date: "2025-11-22", language: "th" },
-      { text: "Very basic coworking. Cheap but wifi is unreliable. Chairs are uncomfortable for long hours.", rating: 2, date: "2025-10-15", language: "en" },
-      { text: "ถูกจริง แต่ได้คุณภาพตามราคา ไม่มีเว็บไซต์ ไม่มีระบบจอง wifi ช้า", rating: 3, date: "2025-09-28", language: "th" },
+    "id": "place-35",
+    "name": "Dr. Smile Dental Clinic",
+    "category": "clinic",
+    "subcategory": "dental clinic",
+    "lat": 16.827,
+    "lng": 100.2585,
+    "rating": 4.6,
+    "reviewCount": 267,
+    "openTime": "09:00",
+    "closeTime": "18:00",
+    "hasWebsite": true,
+    "hasSocialMedia": true,
+    "priceLevel": 2,
+    "photos": 45,
+    "topReviewKeywords": [
+      "หมอฟัน",
+      "ไม่เจ็บ",
+      "painless",
+      "สะอาด",
+      "ราคาเป็นธรรม"
     ],
-    area: "City Center",
+    "reviews": [
+      {
+        "text": "หมอฟันเก่งมาก ทำฟันไม่เจ็บเลย อุปกรณ์ทันสมัย สะอาดมาก",
+        "rating": 5,
+        "date": "2025-12-05",
+        "language": "th"
+      },
+      {
+        "text": "Best dentist in Phitsanulok. Modern equipment. Painless treatment.",
+        "rating": 5,
+        "date": "2025-11-22",
+        "language": "en"
+      }
+    ],
+    "area": "City Center"
   },
   {
-    id: "hotel-010",
-    name: "Wangchan Riverview Resort",
-    category: "hotel",
-    subcategory: "boutique hotel",
-    lat: 16.8192,
-    lng: 100.2672,
-    rating: 4.1,
-    reviewCount: 134,
-    openTime: "00:00",
-    closeTime: "23:59",
-    hasWebsite: true,
-    hasSocialMedia: true,
-    priceLevel: 3,
-    photos: 145,
-    topReviewKeywords: ["resort", "สระว่ายน้ำ", "pool", "ริมน้ำ", "สงบ"],
-    reviews: [
-      { text: "รีสอร์ทริมแม่น้ำน่าน มีสระว่ายน้ำ สงบมาก เหมาะพักผ่อนช่วงวันหยุด", rating: 4, date: "2025-12-03", language: "th" },
-      { text: "Nice resort with a pool right on the Nan River. Very peaceful and relaxing.", rating: 4, date: "2025-11-18", language: "en" },
-      { text: "สวยดี แต่ห่างจากตัวเมือง ต้องมีรถ อาหารในรีสอร์ทแพงมาก", rating: 3, date: "2025-10-10", language: "th" },
+    "id": "place-36",
+    "name": "The Face Clinic Phitsanulok",
+    "category": "clinic",
+    "subcategory": "aesthetic clinic",
+    "lat": 16.8248,
+    "lng": 100.262,
+    "rating": 3.2,
+    "reviewCount": 89,
+    "openTime": "10:00",
+    "closeTime": "19:00",
+    "hasWebsite": false,
+    "hasSocialMedia": true,
+    "priceLevel": 2,
+    "photos": 23,
+    "topReviewKeywords": [
+      "ผิดหวัง",
+      "hard sell",
+      "กดดัน",
+      "ผลลัพธ์ไม่ดี",
+      "ไม่แนะนำ"
     ],
-    area: "Nan River",
+    "reviews": [
+      {
+        "text": "ผิดหวังมาก พนักงาน hard sell มาก กดดันให้ซื้อคอร์ส ผลลัพธ์ไม่เห็นผล",
+        "rating": 2,
+        "date": "2025-12-01",
+        "language": "th"
+      },
+      {
+        "text": "Very pushy sales. Results were mediocre.",
+        "rating": 2,
+        "date": "2025-11-15",
+        "language": "en"
+      }
+    ],
+    "area": "City Center"
   },
   {
-    id: "cafe-011",
-    name: "Between Books Cafe",
-    category: "cafe",
-    subcategory: "book cafe",
-    lat: 16.8262,
-    lng: 100.2582,
-    rating: 4.2,
-    reviewCount: 167,
-    openTime: "09:00",
-    closeTime: "20:00",
-    hasWebsite: false,
-    hasSocialMedia: true,
-    priceLevel: 2,
-    photos: 98,
-    topReviewKeywords: ["หนังสือ", "book cafe", "เงียบ", "ชาอร่อย", "อ่านหนังสือ"],
-    reviews: [
-      { text: "ร้านกาแฟ+หนังสือ บรรยากาศเงียบ เหมาะอ่านหนังสือ ชาดอกไม้อร่อยมาก", rating: 4, date: "2025-12-07", language: "th" },
-      { text: "Lovely book cafe. Very quiet atmosphere. Great for reading. Flower tea is excellent.", rating: 4, date: "2025-11-20", language: "en" },
-      { text: "ที่นั่งน้อย คนเยอะช่วงบ่ายวันเสาร์ หนังสือส่วนใหญ่เป็นภาษาไทย", rating: 3, date: "2025-10-12", language: "th" },
+    "id": "place-37",
+    "name": "Nara Beauty Clinic",
+    "category": "clinic",
+    "subcategory": "aesthetic clinic",
+    "lat": 16.8285,
+    "lng": 100.255,
+    "rating": 4.1,
+    "reviewCount": 178,
+    "openTime": "10:00",
+    "closeTime": "19:00",
+    "hasWebsite": false,
+    "hasSocialMedia": true,
+    "priceLevel": 2,
+    "photos": 67,
+    "topReviewKeywords": [
+      "ฟิลเลอร์",
+      "filler",
+      "ราคาดี",
+      "ปรึกษาฟรี",
+      "พนักงานดี"
     ],
-    area: "City Center",
+    "reviews": [
+      {
+        "text": "ทำฟิลเลอร์ที่นี่ ราคาดี พนักงานบริการดี หมอให้คำปรึกษาฟรี",
+        "rating": 4,
+        "date": "2025-12-03",
+        "language": "th"
+      },
+      {
+        "text": "Good value for filler treatments. Free consultation.",
+        "rating": 4,
+        "date": "2025-11-10",
+        "language": "en"
+      }
+    ],
+    "area": "Topland Plaza"
   },
   {
-    id: "rest-013",
-    name: "Indian Curry House PLK",
-    category: "restaurant",
-    subcategory: "international restaurant",
-    lat: 16.8272,
-    lng: 100.2565,
-    rating: 3.5,
-    reviewCount: 78,
-    openTime: "11:00",
-    closeTime: "21:00",
-    hasWebsite: false,
-    hasSocialMedia: false,
-    priceLevel: 2,
-    photos: 19,
-    topReviewKeywords: ["Indian food", "curry", "พอใช้ได้", "naan", "ไม่ค่อยอร่อย"],
-    reviews: [
-      { text: "อาหารอินเดียพอใช้ได้ naan นุ่มดี แต่ curry ไม่ค่อยเข้มข้น", rating: 3, date: "2025-11-25", language: "th" },
-      { text: "Decent Indian food for a small Thai city. Naan is good. Curries could be more flavorful.", rating: 3, date: "2025-10-18", language: "en" },
-      { text: "ร้านเล็กมาก ไม่มีคนรีวิว หาร้านยาก ไม่มี social media", rating: 3, date: "2025-09-10", language: "th" },
+    "id": "place-38",
+    "name": "Slim & Shape Center",
+    "category": "clinic",
+    "subcategory": "aesthetic clinic",
+    "lat": 16.8278,
+    "lng": 100.2545,
+    "rating": 3.5,
+    "reviewCount": 112,
+    "openTime": "10:00",
+    "closeTime": "20:00",
+    "hasWebsite": false,
+    "hasSocialMedia": true,
+    "priceLevel": 3,
+    "photos": 28,
+    "topReviewKeywords": [
+      "ลดน้ำหนัก",
+      "slimming",
+      "แพงมาก",
+      "ผลลัพธ์ช้า",
+      "coolsculpting"
     ],
-    area: "Topland Plaza",
-  },
-  {
-    id: "clinic-008",
-    name: "Phitsanulok Wellness Clinic",
-    category: "clinic",
-    subcategory: "wellness clinic",
-    lat: 16.7442,
-    lng: 100.1948,
-    rating: 3.9,
-    reviewCount: 98,
-    openTime: "09:00",
-    closeTime: "17:00",
-    hasWebsite: false,
-    hasSocialMedia: true,
-    priceLevel: 2,
-    photos: 34,
-    topReviewKeywords: ["สุขภาพ", "wellness", "นวด", "ผ่อนคลาย", "ใกล้มน."],
-    reviews: [
-      { text: "คลินิกสุขภาพใกล้มหาวิทยาลัย นวดผ่อนคลายดี แต่ไม่มีเว็บไซต์ จองยาก", rating: 4, date: "2025-11-20", language: "th" },
-      { text: "Good wellness clinic near the university. Relaxing massage. Hard to book without a website.", rating: 4, date: "2025-10-15", language: "en" },
-      { text: "ปิดเร็ว 5 โมง ไม่สะดวกสำหรับคนทำงาน ควรเปิดถึงทุ่มอย่างน้อย", rating: 3, date: "2025-09-08", language: "th" },
+    "reviews": [
+      {
+        "text": "ทำ coolsculpting แพงมาก ผลลัพธ์ต้องรอ 2-3 เดือน",
+        "rating": 3,
+        "date": "2025-11-28",
+        "language": "th"
+      },
+      {
+        "text": "Expensive slimming treatments. Results take months to show.",
+        "rating": 3,
+        "date": "2025-10-20",
+        "language": "en"
+      }
     ],
-    area: "Naresuan University",
-  },
-  {
-    id: "cafe-012",
-    name: "ร้านชาพิษณุโลก (PLK Tea House)",
-    category: "cafe",
-    subcategory: "tea house",
-    lat: 16.8178,
-    lng: 100.2705,
-    rating: 3.8,
-    reviewCount: 89,
-    openTime: "09:00",
-    closeTime: "18:00",
-    hasWebsite: false,
-    hasSocialMedia: true,
-    priceLevel: 1,
-    photos: 45,
-    topReviewKeywords: ["ชา", "tea", "ใกล้สถานี", "เงียบ", "ราคาถูก"],
-    reviews: [
-      { text: "ร้านชาเล็กๆ ใกล้สถานีรถไฟ ชาจีนหอมดี ราคาถูก บรรยากาศเงียบ", rating: 4, date: "2025-11-28", language: "th" },
-      { text: "Small tea house near the train station. Good Chinese tea at affordable prices.", rating: 4, date: "2025-10-20", language: "en" },
-      { text: "ร้านเล็กมาก นั่งได้ไม่กี่คน ชาพอใช้ได้ ไม่มีขนม", rating: 3, date: "2025-09-15", language: "th" },
-    ],
-    area: "Train Station",
-  },
-  {
-    id: "rest-014",
-    name: "Shabu Town Phitsanulok",
-    category: "restaurant",
-    subcategory: "thai restaurant",
-    lat: 16.8280,
-    lng: 100.2548,
-    rating: 3.6,
-    reviewCount: 289,
-    openTime: "11:00",
-    closeTime: "22:00",
-    hasWebsite: true,
-    hasSocialMedia: true,
-    priceLevel: 2,
-    photos: 67,
-    topReviewKeywords: ["ชาบู", "buffet", "คุณภาพปานกลาง", "เนื้อบาง", "ราคาพอได้"],
-    reviews: [
-      { text: "ชาบูบุฟเฟ่ต์ ราคาพอได้ แต่เนื้อบางมาก คุณภาพวัตถุดิบปานกลาง", rating: 3, date: "2025-12-01", language: "th" },
-      { text: "All-you-can-eat shabu. Meat quality is average. Decent for the price but not great.", rating: 3, date: "2025-11-12", language: "en" },
-      { text: "น้ำซุปอร่อย แต่ผักไม่ค่อยสด เนื้อตัดบางเกิน พนักงานบริการดี", rating: 3, date: "2025-10-05", language: "th" },
-    ],
-    area: "Topland Plaza",
-  },
-];
+    "area": "Topland Plaza"
+  }
+] as any;
 
 export default places;
