@@ -14,13 +14,13 @@ export function formatNumber(num: number): string {
 
 export function getCategoryColor(category: string): string {
   const colors: Record<string, string> = {
-    hotel: "#3b82f6",
-    cafe: "#f59e0b",
-    restaurant: "#10b981",
-    clinic: "#8b5cf6",
-    coworking: "#ec4899",
+    hotel: "#f97316",
+    cafe: "#8b5cf6",
+    restaurant: "#c4b5fd",
+    clinic: "#fb923c",
+    coworking: "#a78bfa",
   };
-  return colors[category] || "#6b7280";
+  return colors[category] || "#94a3b8";
 }
 
 export function getCategoryLabel(category: string): string {

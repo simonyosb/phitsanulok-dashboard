@@ -25,7 +25,6 @@ import {
   Star,
   MessageSquare,
   AlertTriangle,
-  MapPin,
   TrendingUp,
   TrendingDown,
 } from "lucide-react";
@@ -79,145 +78,60 @@ export default function OverviewPage() {
   }));
 
   return (
-    <div className="space-y-6">
+    <div className="flex flex-col gap-6">
       {/* Header */}
-      <div className="rounded-2xl bg-gradient-to-br from-[#0f172a] via-[#1e3a5f] to-[#2563eb] p-8 text-white shadow-xl relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Y2lyY2xlIGN4PSIyMCIgY3k9IjIwIiByPSIxIiBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LDAuMDUpIi8+PC9zdmc+')] opacity-50" />
-        <div className="relative flex items-center justify-between">
-          <div>
-            <p className="text-blue-300 text-[12px] font-semibold uppercase tracking-[0.15em] mb-2">
-              Dashboard Overview
-            </p>
-            <h1 className="text-[30px] font-extrabold tracking-tight leading-tight">
-              Phitsanulok Business Intelligence
-            </h1>
-            <p className="text-blue-200/80 mt-2 text-[14px] max-w-lg">
-              Market landscape, competitor analysis &amp; social listening
-              for {totalPlaces} businesses across Phitsanulok province
-            </p>
+      <header className="flex justify-between items-center">
+        <h1 className="text-2xl font-bold tracking-tight">Phitsanulok BI</h1>
+        <div className="flex items-center gap-4">
+          <div className="flex items-center gap-2 px-4 py-2 rounded-lg border border-orange-200 text-[#f97316] text-sm font-medium hover:bg-orange-50 transition-colors cursor-pointer">
+            <TrendingUp className="h-4 w-4" />
+            Edit Dashboard
           </div>
-          <div className="text-right hidden md:flex flex-col items-end gap-3">
-            <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 backdrop-blur-sm border border-white/10">
-              <div className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
-              <span className="text-[13px] font-semibold">Live Data</span>
-            </div>
-            <p className="text-[11px] text-blue-300/70">
-              Google Maps via Apify · March 2026
-            </p>
+          <div className="flex items-center gap-2 px-4 py-2 rounded-lg border border-slate-200 bg-white text-sm shadow-sm">
+            <span className="font-medium text-slate-700">March 2026</span>
           </div>
         </div>
-      </div>
+      </header>
 
-      {/* Stat Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-        <StatCard
-          title="Total Places"
-          value={totalPlaces}
-          subtitle="Tracked businesses"
-          icon={Building2}
-          iconBg="bg-blue-50"
-          iconColor="text-blue-600"
-        />
+      {/* KPI Cards Row */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         <StatCard
           title="Avg Rating"
           value={avgRating}
-          subtitle="Across all categories"
+          subtitle="Overall Score"
           icon={Star}
-          iconBg="bg-amber-50"
-          iconColor="text-amber-500"
+          change={{ value: "4.2★", positive: true }}
         />
         <StatCard
           title="Total Reviews"
-          value={totalReviews.toLocaleString()}
-          subtitle="Google Maps reviews"
+          value={`+${totalReviews.toLocaleString()}`}
+          subtitle="Response Rate"
           icon={MessageSquare}
-          iconBg="bg-emerald-50"
-          iconColor="text-emerald-600"
+          change={{ value: "12%", positive: true }}
         />
         <StatCard
-          title="Low Rating (<4.0)"
-          value={lowRatingCount}
-          subtitle="Potential B2B leads"
-          icon={AlertTriangle}
-          iconBg="bg-red-50"
-          iconColor="text-red-500"
+          title="High Ratings"
+          value={`${totalPlaces - lowRatingCount}`}
+          subtitle="Target Completion"
+          icon={Star}
+          change={{ value: `${lowRatingCount} low`, positive: false }}
         />
       </div>
 
-      {/* Charts Row */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        {/* Category Distribution */}
-        <Card>
+      {/* Charts + Categories Row */}
+      <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
+        {/* Rating by Category Chart */}
+        <Card className="md:col-span-8">
           <CardHeader>
-            <CardTitle className="text-[15px] font-semibold">
-              Places by Category
-            </CardTitle>
-          </CardHeader>
-          <CardContent>
-            <div className="flex gap-6">
-              {/* Donut chart */}
-              <div className="shrink-0">
-                {mounted && (
-                  <PieChart width={160} height={160}>
-                    <Pie
-                      data={pieData}
-                      cx={80}
-                      cy={80}
-                      innerRadius={45}
-                      outerRadius={72}
-                      paddingAngle={3}
-                      dataKey="value"
-                      stroke="none"
-                    >
-                      {pieData.map((entry, i) => (
-                        <Cell key={i} fill={entry.color} />
-                      ))}
-                    </Pie>
-                  </PieChart>
-                )}
-              </div>
-              {/* Legend */}
-              <div className="flex-1 space-y-3 py-1">
-                {categoryStats.map((stat) => (
-                  <div key={stat.category} className="flex items-center justify-between">
-                    <div className="flex items-center gap-2.5">
-                      <div
-                        className="h-3 w-3 rounded-sm"
-                        style={{ backgroundColor: getCategoryColor(stat.category) }}
-                      />
-                      <span className="text-[13px] font-medium text-[var(--foreground)]">
-                        {stat.name}
-                      </span>
-                    </div>
-                    <div className="flex items-center gap-3">
-                      <span className="text-[14px] font-bold tabular-nums">
-                        {stat.count}
-                      </span>
-                      <span className="text-[11px] text-[var(--muted-foreground)] tabular-nums w-[60px] text-right">
-                        ★ {stat.avgRating}
-                      </span>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </CardContent>
-        </Card>
-
-        {/* Rating by Category */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-[15px] font-semibold">
-              Average Rating by Category
-            </CardTitle>
+            <CardTitle>Rating Trends by Category</CardTitle>
           </CardHeader>
           <CardContent>
             {mounted && (
-              <ResponsiveContainer width="100%" height={220}>
+              <ResponsiveContainer width="100%" height={250}>
                 <BarChart data={barData} barCategoryGap="25%">
                   <CartesianGrid
                     strokeDasharray="3 3"
-                    stroke="#e2e8f0"
+                    stroke="rgba(0,0,0,0.05)"
                     vertical={false}
                   />
                   <XAxis
@@ -225,7 +139,7 @@ export default function OverviewPage() {
                     fontSize={11}
                     tickLine={false}
                     axisLine={false}
-                    tick={{ fill: "#64748b" }}
+                    tick={{ fill: "#94a3b8" }}
                   />
                   <YAxis
                     domain={[0, 5]}
@@ -233,7 +147,7 @@ export default function OverviewPage() {
                     fontSize={11}
                     tickLine={false}
                     axisLine={false}
-                    tick={{ fill: "#64748b" }}
+                    tick={{ fill: "#94a3b8" }}
                     width={30}
                   />
                   <Tooltip
@@ -256,52 +170,81 @@ export default function OverviewPage() {
             )}
           </CardContent>
         </Card>
-      </div>
 
-      {/* Area + Keywords Row */}
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-        {/* Area Distribution */}
-        <Card>
+        {/* Category Donut */}
+        <Card className="md:col-span-4">
           <CardHeader>
-            <CardTitle className="text-[15px] font-semibold flex items-center gap-2">
-              <MapPin className="h-4 w-4 text-[var(--muted-foreground)]" />
-              Places by Area
-            </CardTitle>
+            <CardTitle>Top Categories</CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="space-y-3.5">
-              {areaStats.map((area, i) => {
-                const colors = [
-                  "#3b82f6",
-                  "#8b5cf6",
-                  "#f59e0b",
-                  "#10b981",
-                  "#ec4899",
-                ];
-                const pct = Math.round((area.count / totalPlaces) * 100);
-                return (
-                  <div key={area.area}>
-                    <div className="flex items-center justify-between mb-1">
-                      <span className="text-[13px] font-medium">
-                        {area.area}
-                      </span>
-                      <div className="flex items-center gap-2">
-                        <span className="text-[13px] font-bold tabular-nums">
-                          {area.count}
-                        </span>
-                        <span className="text-[11px] text-[var(--muted-foreground)] tabular-nums">
-                          {pct}%
-                        </span>
-                      </div>
-                    </div>
-                    <div className="h-2 rounded-full bg-gray-100 overflow-hidden">
+            <div className="flex flex-col items-center gap-6">
+              {/* Donut chart */}
+              <div className="shrink-0">
+                {mounted && (
+                  <PieChart width={120} height={120}>
+                    <Pie
+                      data={pieData}
+                      cx={60}
+                      cy={60}
+                      innerRadius={35}
+                      outerRadius={55}
+                      paddingAngle={3}
+                      dataKey="value"
+                      stroke="none"
+                    >
+                      {pieData.map((entry, i) => (
+                        <Cell key={i} fill={entry.color} />
+                      ))}
+                    </Pie>
+                  </PieChart>
+                )}
+              </div>
+              {/* Legend */}
+              <div className="w-full space-y-3">
+                {categoryStats.map((stat) => {
+                  const pct = Math.round((stat.count / totalPlaces) * 100);
+                  return (
+                    <div key={stat.category} className="flex items-center gap-2 text-sm">
                       <div
-                        className="h-full rounded-full transition-all duration-500"
-                        style={{
-                          width: `${pct}%`,
-                          backgroundColor: colors[i % colors.length],
-                        }}
+                        className="w-2 h-2 rounded-full shrink-0"
+                        style={{ backgroundColor: getCategoryColor(stat.category) }}
                       />
+                      <span className="font-medium text-slate-700">{pct}%</span>
+                      <span className="text-slate-500 truncate">{stat.name}</span>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+      </div>
+
+      {/* Area Distribution + Keywords */}
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        {/* Geographic Distribution */}
+        <Card>
+          <CardHeader>
+            <CardTitle>Geographic Distribution</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="space-y-4">
+              {areaStats.map((area, i) => {
+                const colors = ["#f97316", "#8b5cf6", "#c4b5fd", "#fb923c", "#a78bfa"];
+                return (
+                  <div key={area.area} className="flex items-center justify-between text-sm">
+                    <div className="flex items-center gap-3">
+                      <div
+                        className="w-2 h-2 rounded-full"
+                        style={{ backgroundColor: colors[i % colors.length] }}
+                      />
+                      <span className="font-medium text-slate-700">{area.area}</span>
+                    </div>
+                    <div className="flex items-center gap-4">
+                      <span className="text-slate-600">{area.count}</span>
+                      <span className="px-2 py-0.5 rounded bg-purple-100 text-[#8b5cf6] text-xs font-semibold w-12 text-center">
+                        {Math.round((area.count / totalPlaces) * 100)}%
+                      </span>
                     </div>
                   </div>
                 );
@@ -314,10 +257,8 @@ export default function OverviewPage() {
         <Card>
           <CardHeader>
             <div className="flex items-center gap-2">
-              <TrendingUp className="h-4 w-4 text-emerald-500" />
-              <CardTitle className="text-[15px] font-semibold">
-                Positive Keywords
-              </CardTitle>
+              <TrendingUp className="h-4 w-4 text-green-500" />
+              <CardTitle>Positive Keywords</CardTitle>
             </div>
           </CardHeader>
           <CardContent>
@@ -325,10 +266,10 @@ export default function OverviewPage() {
               {positiveKeywords.slice(0, 12).map((kw) => (
                 <span
                   key={kw.keyword}
-                  className="inline-flex items-center gap-1 rounded-full bg-emerald-50 border border-emerald-200/60 px-2.5 py-1 text-[11px] font-medium text-emerald-700"
+                  className="inline-flex items-center gap-1 rounded-full bg-orange-50 border border-orange-200/60 px-2.5 py-1 text-[11px] font-medium text-orange-700"
                 >
                   {kw.keyword}
-                  <span className="text-[10px] text-emerald-500 font-bold">
+                  <span className="text-[10px] text-orange-500 font-bold">
                     {kw.count}
                   </span>
                 </span>
@@ -342,9 +283,7 @@ export default function OverviewPage() {
           <CardHeader>
             <div className="flex items-center gap-2">
               <TrendingDown className="h-4 w-4 text-red-500" />
-              <CardTitle className="text-[15px] font-semibold">
-                Negative Keywords
-              </CardTitle>
+              <CardTitle>Negative Keywords</CardTitle>
             </div>
           </CardHeader>
           <CardContent>
@@ -352,10 +291,10 @@ export default function OverviewPage() {
               {negativeKeywords.slice(0, 12).map((kw) => (
                 <span
                   key={kw.keyword}
-                  className="inline-flex items-center gap-1 rounded-full bg-red-50 border border-red-200/60 px-2.5 py-1 text-[11px] font-medium text-red-700"
+                  className="inline-flex items-center gap-1 rounded-full bg-violet-50 border border-violet-200/60 px-2.5 py-1 text-[11px] font-medium text-violet-700"
                 >
                   {kw.keyword}
-                  <span className="text-[10px] text-red-400 font-bold">
+                  <span className="text-[10px] text-violet-500 font-bold">
                     {kw.count}
                   </span>
                 </span>
@@ -370,28 +309,26 @@ export default function OverviewPage() {
         <Card>
           <CardHeader>
             <div className="flex items-center gap-2">
-              <Star className="h-4 w-4 text-amber-500" />
-              <CardTitle className="text-[15px] font-semibold">
-                Top Rated Places
-              </CardTitle>
+              <Star className="h-4 w-4 text-orange-500" />
+              <CardTitle>Top Rated Places</CardTitle>
             </div>
           </CardHeader>
           <CardContent>
-            <div className="divide-y divide-gray-100">
+            <div className="divide-y divide-slate-100">
               {topRated.map((place, i) => (
                 <div
                   key={place.id}
                   className="flex items-center justify-between py-3 first:pt-0 last:pb-0"
                 >
                   <div className="flex items-center gap-3 min-w-0">
-                    <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-emerald-50 text-[12px] font-bold text-emerald-600">
+                    <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-orange-50 text-[12px] font-bold text-orange-600">
                       {i + 1}
                     </span>
                     <div className="min-w-0">
                       <p className="text-[13px] font-semibold truncate">
                         {place.name}
                       </p>
-                      <p className="text-[11px] text-[var(--muted-foreground)]">
+                      <p className="text-[11px] text-slate-500">
                         {place.area} · {place.reviewCount} reviews
                       </p>
                     </div>
@@ -426,13 +363,11 @@ export default function OverviewPage() {
           <CardHeader>
             <div className="flex items-center gap-2">
               <AlertTriangle className="h-4 w-4 text-red-500" />
-              <CardTitle className="text-[15px] font-semibold">
-                Lowest Rated (B2B Leads)
-              </CardTitle>
+              <CardTitle>Lowest Rated (B2B Leads)</CardTitle>
             </div>
           </CardHeader>
           <CardContent>
-            <div className="divide-y divide-gray-100">
+            <div className="divide-y divide-slate-100">
               {worstRated.map((place, i) => (
                 <div
                   key={place.id}
@@ -453,7 +388,7 @@ export default function OverviewPage() {
                           </span>
                         )}
                         {!place.hasSocialMedia && (
-                          <span className="text-[10px] px-1.5 py-0.5 rounded-full bg-orange-50 text-orange-500 font-medium border border-orange-100">
+                          <span className="text-[10px] px-1.5 py-0.5 rounded-full bg-violet-50 text-violet-500 font-medium border border-violet-100">
                             No social
                           </span>
                         )}

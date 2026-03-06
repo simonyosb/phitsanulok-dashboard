@@ -26,7 +26,7 @@ export default function RootLayout({
       </head>
       <body className="font-[Inter,sans-serif]">
         <Sidebar />
-        <main className="ml-[260px] min-h-screen bg-[var(--background)]">
+        <main className="ml-20 min-h-screen bg-[var(--background)]">
           <div className="p-6 lg:p-8">{children}</div>
         </main>
       </body>
