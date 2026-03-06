@@ -27,12 +27,12 @@ export function Sidebar() {
   return (
     <aside className="fixed left-0 top-0 z-40 h-screen w-20 bg-white border-r border-slate-200 flex flex-col items-center py-6 shadow-sm">
       {/* Logo */}
-      <div className="text-[#f97316] mb-10">
+      <div className="text-orange-500 mb-8 mt-2">
         <BarChart3 className="h-7 w-7" />
       </div>
 
       {/* Nav */}
-      <nav className="flex-1 flex flex-col gap-2">
+      <nav className="flex-1 flex flex-col gap-3 w-full px-3">
         {navItems.map((item) => {
           const isActive =
             item.href === "/" ? pathname === "/" : pathname.startsWith(item.href);
@@ -42,21 +42,22 @@ export function Sidebar() {
               href={item.href}
               title={item.label}
               className={cn(
-                "p-3 rounded-xl flex items-center justify-center transition-colors",
+                "w-full aspect-square rounded-xl flex flex-col items-center justify-center gap-1 transition-all",
                 isActive
-                  ? "bg-orange-100 text-[#f97316]"
-                  : "text-slate-400 hover:bg-slate-100 hover:text-slate-600"
+                  ? "bg-orange-50 text-orange-600 shadow-sm border border-orange-100"
+                  : "text-slate-400 hover:bg-slate-50 hover:text-slate-700"
               )}
             >
               <item.icon className="h-5 w-5" />
+              <span className="text-[9px] font-medium">{item.label}</span>
             </Link>
           );
         })}
       </nav>
 
       {/* Bottom status */}
-      <div className="mt-auto flex flex-col items-center gap-1">
-        <div className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
+      <div className="mt-auto flex flex-col items-center gap-1.5 pb-2">
+        <div className="h-2.5 w-2.5 rounded-full bg-emerald-400 border-2 border-white shadow-sm animate-pulse" />
         <p className="text-[9px] text-slate-400 font-medium">Live</p>
       </div>
     </aside>

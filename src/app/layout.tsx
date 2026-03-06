@@ -17,18 +17,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="th">
+    <html lang="en">
       <head>
         <link
           rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
         />
       </head>
-      <body className="font-[Inter,sans-serif]">
-        <Sidebar />
-        <main className="ml-20 min-h-screen bg-[var(--background)]">
-          <div className="p-6 lg:p-8">{children}</div>
-        </main>
+      <body className="font-[Inter,sans-serif] min-h-screen bg-slate-50 text-slate-900 antialiased">
+        <div className="flex">
+          <Sidebar />
+          <main className="flex-1 w-full pl-20 transition-all">
+            <div className="p-6 max-w-7xl mx-auto">{children}</div>
+          </main>
+        </div>
       </body>
     </html>
   );

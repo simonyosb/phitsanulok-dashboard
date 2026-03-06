@@ -181,14 +181,14 @@ export default function OverviewPage() {
               {/* Donut chart */}
               <div className="shrink-0">
                 {mounted && (
-                  <PieChart width={120} height={120}>
+                  <PieChart width={180} height={180}>
                     <Pie
                       data={pieData}
-                      cx={60}
-                      cy={60}
-                      innerRadius={35}
-                      outerRadius={55}
-                      paddingAngle={3}
+                      cx={90}
+                      cy={90}
+                      innerRadius={50}
+                      outerRadius={80}
+                      paddingAngle={4}
                       dataKey="value"
                       stroke="none"
                     >
@@ -200,7 +200,7 @@ export default function OverviewPage() {
                 )}
               </div>
               {/* Legend */}
-              <div className="w-full space-y-3">
+              <div className="w-full space-y-2.5">
                 {categoryStats.map((stat) => {
                   const pct = Math.round((stat.count / totalPlaces) * 100);
                   return (
@@ -262,14 +262,14 @@ export default function OverviewPage() {
             </div>
           </CardHeader>
           <CardContent>
-            <div className="flex flex-wrap gap-1.5">
+            <div className="flex flex-wrap items-center gap-2">
               {positiveKeywords.slice(0, 12).map((kw) => (
                 <span
                   key={kw.keyword}
-                  className="inline-flex items-center gap-1 rounded-full bg-orange-50 border border-orange-200/60 px-2.5 py-1 text-[11px] font-medium text-orange-700"
+                  className="inline-flex items-center gap-1.5 rounded-full bg-orange-50 border border-orange-200/60 px-3 py-1 text-xs font-medium text-orange-700 whitespace-nowrap"
                 >
                   {kw.keyword}
-                  <span className="text-[10px] text-orange-500 font-bold">
+                  <span className="text-[10px] text-orange-500 font-bold bg-white px-1.5 py-0.5 rounded-full">
                     {kw.count}
                   </span>
                 </span>
@@ -287,14 +287,14 @@ export default function OverviewPage() {
             </div>
           </CardHeader>
           <CardContent>
-            <div className="flex flex-wrap gap-1.5">
+            <div className="flex flex-wrap items-center gap-2">
               {negativeKeywords.slice(0, 12).map((kw) => (
                 <span
                   key={kw.keyword}
-                  className="inline-flex items-center gap-1 rounded-full bg-violet-50 border border-violet-200/60 px-2.5 py-1 text-[11px] font-medium text-violet-700"
+                  className="inline-flex items-center gap-1.5 rounded-full bg-violet-50 border border-violet-200/60 px-3 py-1 text-xs font-medium text-violet-700 whitespace-nowrap"
                 >
                   {kw.keyword}
-                  <span className="text-[10px] text-violet-500 font-bold">
+                  <span className="text-[10px] text-violet-500 font-bold bg-white px-1.5 py-0.5 rounded-full">
                     {kw.count}
                   </span>
                 </span>
@@ -337,11 +337,11 @@ export default function OverviewPage() {
                     <Badge
                       variant={
                         place.category as
-                          | "hotel"
-                          | "cafe"
-                          | "restaurant"
-                          | "clinic"
-                          | "coworking"
+                        | "hotel"
+                        | "cafe"
+                        | "restaurant"
+                        | "clinic"
+                        | "coworking"
                       }
                     >
                       {getCategoryLabel(place.category)}
@@ -399,11 +399,11 @@ export default function OverviewPage() {
                     <Badge
                       variant={
                         place.category as
-                          | "hotel"
-                          | "cafe"
-                          | "restaurant"
-                          | "clinic"
-                          | "coworking"
+                        | "hotel"
+                        | "cafe"
+                        | "restaurant"
+                        | "clinic"
+                        | "coworking"
                       }
                     >
                       {getCategoryLabel(place.category)}

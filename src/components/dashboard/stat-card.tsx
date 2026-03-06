@@ -19,31 +19,29 @@ export function StatCard({
   change,
 }: StatCardProps) {
   return (
-    <div className="rounded-xl border border-slate-100 bg-white p-6 shadow-sm flex flex-col justify-between">
-      <div className="flex justify-between items-start mb-2">
-        <h3 className="text-sm font-semibold text-slate-600">{title}</h3>
-        {change && (
-          <span
-            className={cn(
-              "px-2 py-1 rounded text-xs font-medium",
-              change.positive
-                ? "bg-green-100 text-green-600"
-                : "bg-red-100 text-red-600"
-            )}
-          >
-            {change.positive ? "+" : ""}{change.value}
-          </span>
-        )}
+    <div className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm flex flex-col gap-4">
+      <div className="flex justify-between items-center">
+        <h3 className="text-sm font-medium text-slate-500">{title}</h3>
+        <Icon className="h-5 w-5 text-slate-400" />
       </div>
-      <div className="flex items-end gap-2 border-b border-slate-100 pb-4 mb-4">
-        <span className="text-3xl font-bold">{value}</span>
-        {title === "Avg Rating" && (
-          <Icon className="h-5 w-5 text-orange-400 mb-1" />
-        )}
+      <div>
+        <div className="text-3xl font-bold text-slate-800">{value || "0.0"}</div>
+        <div className="flex items-center gap-2 mt-2">
+          {change && (
+            <span
+              className={cn(
+                "px-2 py-0.5 rounded text-xs font-semibold",
+                change.positive
+                  ? "bg-emerald-100 text-emerald-700"
+                  : "bg-rose-100 text-rose-700"
+              )}
+            >
+              {change.positive ? "+" : ""}{change.value}
+            </span>
+          )}
+          {subtitle && <span className="text-xs text-slate-500 font-medium">{subtitle}</span>}
+        </div>
       </div>
-      {subtitle && (
-        <p className="text-xs text-slate-500">{subtitle}</p>
-      )}
     </div>
   );
 }
