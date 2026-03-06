@@ -49,11 +49,20 @@ export default function OverviewPage() {
 
   return (
     <div>
-      <div className="mb-8">
-        <h1 className="text-2xl font-bold">Dashboard Overview</h1>
-        <p className="text-[var(--muted-foreground)] mt-1">
-          Business intelligence for Phitsanulok province
-        </p>
+      {/* Hero Header */}
+      <div className="gradient-header rounded-2xl p-6 mb-8 text-white">
+        <div className="flex items-center justify-between">
+          <div>
+            <h1 className="text-2xl font-bold">Phitsanulok Business Intelligence</h1>
+            <p className="text-blue-100 mt-1">
+              Market landscape, competitor analysis, and social listening dashboard
+            </p>
+          </div>
+          <div className="text-right hidden md:block">
+            <p className="text-sm text-blue-200">Data Source: Google Maps</p>
+            <p className="text-sm text-blue-200">Updated: March 2026</p>
+          </div>
+        </div>
       </div>
 
       {/* Stat Cards */}
