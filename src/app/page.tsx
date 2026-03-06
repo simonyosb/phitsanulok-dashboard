@@ -80,14 +80,14 @@ export default function OverviewPage() {
   return (
     <div className="flex flex-col gap-6">
       {/* Header */}
-      <header className="flex justify-between items-center">
+      <header className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
         <h1 className="text-2xl font-bold tracking-tight">Phitsanulok BI</h1>
-        <div className="flex items-center gap-4">
-          <div className="flex items-center gap-2 px-4 py-2 rounded-lg border border-orange-200 text-[#f97316] text-sm font-medium hover:bg-orange-50 transition-colors cursor-pointer">
+        <div className="flex flex-wrap items-center gap-2 sm:gap-4 w-full sm:w-auto">
+          <div className="flex-1 sm:flex-none flex justify-center items-center gap-2 px-4 py-2 rounded-lg border border-orange-200 text-[#f97316] text-sm font-medium hover:bg-orange-50 transition-colors cursor-pointer whitespace-nowrap">
             <TrendingUp className="h-4 w-4" />
             Edit Dashboard
           </div>
-          <div className="flex items-center gap-2 px-4 py-2 rounded-lg border border-slate-200 bg-white text-sm shadow-sm">
+          <div className="flex-1 sm:flex-none flex justify-center items-center gap-2 px-4 py-2 rounded-lg border border-slate-200 bg-white text-sm shadow-sm whitespace-nowrap">
             <span className="font-medium text-slate-700">March 2026</span>
           </div>
         </div>

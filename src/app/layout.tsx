@@ -25,10 +25,10 @@ export default function RootLayout({
         />
       </head>
       <body className="font-[Inter,sans-serif] min-h-screen bg-slate-50 text-slate-900 antialiased">
-        <div className="flex">
+        <div className="flex flex-col md:flex-row min-h-screen">
           <Sidebar />
-          <main className="flex-1 w-full pl-20 transition-all">
-            <div className="p-6 max-w-7xl mx-auto">{children}</div>
+          <main className="flex-1 w-full md:pl-20 pb-16 md:pb-0 transition-all">
+            <div className="p-4 sm:p-6 lg:p-8 max-w-7xl mx-auto">{children}</div>
           </main>
         </div>
       </body>
