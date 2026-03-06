@@ -104,6 +104,18 @@ function main() {
       console.log(`  Filtered out (no reviews): ${p.name}`);
       return false;
     }
+    // Filter out government offices and non-business places
+    const name = p.name.toLowerCase();
+    const sub = (p.subcategory || "").toLowerCase();
+    if (
+      sub.includes("สถานที่ราชการ") ||
+      sub.includes("government") ||
+      name.includes("สำนักงาน") ||
+      name.includes("ที่ดิน")
+    ) {
+      console.log(`  Filtered out (government): ${p.name}`);
+      return false;
+    }
     return true;
   });
   console.log(`After filtering: ${scraped.length} valid places`);

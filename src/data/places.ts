@@ -1,6 +1,6 @@
 // Phitsanulok Province Business Intelligence Dashboard
 // Data: Google Maps via Apify (2026-03-06) + supplementary data
-// Total: 30 places across 5 categories
+// Total: 29 places across 5 categories
 
 export interface Review {
   text: string;
@@ -939,95 +939,6 @@ export const places: Place[] = [
   },
   {
     "id": "place-12",
-    "name": "สำนักงานที่ดินจังหวัดพิษณุโลก สาขานครไทย",
-    "category": "restaurant",
-    "subcategory": "สถานที่ราชการ",
-    "lat": 17.1084541,
-    "lng": 100.8264715,
-    "rating": 3.4,
-    "reviewCount": 18,
-    "openTime": "08:00",
-    "closeTime": "22:00",
-    "hasWebsite": true,
-    "hasSocialMedia": false,
-    "priceLevel": 2,
-    "photos": 20,
-    "topReviewKeywords": [
-      "เจ้าหน้าที่หน้าตาดูเหนื่อยแต่ก็ยังยิ้ม",
-      "ขอบคุณนะคะที่ใส่ใจประชาชน",
-      "ฝากปรับปรุงเรื่องการบริการ",
-      "ของเจ้าหน้าที่ผู้ชายวัยรุ่นตัวสูงๆ",
-      "พูดจา",
-      "ใช้น้ำเสียงกับคนที่มาใช้บริการห่วยแตก",
-      "เป็นกรมที่ดินที่ห่วยแตกมาก",
-      "เจ้าหน้าที่"
-    ],
-    "reviews": [
-      {
-        "text": "เจ้าหน้าที่หน้าตาดูเหนื่อยแต่ก็ยังยิ้ม ขอบคุณนะคะที่ใส่ใจประชาชน",
-        "rating": 5,
-        "date": "2026-03-02T18:45:11.996Z",
-        "language": "th"
-      },
-      {
-        "text": "ฝากปรับปรุงเรื่องการบริการ ของเจ้าหน้าที่ผู้ชายวัยรุ่นตัวสูงๆ พูดจา ใช้น้ำเสียงกับคนที่มาใช้บริการห่วยแตก",
-        "rating": 1,
-        "date": "2025-12-05T06:36:41.600Z",
-        "language": "th"
-      },
-      {
-        "text": "เป็นกรมที่ดินที่ห่วยแตกมาก เจ้าหน้าที่ ที่ให้บริการทำเสมือนว่าตัวเองเป็นเจ้านาย บริการไม่ให้ความสะดวกแก่ประชาชนเลยทำเหยียด เหมือนตัวเองนี่เก่ง ข้านี้ละมีการศึกษา จะบอกอะไรให้ครับ เรียนมาเสียเปล่าเป็นราชการ คือข้าของแผ่นดิน  ควรมีจิตสำนึกที่ดีกว่านี้นะครับ ไม่ใช่คิดว่าตัวเองนี้ ยิ่งใหญ่กว่าใคร ฝากไว้ให้คิด 👎👎",
-        "rating": 1,
-        "date": "2025-10-14T14:33:34.887Z",
-        "language": "th"
-      },
-      {
-        "text": "ทำงานช้ามากๆรอหลับไปหลายตื่นยังไม่ถึงคิวเลย...",
-        "rating": 1,
-        "date": "2025-06-12T03:56:41.794Z",
-        "language": "th"
-      },
-      {
-        "text": "ไปใช้บริการมาเมื่อวาน ประทับใจมาก เจ้าหน้าที่แนะนำ บริการดี",
-        "rating": 5,
-        "date": "2025-02-22T08:55:57.423Z",
-        "language": "th"
-      },
-      {
-        "text": "เมื่อวานไปใช้บริการเกิดความประทับใจเนื่องจาก จนท. บริการดีมากๆค่ะ",
-        "rating": 5,
-        "date": "2025-02-22T02:21:06.714Z",
-        "language": "th"
-      },
-      {
-        "text": "บริการดีมากค่ะ",
-        "rating": 5,
-        "date": "2025-02-13T06:11:06.756Z",
-        "language": "th"
-      },
-      {
-        "text": "",
-        "rating": 4,
-        "date": "2023-05-12T08:33:09.245Z",
-        "language": "en"
-      },
-      {
-        "text": "ผมจะขอคัดค้านการรับมรดก ต้องทำยังไง\nซึ่งผมไม่โอเคแล้วตอนนี้ กรณีมารดาเสียชีวิต",
-        "rating": 5,
-        "date": "2023-01-24T06:57:43.566Z",
-        "language": "th"
-      },
-      {
-        "text": "บริหารจัดการได้ห๋วยแตกเท่าที่เคยติดต่อมา อธิบดีดูแลผู้ใต้บังคับบัญชาท่านด้วย",
-        "rating": 1,
-        "date": "2022-04-07T07:08:02.082Z",
-        "language": "th"
-      }
-    ],
-    "area": "Topland Plaza"
-  },
-  {
-    "id": "place-13",
     "name": "Dek-cha พ่นไฟ สาขานครไทย",
     "category": "cafe",
     "subcategory": "ร้านกาแฟ",
@@ -1105,10 +1016,10 @@ export const places: Place[] = [
         "language": "en"
       }
     ],
-    "area": "City Center"
+    "area": "Topland Plaza"
   },
   {
-    "id": "place-14",
+    "id": "place-13",
     "name": "ร้านครัวระเบียงครัว",
     "category": "restaurant",
     "subcategory": "ร้านอาหาร",
@@ -1170,10 +1081,10 @@ export const places: Place[] = [
         "language": "th"
       }
     ],
-    "area": "Naresuan University"
+    "area": "City Center"
   },
   {
-    "id": "place-15",
+    "id": "place-14",
     "name": "The Imperial Hotel and Convention Centre Phitsanulok",
     "category": "hotel",
     "subcategory": "โรงแรม",
@@ -1262,7 +1173,7 @@ export const places: Place[] = [
     "area": "Nan River"
   },
   {
-    "id": "place-16",
+    "id": "place-15",
     "name": "ร้านพุงกาง ลาบขม ต้มแซบ",
     "category": "restaurant",
     "subcategory": "ร้านอาหาร",
@@ -1307,10 +1218,10 @@ export const places: Place[] = [
         "language": "th"
       }
     ],
-    "area": "Train Station"
+    "area": "City Center"
   },
   {
-    "id": "place-17",
+    "id": "place-16",
     "name": "ร้านอาหาร The Pool Cafe Bar",
     "category": "cafe",
     "subcategory": "ร้านอาหาร",
@@ -1396,10 +1307,10 @@ export const places: Place[] = [
         "language": "en"
       }
     ],
-    "area": "City Center"
+    "area": "Train Station"
   },
   {
-    "id": "place-18",
+    "id": "place-17",
     "name": "ร้าน ภ สำเภา",
     "category": "restaurant",
     "subcategory": "ร้านอาหาร",
@@ -1440,7 +1351,7 @@ export const places: Place[] = [
     "area": "City Center"
   },
   {
-    "id": "place-19",
+    "id": "place-18",
     "name": "โรงแรม โยเดีย เฮอริเทจ - Yodia Heritage Boutique Hotel",
     "category": "hotel",
     "subcategory": "โรงแรม",
@@ -1526,10 +1437,10 @@ export const places: Place[] = [
         "language": "en"
       }
     ],
-    "area": "Nan River"
+    "area": "City Center"
   },
   {
-    "id": "place-20",
+    "id": "place-19",
     "name": "ส้มตำเจ๊เขียวหนองทอง",
     "category": "restaurant",
     "subcategory": "ร้านอาหาร",
@@ -1615,10 +1526,10 @@ export const places: Place[] = [
         "language": "en"
       }
     ],
-    "area": "Topland Plaza"
+    "area": "Nan River"
   },
   {
-    "id": "place-21",
+    "id": "place-20",
     "name": "HUB Phitsanulok Co-working",
     "category": "coworking",
     "subcategory": "co-working space",
@@ -1662,7 +1573,7 @@ export const places: Place[] = [
     "area": "City Center"
   },
   {
-    "id": "place-22",
+    "id": "place-21",
     "name": "JEAB Space",
     "category": "coworking",
     "subcategory": "co-working space",
@@ -1700,7 +1611,7 @@ export const places: Place[] = [
     "area": "Naresuan University"
   },
   {
-    "id": "place-23",
+    "id": "place-22",
     "name": "The Desk PLK",
     "category": "coworking",
     "subcategory": "co-working space",
@@ -1738,7 +1649,7 @@ export const places: Place[] = [
     "area": "Nan River"
   },
   {
-    "id": "place-24",
+    "id": "place-23",
     "name": "WorkCafe Connect",
     "category": "coworking",
     "subcategory": "co-working cafe",
@@ -1776,7 +1687,7 @@ export const places: Place[] = [
     "area": "Train Station"
   },
   {
-    "id": "place-25",
+    "id": "place-24",
     "name": "Digital Nomad PLK",
     "category": "coworking",
     "subcategory": "co-working space",
@@ -1814,7 +1725,7 @@ export const places: Place[] = [
     "area": "City Center"
   },
   {
-    "id": "place-26",
+    "id": "place-25",
     "name": "Phitsanulok Skin Clinic",
     "category": "clinic",
     "subcategory": "aesthetic clinic",
@@ -1852,7 +1763,7 @@ export const places: Place[] = [
     "area": "City Center"
   },
   {
-    "id": "place-27",
+    "id": "place-26",
     "name": "Dr. Smile Dental Clinic",
     "category": "clinic",
     "subcategory": "dental clinic",
@@ -1890,7 +1801,7 @@ export const places: Place[] = [
     "area": "City Center"
   },
   {
-    "id": "place-28",
+    "id": "place-27",
     "name": "The Face Clinic Phitsanulok",
     "category": "clinic",
     "subcategory": "aesthetic clinic",
@@ -1928,7 +1839,7 @@ export const places: Place[] = [
     "area": "City Center"
   },
   {
-    "id": "place-29",
+    "id": "place-28",
     "name": "Nara Beauty Clinic",
     "category": "clinic",
     "subcategory": "aesthetic clinic",
@@ -1966,7 +1877,7 @@ export const places: Place[] = [
     "area": "Topland Plaza"
   },
   {
-    "id": "place-30",
+    "id": "place-29",
     "name": "Slim & Shape Center",
     "category": "clinic",
     "subcategory": "aesthetic clinic",
